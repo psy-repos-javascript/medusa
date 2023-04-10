@@ -7,7 +7,7 @@ import { AdminProductCategoriesReqBase } from "../../../../types/product-categor
 import { FindParams } from "../../../../types/common"
 
 /**
- * @oas [post] /product-categories
+ * @oas [post] /admin/product-categories
  * operationId: "PostProductCategories"
  * summary: "Create a Product Category"
  * description: "Creates a Product Category."
@@ -49,7 +49,7 @@ import { FindParams } from "../../../../types/common"
  *   - api_token: []
  *   - cookie_auth: []
  * tags:
- *   - Product Category
+ *   - Product Categories
  * responses:
  *  "200":
  *    description: OK
@@ -103,6 +103,9 @@ export default async (req: Request, res: Response) => {
  *   name:
  *     type: string
  *     description: The name to identify the Product Category by.
+ *   description:
+ *     type: string
+ *     description: An optional text field to describe the Product Category by.
  *   handle:
  *     type: string
  *     description: An optional handle to be used in slugs, if none is provided we will kebab-case the title.

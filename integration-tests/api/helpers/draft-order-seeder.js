@@ -14,17 +14,18 @@ const {
   Discount,
   DiscountRule,
   Payment,
+  ShippingProfileType,
 } = require("@medusajs/medusa")
 const { simpleSalesChannelFactory } = require("../factories")
 
-module.exports = async (connection, data = {}) => {
-  const manager = connection.manager
+module.exports = async (dataSource, data = {}) => {
+  const manager = dataSource.manager
 
   const defaultProfile = await manager.findOne(ShippingProfile, {
-    type: "default",
+    where: { type: ShippingProfileType.DEFAULT },
   })
 
-  const salesChannel = await simpleSalesChannelFactory(connection, {
+  const salesChannel = await simpleSalesChannelFactory(dataSource, {
     id: "sales-channel",
     is_default: true,
   })
@@ -57,6 +58,19 @@ module.exports = async (connection, data = {}) => {
   await manager.query(
     `insert into product_sales_channel values ('test-product-2', '${salesChannel.id}');`
   )
+
+  await manager.insert(ProductVariant, {
+    id: "test-variant-without-prices",
+    title: "test variant without prices",
+    product_id: "test-product",
+    inventory_quantity: 1,
+    options: [
+      {
+        option_id: "test-option",
+        value: "no prices",
+      },
+    ],
+  })
 
   await manager.insert(ProductVariant, {
     id: "test-variant",
