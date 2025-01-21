@@ -1,4 +1,4 @@
-import { updateCartCustomerWorkflow } from "@medusajs/core-flows"
+import { transferCartCustomerWorkflow } from "@medusajs/core-flows"
 import { HttpTypes } from "@medusajs/framework/types"
 
 import {
@@ -11,7 +11,7 @@ export const POST = async (
   req: AuthenticatedMedusaRequest,
   res: MedusaResponse<HttpTypes.StoreCartResponse>
 ) => {
-  const workflow = updateCartCustomerWorkflow(req.scope)
+  const workflow = transferCartCustomerWorkflow(req.scope)
 
   await workflow.run({
     input: {
@@ -23,7 +23,7 @@ export const POST = async (
   const cart = await refetchCart(
     req.params.id,
     req.scope,
-    req.remoteQueryConfig.fields
+    req.queryConfig.fields
   )
 
   res.status(200).json({ cart })

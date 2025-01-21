@@ -130,6 +130,11 @@ export const RouteMap: RouteObject[] = [
                           ),
                       },
                       {
+                        path: "stock",
+                        lazy: () =>
+                          import("../../routes/products/product-stock"),
+                      },
+                      {
                         path: "metadata/edit",
                         lazy: () =>
                           import("../../routes/products/product-metadata"),
@@ -172,6 +177,13 @@ export const RouteMap: RouteObject[] = [
                         lazy: () =>
                           import(
                             "../../routes/product-variants/product-variant-manage-inventory-items"
+                          ),
+                      },
+                      {
+                        path: "metadata/edit",
+                        lazy: () =>
+                          import(
+                            "../../routes/product-variants/product-variant-metadata"
                           ),
                       },
                     ],
@@ -316,6 +328,25 @@ export const RouteMap: RouteObject[] = [
                     path: "refund",
                     lazy: () =>
                       import("../../routes/orders/order-create-refund"),
+                  },
+                  {
+                    path: "transfer",
+                    lazy: () =>
+                      import("../../routes/orders/order-request-transfer"),
+                  },
+                  {
+                    path: "email",
+                    lazy: () => import("../../routes/orders/order-edit-email"),
+                  },
+                  {
+                    path: "shipping-address",
+                    lazy: () =>
+                      import("../../routes/orders/order-edit-shipping-address"),
+                  },
+                  {
+                    path: "billing-address",
+                    lazy: () =>
+                      import("../../routes/orders/order-edit-billing-address"),
                   },
                 ],
               },
@@ -592,6 +623,11 @@ export const RouteMap: RouteObject[] = [
                       ),
                   },
                   {
+                    path: ":order_id/transfer",
+                    lazy: () =>
+                      import("../../routes/orders/order-request-transfer"),
+                  },
+                  {
                     path: "metadata/edit",
                     lazy: () =>
                       import("../../routes/customers/customer-metadata"),
@@ -733,6 +769,11 @@ export const RouteMap: RouteObject[] = [
                     lazy: () =>
                       import("../../routes/inventory/inventory-create"),
                   },
+                  {
+                    path: "stock",
+                    lazy: () =>
+                      import("../../routes/inventory/inventory-stock"),
+                  },
                 ],
               },
               {
@@ -869,6 +910,10 @@ export const RouteMap: RouteObject[] = [
                     path: "countries/add",
                     lazy: () =>
                       import("../../routes/regions/region-add-countries"),
+                  },
+                  {
+                    path: "metadata/edit",
+                    lazy: () => import("../../routes/regions/region-metadata"),
                   },
                 ],
               },
@@ -1064,6 +1109,15 @@ export const RouteMap: RouteObject[] = [
                         },
                       }
                     },
+                    children: [
+                      {
+                        path: "metadata/edit",
+                        lazy: () =>
+                          import(
+                            "../../routes/shipping-profiles/shipping-profile-metadata"
+                          ),
+                      },
+                    ],
                   },
                 ],
               },

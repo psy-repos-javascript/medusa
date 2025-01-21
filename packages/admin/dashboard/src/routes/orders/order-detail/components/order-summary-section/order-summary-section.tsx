@@ -20,10 +20,12 @@ import {
   AdminOrderPreview,
   AdminRegion,
   AdminReturn,
+  AdminPaymentCollection,
 } from "@medusajs/types"
 import {
   Badge,
   Button,
+  clx,
   Container,
   Copy,
   Heading,
@@ -32,12 +34,10 @@ import {
   toast,
   Tooltip,
   usePrompt,
-  clx,
 } from "@medusajs/ui"
 
-import { AdminPaymentCollection } from "../../../../../../../../core/types/dist/http/payment/admin/entities"
+import { AdminReservation } from "@medusajs/types/src/http"
 import { ActionMenu } from "../../../../../components/common/action-menu"
-import { ButtonMenu } from "../../../../../components/common/button-menu/button-menu"
 import { Thumbnail } from "../../../../../components/common/thumbnail"
 import { useClaims } from "../../../../../hooks/api/claims"
 import { useExchanges } from "../../../../../hooks/api/exchanges"
@@ -56,7 +56,6 @@ import { getReturnableQuantity } from "../../../../../lib/rma"
 import { CopyPaymentLink } from "../copy-payment-link/copy-payment-link"
 import ReturnInfoPopover from "./return-info-popover"
 import ShippingInfoPopover from "./shipping-info-popover"
-import { AdminReservation } from "@medusajs/types/src/http"
 
 type OrderSummarySectionProps = {
   order: AdminOrder
@@ -193,7 +192,7 @@ export const OrderSummarySection = ({ order }: OrderSummarySectionProps) => {
                 {t("orders.returns.receive.action")}
               </Button>
             ) : (
-              <ButtonMenu
+              <ActionMenu
                 groups={[
                   {
                     actions: receivableReturns.map((r) => {
@@ -225,7 +224,7 @@ export const OrderSummarySection = ({ order }: OrderSummarySectionProps) => {
                 <Button variant="secondary" size="small">
                   {t("orders.returns.receive.action")}
                 </Button>
-              </ButtonMenu>
+              </ActionMenu>
             ))}
 
           {showAllocateButton && (
@@ -310,6 +309,7 @@ const Header = ({
                 to: `/orders/${order.id}/edits`,
                 icon: <PencilSquare />,
                 disabled:
+                  order.status === "canceled" ||
                   (orderPreview?.order_change &&
                     orderPreview?.order_change?.change_type !== "edit") ||
                   (orderPreview?.order_change?.change_type === "edit" &&
@@ -341,7 +341,7 @@ const Header = ({
                   shouldDisableReturn ||
                   isOrderEditActive ||
                   (!!orderPreview?.order_change?.return_id &&
-                    !!!orderPreview?.order_change?.exchange_id) ||
+                    !orderPreview?.order_change?.exchange_id) ||
                   !!orderPreview?.order_change?.claim_id,
               },
               {
@@ -356,7 +356,7 @@ const Header = ({
                   shouldDisableReturn ||
                   isOrderEditActive ||
                   (!!orderPreview?.order_change?.return_id &&
-                    !!!orderPreview?.order_change?.claim_id) ||
+                    !orderPreview?.order_change?.claim_id) ||
                   !!orderPreview?.order_change?.exchange_id,
               },
             ],
@@ -555,7 +555,7 @@ const Cost = ({
 const CostBreakdown = ({
   order,
 }: {
-  order: AdminOrder & { region: AdminRegion }
+  order: AdminOrder & { region?: AdminRegion | null }
 }) => {
   const { t } = useTranslation()
   const [isTaxOpen, setIsTaxOpen] = useState(false)
@@ -590,7 +590,7 @@ const CostBreakdown = ({
     return taxCodeMap
   }, [order])
 
-  const automaticTaxesOn = !!order.region!.automatic_taxes
+  const automaticTaxesOn = !!order.region?.automatic_taxes
   const hasTaxLines = !!Object.keys(taxCodes).length
 
   const discountTotal = automaticTaxesOn

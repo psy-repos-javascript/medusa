@@ -12,15 +12,16 @@ export const GET = async (
   const variables = {
     filters: {
       ...req.filterableFields,
+      is_draft_order: false,
       customer_id: req.auth_context.actor_id,
     },
-    ...req.remoteQueryConfig.pagination,
+    ...req.queryConfig.pagination,
   }
 
   const workflow = getOrdersListWorkflow(req.scope)
   const { result } = await workflow.run({
     input: {
-      fields: req.remoteQueryConfig.fields,
+      fields: req.queryConfig.fields,
       variables,
     },
   })
