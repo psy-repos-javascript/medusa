@@ -1,10 +1,11 @@
 import { ProductTypes } from "@medusajs/framework/types"
-import { ProductStatus } from "@medusajs/framework/utils"
-import { Image } from "@models"
+import { ProductStatus, toHandle } from "@medusajs/framework/utils"
+import { ProductImage } from "@models"
 import faker from "faker"
 
 export const buildProductOnlyData = ({
   title,
+  handle,
   description,
   subtitle,
   is_giftcard,
@@ -14,6 +15,7 @@ export const buildProductOnlyData = ({
   status,
 }: {
   title?: string
+  handle?: string
   description?: string
   subtitle?: string
   is_giftcard?: boolean
@@ -22,15 +24,17 @@ export const buildProductOnlyData = ({
   images?: { id?: string; url: string }[]
   status?: ProductStatus
 } = {}) => {
+  title ??= faker.commerce.productName()
   return {
-    title: title ?? faker.commerce.productName(),
+    title: title as string,
+    handle: handle ?? toHandle(title!),
     description: description ?? faker.commerce.productName(),
     subtitle: subtitle ?? faker.commerce.productName(),
     is_giftcard: is_giftcard ?? false,
     discountable: discountable ?? true,
     thumbnail: thumbnail as string,
     status: status ?? ProductStatus.PUBLISHED,
-    images: (images ?? []) as Image[],
+    images: (images ?? []) as ProductImage[],
   }
 }
 
@@ -44,7 +48,7 @@ export const buildProductAndRelationsData = ({
   images,
   status,
   type_id,
-  tags,
+  tag_ids,
   options,
   variants,
   collection_id,
@@ -60,9 +64,9 @@ export const buildProductAndRelationsData = ({
     discountable: discountable ?? true,
     thumbnail: thumbnail as string,
     status: status ?? ProductStatus.PUBLISHED,
-    images: (images ?? []) as Image[],
+    images: (images ?? []) as ProductImage[],
     type_id,
-    tags: tags ?? [{ value: "tag-1" }],
+    tag_ids,
     collection_id,
     options: options ?? [
       {

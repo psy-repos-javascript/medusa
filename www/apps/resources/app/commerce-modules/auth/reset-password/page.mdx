@@ -8,6 +8,12 @@ export const metadata = {
 
 In this guide, you'll learn how to handle the `auth.password_reset` event, which is emitted when a request is sent to the [Generate Reset Password Token API route](../authentication-route/page.mdx#generate-reset-password-token-route).
 
+<Note title="Looking for no-code docs?">
+
+Refer to this [Medusa Admin User Guide](!user-guide!/reset-password) to learn how to reset your user admin password using the dashboard.
+
+</Note>
+
 You'll create a subscriber that listens to the event. When the event is emitted, the subscriber sends an email notification to the user.
 
 <Prerequisites
@@ -82,6 +88,12 @@ You subscribe to the `auth.password_reset` event. The event has a data payload o
 - `entity_id`: The identifier of the user. When using the `emailpass` provider, it's the user's email.
 - `token`: The token to reset the user's password.
 - `actor_type`: The user's actor type. For example, if the user is a customer, the `actor_type` is `customer`. If it's an admin user, the `actor_type` is `user`.
+
+<Note>
+
+This event's payload previously had an `actorType` field. It was renamed to `actor_type` after [Medusa v2.0.7](https://github.com/medusajs/medusa/releases/tag/v2.0.7).
+
+</Note>
 
 In the subscriber, you:
 

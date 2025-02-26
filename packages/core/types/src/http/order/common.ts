@@ -8,46 +8,13 @@ import { BaseProduct, BaseProductVariant } from "../product/common"
 import { BaseReturn } from "../return/common"
 
 export interface BaseOrderSummary {
-  /**
-   * The total of the order including taxes and promotions.
-   */
-  total: number
-  /**
-   * The total of the order excluding taxes, including promotions.
-   */
-  subtotal: number
-  /**
-   * The tax totals of the order including promotions.
-   */
-  total_tax: number
-  /**
-   * The total ordered amount.
-   */
-  ordered_total: number
-  /**
-   * The total fulfilled amount.
-   */
-  fulfilled_total: number
-  /**
-   * The total amount of returned items.
-   */
-  returned_total: number
-  /**
-   * The total amount of the items requested to be returned.
-   */
-  return_request_total: number
-  /**
-   * The total amount of the items removed from the order.
-   */
-  write_off_total: number
-  /**
-   * The total amount paid.
-   */
+  pending_difference: number
+  current_order_total: number
+  original_order_total: number
+  transaction_total: number
   paid_total: number
-  /**
-   * The total amount refunded
-   */
   refunded_total: number
+  accounting_total: number
 }
 
 export interface BaseOrderAdjustmentLine {
@@ -224,7 +191,7 @@ export interface BaseOrderAddress {
   city?: string
   /**
    * The address's country code.
-   * 
+   *
    * @example us
    */
   country_code?: string
@@ -281,7 +248,7 @@ export interface BaseOrderShippingMethod {
   shipping_option_id: string | null
   /**
    * Data relevant for the fulfillment provider handling the shipping.
-   * 
+   *
    * Learn more in [this guide](https://docs.medusajs.com/resources/commerce-modules/fulfillment/shipping-option#data-property).
    */
   data: Record<string, unknown> | null
@@ -631,7 +598,7 @@ export interface BaseOrderTransaction {
   amount: number
   /**
    * The transaction's currency code.
-   * 
+   *
    * @example
    * usd
    */
@@ -689,7 +656,7 @@ export interface BaseOrderFulfillment {
   requires_shipping: boolean
   /**
    * Data necessary for the provider handling the fulfillment.
-   * 
+   *
    * Learn more in [this guide](https://docs.medusajs.com/resources/commerce-modules/fulfillment/shipping-option#data-property).
    */
   data: Record<string, unknown> | null
@@ -764,7 +731,7 @@ export interface BaseOrder {
   email: string | null
   /**
    * The order's currency code.
-   * 
+   *
    * @example
    * usd
    */
@@ -773,6 +740,10 @@ export interface BaseOrder {
    * The order's display ID.
    */
   display_id?: number
+  /**
+   * The order's status.
+   */
+  status: string
   /**
    * The order's shipping address.
    */
@@ -925,7 +896,10 @@ export interface BaseOrderFilters
   /**
    * Filter by status(es).
    */
-  status?: OrderStatus[] | OrderStatus | OperatorMap<OrderStatus | OrderStatus[]>
+  status?:
+    | OrderStatus[]
+    | OrderStatus
+    | OperatorMap<OrderStatus | OrderStatus[]>
 }
 
 export interface BaseOrderChangesFilters
@@ -958,7 +932,13 @@ export interface BaseOrderChange {
   /**
    * The type of the order change
    */
-  change_type?: "return" | "exchange" | "claim" | "edit" | "return_request"
+  change_type?:
+    | "return"
+    | "exchange"
+    | "claim"
+    | "edit"
+    | "return_request"
+    | "transfer"
 
   /**
    * The ID of the associated order

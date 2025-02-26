@@ -1,12 +1,14 @@
 "use client"
 
-import React, { createContext, useContext } from "react"
-import { useAnalytics } from "@/providers"
-import { AiAssistant } from "@/components"
-// @ts-expect-error can't install the types package because it doesn't support React v19
-import ReCAPTCHA from "react-google-recaptcha"
+import React, { createContext, useContext, useEffect, useState } from "react"
+import { useAnalytics, useSearch } from "@/providers"
+import { AiAssistantIcon, AiAssistantSearchWindow } from "@/components"
+import { RecaptchaAction, useRecaptcha } from "../../hooks/use-recaptcha"
+import { AiAssistantChatProvider } from "./Chat"
 
 export type AiAssistantFeedbackType = "upvote" | "downvote"
+
+export type AiAssistantChatType = "default" | "popover"
 
 export type AiAssistantContextType = {
   getAnswer: (question: string, thread_id?: string) => Promise<Response>
@@ -15,6 +17,9 @@ export type AiAssistantContextType = {
     reaction: AiAssistantFeedbackType
   ) => Promise<Response>
   version: "v1" | "v2"
+  chatOpened: boolean
+  setChatOpened: React.Dispatch<React.SetStateAction<boolean>>
+  chatType: AiAssistantChatType
 }
 
 const AiAssistantContext = createContext<AiAssistantContextType | null>(null)
@@ -25,6 +30,8 @@ export type AiAssistantProviderProps = {
   recaptchaSiteKey: string
   websiteId: string
   version?: "v1" | "v2"
+  type?: "search" | "chat"
+  chatType?: AiAssistantChatType
 }
 
 export const AiAssistantProvider = ({
@@ -33,20 +40,19 @@ export const AiAssistantProvider = ({
   websiteId,
   version = "v2",
   children,
+  type = "chat",
+  chatType = "default",
 }: AiAssistantProviderProps) => {
+  const [chatOpened, setChatOpened] = useState(false)
+  const { setCommands, setIsOpen, setCommand } = useSearch()
   const { analytics } = useAnalytics()
-  const recaptchaRef = React.createRef<ReCAPTCHA>()
-
-  const getReCaptchaToken = async () => {
-    if (recaptchaRef?.current) {
-      const recaptchaToken = await recaptchaRef.current.executeAsync()
-      return recaptchaToken || ""
-    }
-    return ""
-  }
+  const { execute: getReCaptchaToken } = useRecaptcha({
+    siteKey: recaptchaSiteKey,
+  })
 
   const sendRequest = async (
     apiPath: string,
+    action: RecaptchaAction,
     method = "GET",
     headers?: HeadersInit,
     body?: BodyInit
@@ -54,7 +60,7 @@ export const AiAssistantProvider = ({
     return await fetch(`${apiUrl}${apiPath}`, {
       method,
       headers: {
-        "X-RECAPTCHA-TOKEN": await getReCaptchaToken(),
+        "X-RECAPTCHA-ENTERPRISE-TOKEN": await getReCaptchaToken(action),
         "X-WEBSITE-ID": websiteId,
         ...headers,
       },
@@ -67,7 +73,8 @@ export const AiAssistantProvider = ({
     return await sendRequest(
       threadId
         ? `/query/v1/thread/${threadId}/stream?query=${questionParam}`
-        : `/query/v1/stream?query=${questionParam}`
+        : `/query/v1/stream?query=${questionParam}`,
+      RecaptchaAction.AskAi
     )
   }
 
@@ -77,6 +84,7 @@ export const AiAssistantProvider = ({
   ) => {
     return await sendRequest(
       `/query/v1/question-answer/${questionId}/feedback`,
+      RecaptchaAction.FeedbackSubmit,
       "POST",
       {
         "Content-Type": "application/json",
@@ -89,27 +97,47 @@ export const AiAssistantProvider = ({
     )
   }
 
+  useEffect(() => {
+    setCommands((prevCommands) => {
+      const newCommands = [...prevCommands]
+
+      if (!newCommands.find((c) => c.name === "ai-assistant")) {
+        newCommands.push({
+          name: "ai-assistant",
+          icon: <AiAssistantIcon />,
+          title: "AI Assistant",
+          badge: {
+            variant: "blue",
+            badgeType: "shaded",
+            children: "Beta",
+          },
+          action: () => {
+            setIsOpen(false)
+            setChatOpened(true)
+            setCommand(null)
+          },
+        })
+      }
+
+      return newCommands
+    })
+  }, [])
+
   return (
     <AiAssistantContext.Provider
       value={{
         getAnswer,
         sendFeedback,
         version,
+        chatOpened,
+        setChatOpened,
+        chatType,
       }}
     >
-      {children}
-      <AiAssistant />
-      <ReCAPTCHA
-        ref={recaptchaRef}
-        size="invisible"
-        sitekey={recaptchaSiteKey}
-        onErrored={() =>
-          console.error(
-            "ReCAPTCHA token not yet configured. Please reach out to the kapa team at founders@kapa.ai to complete the setup."
-          )
-        }
-        className="grecaptcha-badge"
-      />
+      <AiAssistantChatProvider>
+        {children}
+        {type === "search" && <AiAssistantSearchWindow />}
+      </AiAssistantChatProvider>
     </AiAssistantContext.Provider>
   )
 }

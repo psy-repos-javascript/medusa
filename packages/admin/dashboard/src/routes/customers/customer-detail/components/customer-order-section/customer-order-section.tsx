@@ -6,7 +6,7 @@ import { createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { ActionMenu } from "../../../../../components/common/action-menu"
-import { DataTable } from "../../../../../components/table/data-table"
+import { _DataTable } from "../../../../../components/table/data-table"
 import { useOrders } from "../../../../../hooks/api/orders"
 import { useOrderTableColumns } from "../../../../../hooks/table/columns/use-order-table-columns"
 import { useOrderTableFilters } from "../../../../../hooks/table/filters/use-order-table-filters"
@@ -70,7 +70,7 @@ export const CustomerOrderSection = ({
         {/*  </Button>*/}
         {/*</div>*/}
       </div>
-      <DataTable
+      <_DataTable
         columns={columns}
         table={table}
         pagination
@@ -102,7 +102,7 @@ const CustomerOrderActions = ({ order }: { order: HttpTypes.AdminOrder }) => {
           actions: [
             {
               label: t("transferOwnership.label"),
-              to: `${order.id}/transfer-ownership`,
+              to: `${order.id}/transfer`,
               icon: <ArrowPath />,
             },
           ],
@@ -120,11 +120,10 @@ const useColumns = () => {
   return useMemo(
     () => [
       ...base,
-      // TODO: REENABLE WHEN TRANSFER OWNERSHIP IS IMPLEMENTED
-      // columnHelper.display({
-      //   id: "actions",
-      //   cell: ({ row }) => <CustomerOrderActions order={row.original} />,
-      // }),
+      columnHelper.display({
+        id: "actions",
+        cell: ({ row }) => <CustomerOrderActions order={row.original} />,
+      }),
     ],
     [base]
   )

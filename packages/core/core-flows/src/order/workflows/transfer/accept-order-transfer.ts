@@ -8,21 +8,61 @@ import {
   WorkflowResponse,
   createStep,
   createWorkflow,
+  transform,
 } from "@medusajs/framework/workflows-sdk"
 import { OrderPreviewDTO } from "@medusajs/types"
-
-import { useRemoteQueryStep } from "../../../common"
-import { throwIfOrderIsCancelled } from "../../utils/order-validation"
-import { previewOrderChangeStep } from "../../steps"
 import {
   ChangeActionType,
   MedusaError,
   OrderChangeStatus,
 } from "@medusajs/utils"
+
+import { useQueryGraphStep } from "../../../common"
+import { previewOrderChangeStep } from "../../steps"
 import { confirmOrderChanges } from "../../steps/confirm-order-changes"
+import { throwIfOrderIsCancelled } from "../../utils/order-validation"
 
 /**
- * This step validates that an order transfer can be accepted.
+ * The details of the order transfer acceptance to validate.
+ */
+export type AcceptOrderTransferValidationStepInput = {
+  /**
+   * The token of the order transfer.
+   */
+  token: string
+  /**
+   * The order to accept the transfer for.
+   */
+  order: OrderDTO
+  /**
+   * The order change made by the transfer request.
+   */
+  orderChange: OrderChangeDTO
+}
+
+/**
+ * This step validates that an order transfer can be accepted. If the
+ * order doesn't have an existing transfer request, the step throws an error.
+ *
+ * :::note
+ *
+ * You can retrieve an order and order change details using [Query](https://docs.medusajs.com/learn/fundamentals/module-links/query),
+ * or [useQueryGraphStep](https://docs.medusajs.com/resources/references/medusa-workflows/steps/useQueryGraphStep).
+ *
+ * :::
+ *
+ * @example
+ * const data = acceptOrderTransferValidationStep({
+ *   token: "sk_123456",
+ *   order: {
+ *     id: "order_123",
+ *     // other order details...
+ *   },
+ *   orderChange: {
+ *     id: "order_change_123",
+ *     // other order change details...
+ *   }
+ * })
  */
 export const acceptOrderTransferValidationStep = createStep(
   "accept-order-transfer-validation",
@@ -55,23 +95,44 @@ export const acceptOrderTransferValidationStep = createStep(
 
 export const acceptOrderTransferWorkflowId = "accept-order-transfer-workflow"
 /**
- * This workflow accepts an order transfer.
+ * This workflow accepts an order transfer, requested previously by the {@link requestOrderTransferWorkflow}. This workflow is used by the
+ * [Accept Order Transfer Store API Route](https://docs.medusajs.com/api/store#orders_postordersidtransferaccept).
+ *
+ * You can use this workflow within your customizations or your own custom workflows, allowing you to build a custom flow
+ * around accepting an order transfer.
+ *
+ * @example
+ * const { result } = await acceptOrderTransferWorkflow(container)
+ * .run({
+ *   input: {
+ *     token: "sk_123456",
+ *     order_id: "order_123",
+ *   }
+ * })
+ *
+ * @summary
+ *
+ * Accept an order transfer request.
  */
 export const acceptOrderTransferWorkflow = createWorkflow(
   acceptOrderTransferWorkflowId,
   function (
     input: WorkflowData<OrderWorkflow.AcceptOrderTransferWorkflowInput>
   ): WorkflowResponse<OrderPreviewDTO> {
-    const order: OrderDTO = useRemoteQueryStep({
-      entry_point: "orders",
+    const orderQuery = useQueryGraphStep({
+      entity: "order",
       fields: ["id", "email", "status", "customer_id"],
-      variables: { id: input.order_id },
-      list: false,
-      throw_if_key_not_found: true,
-    })
+      filters: { id: input.order_id },
+      options: { throwIfKeyNotFound: true },
+    }).config({ name: "order-query" })
 
-    const orderChange: OrderChangeDTO = useRemoteQueryStep({
-      entry_point: "order_change",
+    const order = transform(
+      { orderQuery },
+      ({ orderQuery }) => orderQuery.data[0]
+    )
+
+    const orderChangeQuery = useQueryGraphStep({
+      entity: "order_change",
       fields: [
         "id",
         "status",
@@ -84,14 +145,16 @@ export const acceptOrderTransferWorkflow = createWorkflow(
         "actions.reference_id",
         "actions.internal_note",
       ],
-      variables: {
-        filters: {
-          order_id: input.order_id,
-          status: [OrderChangeStatus.REQUESTED],
-        },
+      filters: {
+        order_id: input.order_id,
+        status: [OrderChangeStatus.REQUESTED],
       },
-      list: false,
     }).config({ name: "order-change-query" })
+
+    const orderChange = transform(
+      { orderChangeQuery },
+      ({ orderChangeQuery }) => orderChangeQuery.data[0]
+    )
 
     acceptOrderTransferValidationStep({
       order,

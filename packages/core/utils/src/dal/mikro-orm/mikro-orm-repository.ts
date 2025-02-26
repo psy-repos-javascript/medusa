@@ -1,8 +1,10 @@
 import {
-  BaseFilterable,
   Context,
   DAL,
   FilterQuery,
+  FindOptions,
+  InferEntityType,
+  InferRepositoryReturnType,
   FilterQuery as InternalFilterQuery,
   PerformedActions,
   RepositoryService,
@@ -15,11 +17,10 @@ import {
   EntityName,
   EntityProperty,
   EntitySchema,
+  LoadStrategy,
   FilterQuery as MikroFilterQuery,
   FindOptions as MikroOptions,
-  LoadStrategy,
-  ReferenceType,
-  RequiredEntityData,
+  ReferenceKind,
 } from "@mikro-orm/core"
 import { SqlEntityManager } from "@mikro-orm/postgresql"
 import {
@@ -28,6 +29,7 @@ import {
   MedusaError,
   promiseAll,
 } from "../../common"
+import { toMikroORMEntity } from "../../dml"
 import { buildQuery } from "../../modules-sdk/build-query"
 import {
   getSoftDeletedCascadedEntitiesIdsMappedBy,
@@ -37,7 +39,7 @@ import { dbErrorMapper } from "./db-error-mapper"
 import { mikroOrmSerializer } from "./mikro-orm-serializer"
 import { mikroOrmUpdateDeletedAtRecursively } from "./utils"
 
-export class MikroOrmBase<T = any> {
+export class MikroOrmBase {
   readonly manager_: any
 
   protected constructor({ manager }) {
@@ -90,10 +92,12 @@ export class MikroOrmBase<T = any> {
  * related ones.
  */
 
-export class MikroOrmBaseRepository<T extends object = object>
-  extends MikroOrmBase<T>
+export class MikroOrmBaseRepository<const T extends object = object>
+  extends MikroOrmBase
   implements RepositoryService<T>
 {
+  entity: EntityClass<InferEntityType<T>>
+
   constructor(...args: any[]) {
     // @ts-ignore
     super(...arguments)
@@ -144,43 +148,58 @@ export class MikroOrmBaseRepository<T extends object = object>
     })
   }
 
-  create(data: unknown[], context?: Context): Promise<T[]> {
+  create(
+    data: unknown[],
+    context?: Context
+  ): Promise<InferRepositoryReturnType<T>[]> {
     throw new Error("Method not implemented.")
   }
 
-  update(data: { entity; update }[], context?: Context): Promise<T[]> {
+  update(
+    data: { entity; update }[],
+    context?: Context
+  ): Promise<InferRepositoryReturnType<T>[]> {
     throw new Error("Method not implemented.")
   }
 
   delete(
-    idsOrPKs: FilterQuery<T> & BaseFilterable<FilterQuery<T>>,
+    idsOrPKs: FindOptions<T>["where"],
     context?: Context
-  ): Promise<void> {
+  ): Promise<string[]> {
     throw new Error("Method not implemented.")
   }
 
-  find(options?: DAL.FindOptions<T>, context?: Context): Promise<T[]> {
+  find(
+    options?: DAL.FindOptions<T>,
+    context?: Context
+  ): Promise<InferRepositoryReturnType<T>[]> {
     throw new Error("Method not implemented.")
   }
 
   findAndCount(
     options?: DAL.FindOptions<T>,
     context?: Context
-  ): Promise<[T[], number]> {
+  ): Promise<[InferRepositoryReturnType<T>[], number]> {
     throw new Error("Method not implemented.")
   }
 
-  upsert(data: unknown[], context: Context = {}): Promise<T[]> {
+  upsert(
+    data: unknown[],
+    context: Context = {}
+  ): Promise<InferRepositoryReturnType<T>[]> {
     throw new Error("Method not implemented.")
   }
 
   upsertWithReplace(
     data: unknown[],
-    config: UpsertWithReplaceConfig<T> = {
+    config: UpsertWithReplaceConfig<InferRepositoryReturnType<T>> = {
       relations: [],
     },
     context: Context = {}
-  ): Promise<{ entities: T[]; performedActions: PerformedActions }> {
+  ): Promise<{
+    entities: InferRepositoryReturnType<T>[]
+    performedActions: PerformedActions
+  }> {
     throw new Error("Method not implemented.")
   }
 
@@ -188,10 +207,10 @@ export class MikroOrmBaseRepository<T extends object = object>
     filters:
       | string
       | string[]
-      | (FilterQuery<T> & BaseFilterable<FilterQuery<T>>)
-      | (FilterQuery<T> & BaseFilterable<FilterQuery<T>>)[],
+      | DAL.FindOptions<T>["where"]
+      | DAL.FindOptions<T>["where"][],
     sharedContext: Context = {}
-  ): Promise<[T[], Record<string, unknown[]>]> {
+  ): Promise<[InferRepositoryReturnType<T>[], Record<string, unknown[]>]> {
     const entities = await this.find({ where: filters as any }, sharedContext)
     const date = new Date()
 
@@ -212,8 +231,8 @@ export class MikroOrmBaseRepository<T extends object = object>
   async restore(
     idsOrFilter: string[] | InternalFilterQuery,
     sharedContext: Context = {}
-  ): Promise<[T[], Record<string, unknown[]>]> {
-    const query = buildQuery(idsOrFilter, {
+  ): Promise<[InferRepositoryReturnType<T>[], Record<string, unknown[]>]> {
+    const query = buildQuery<T>(idsOrFilter, {
       withDeleted: true,
     })
 
@@ -229,29 +248,11 @@ export class MikroOrmBaseRepository<T extends object = object>
 
     return [entities, softDeletedEntitiesMap]
   }
-
-  applyFreeTextSearchFilters<T>(
-    findOptions: DAL.FindOptions<T & { q?: string }>,
-    retrieveConstraintsToApply: (q: string) => any[]
-  ): void {
-    if (!("q" in findOptions.where) || !findOptions.where.q) {
-      delete findOptions.where.q
-
-      return
-    }
-
-    const q = findOptions.where.q as string
-    delete findOptions.where.q
-
-    findOptions.where = {
-      $and: [findOptions.where, { $or: retrieveConstraintsToApply(q) }],
-    } as unknown as DAL.FilterQuery<T & { q?: string }>
-  }
 }
 
 export class MikroOrmBaseTreeRepository<
-  T extends object = object
-> extends MikroOrmBase<T> {
+  const T extends object = object
+> extends MikroOrmBase {
   constructor() {
     // @ts-ignore
     super(...arguments)
@@ -261,7 +262,7 @@ export class MikroOrmBaseTreeRepository<
     options?: DAL.FindOptions,
     transformOptions?: RepositoryTransformOptions,
     context?: Context
-  ): Promise<T[]> {
+  ): Promise<InferRepositoryReturnType<T>[]> {
     throw new Error("Method not implemented.")
   }
 
@@ -269,29 +270,45 @@ export class MikroOrmBaseTreeRepository<
     options?: DAL.FindOptions,
     transformOptions?: RepositoryTransformOptions,
     context?: Context
-  ): Promise<[T[], number]> {
+  ): Promise<[InferRepositoryReturnType<T>[], number]> {
     throw new Error("Method not implemented.")
   }
 
-  create(data: unknown[], context?: Context): Promise<T[]> {
+  create(
+    data: unknown[],
+    context?: Context
+  ): Promise<InferRepositoryReturnType<T>[]> {
     throw new Error("Method not implemented.")
   }
 
-  update(data: unknown[], context?: Context): Promise<T[]> {
+  update(
+    data: unknown[],
+    context?: Context
+  ): Promise<InferRepositoryReturnType<T>[]> {
     throw new Error("Method not implemented.")
   }
 
-  delete(ids: string[], context?: Context): Promise<void> {
+  delete(ids: string[], context?: Context): Promise<string[]> {
     throw new Error("Method not implemented.")
   }
 }
 
-export function mikroOrmBaseRepositoryFactory<T extends object = object>(
-  entity: any
+export function mikroOrmBaseRepositoryFactory<const T extends object>(
+  entity: T
 ): {
   new ({ manager }: { manager: any }): MikroOrmBaseRepository<T>
 } {
+  const mikroOrmEntity = toMikroORMEntity(entity) as EntityClass<
+    InferEntityType<T>
+  >
+
   class MikroOrmAbstractBaseRepository_ extends MikroOrmBaseRepository<T> {
+    entity = mikroOrmEntity
+    tableName = (
+      (mikroOrmEntity as unknown as EntitySchema).meta ??
+      (mikroOrmEntity as EntityClass<any>).prototype.__meta
+    ).collection
+
     // @ts-ignore
     constructor(...args: any[]) {
       // @ts-ignore
@@ -315,19 +332,19 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
       })
     }
 
-    async create(data: any[], context?: Context): Promise<T[]> {
+    async create(
+      data: any[],
+      context?: Context
+    ): Promise<InferRepositoryReturnType<T>[]> {
       const manager = this.getActiveManager<EntityManager>(context)
 
       const entities = data.map((data_) => {
-        return manager.create(
-          entity as EntityName<T>,
-          data_ as RequiredEntityData<T>
-        )
+        return manager.create(this.entity, data_)
       })
 
       manager.persist(entities)
 
-      return entities
+      return entities as InferRepositoryReturnType<T>[]
     }
 
     /**
@@ -350,7 +367,7 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
       const relations = manager
         .getDriver()
         .getMetadata()
-        .get(entity.name).relations
+        .get(this.entity.name).relations
 
       // In case an empty array is provided for a collection relation of type m:n, this relation needs to be init in order to be
       // able to perform an application cascade action.
@@ -363,7 +380,7 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
           const relation = relations.find((relation) => relation.name === key)
           const shouldInit =
             relation &&
-            relation.reference === ReferenceType.MANY_TO_MANY &&
+            relation.kind === ReferenceKind.MANY_TO_MANY &&
             Array.isArray(update[key]) &&
             !update[key].length
 
@@ -397,13 +414,18 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
       }
     }
 
-    async update(data: { entity; update }[], context?: Context): Promise<T[]> {
+    async update(
+      data: { entity; update }[],
+      context?: Context
+    ): Promise<InferRepositoryReturnType<T>[]> {
       const manager = this.getActiveManager<EntityManager>(context)
 
       await this.initManyToManyToDetachAllItemsIfNeeded(data, context)
 
       data.map((_, index) => {
-        manager.assign(data[index].entity, data[index].update)
+        manager.assign(data[index].entity, data[index].update, {
+          mergeObjectProperties: true,
+        })
         manager.persist(data[index].entity)
       })
 
@@ -411,17 +433,37 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
     }
 
     async delete(
-      filters: FilterQuery<T> & BaseFilterable<FilterQuery<T>>,
+      filters: FindOptions<T>["where"],
       context?: Context
-    ): Promise<void> {
-      const manager = this.getActiveManager<EntityManager>(context)
-      await manager.nativeDelete<T>(entity as EntityName<T>, filters as any)
+    ): Promise<string[]> {
+      const manager = this.getActiveManager<SqlEntityManager>(context)
+
+      const whereSqlInfo = manager
+        .createQueryBuilder(this.entity.name, this.tableName)
+        .where(filters)
+        .getKnexQuery()
+        .toSQL()
+
+      const where = [
+        whereSqlInfo.sql.split("where ")[1],
+        whereSqlInfo.bindings,
+      ] as [string, any[]]
+
+      return await (manager.getTransactionContext() ?? manager.getKnex())
+        .queryBuilder()
+        .from(this.tableName)
+        .delete()
+        .where(manager.getKnex().raw(...where))
+        .returning("id")
+        .then((rows: { id: string }[]) => {
+          return rows.map((row: { id: string }) => row.id)
+        })
     }
 
     async find(
-      options: DAL.FindOptions<T> = { where: {} },
+      options: DAL.FindOptions<T> = { where: {} } as DAL.FindOptions<T>,
       context?: Context
-    ): Promise<T[]> {
+    ): Promise<InferRepositoryReturnType<T>[]> {
       const manager = this.getActiveManager<EntityManager>(context)
 
       const findOptions_ = { ...options }
@@ -443,17 +485,17 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
         findOptions: findOptions_,
       })
 
-      return await manager.find(
-        entity as EntityName<T>,
+      return (await manager.find(
+        this.entity as EntityName<T>,
         findOptions_.where as MikroFilterQuery<T>,
         findOptions_.options as MikroOptions<T>
-      )
+      )) as InferRepositoryReturnType<T>[]
     }
 
     async findAndCount(
-      findOptions: DAL.FindOptions<T> = { where: {} },
+      findOptions: DAL.FindOptions<T> = { where: {} } as DAL.FindOptions<T>,
       context: Context = {}
-    ): Promise<[T[], number]> {
+    ): Promise<[InferRepositoryReturnType<T>[], number]> {
       const manager = this.getActiveManager<EntityManager>(context)
 
       const findOptions_ = { ...findOptions }
@@ -467,18 +509,22 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
         findOptions: findOptions_,
       })
 
-      return await manager.findAndCount(
-        entity as EntityName<T>,
-        findOptions_.where as MikroFilterQuery<T>,
-        findOptions_.options as MikroOptions<T>
-      )
+      return (await manager.findAndCount(
+        this.entity,
+        findOptions_.where,
+        findOptions_.options as any // MikroOptions<T>
+      )) as [InferRepositoryReturnType<T>[], number]
     }
 
-    async upsert(data: any[], context: Context = {}): Promise<T[]> {
+    async upsert(
+      data: any[],
+      context: Context = {}
+    ): Promise<InferRepositoryReturnType<T>[]> {
       const manager = this.getActiveManager<EntityManager>(context)
 
-      const primaryKeys =
-        MikroOrmAbstractBaseRepository_.retrievePrimaryKeys(entity)
+      const primaryKeys = MikroOrmAbstractBaseRepository_.retrievePrimaryKeys(
+        this.entity
+      )
 
       let primaryKeysCriteria: { [key: string]: any }[] = []
       if (primaryKeys.length === 1) {
@@ -497,7 +543,7 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
         }))
       }
 
-      let allEntities: T[][] = []
+      let allEntities: InferRepositoryReturnType<T>[][] = []
 
       if (primaryKeysCriteria.length) {
         allEntities = await Promise.all(
@@ -513,7 +559,10 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
 
       const existingEntities = allEntities.flat()
 
-      const existingEntitiesMap = new Map<string, T>()
+      const existingEntitiesMap = new Map<
+        string,
+        InferRepositoryReturnType<T>
+      >()
       existingEntities.forEach((entity) => {
         if (entity) {
           const key =
@@ -525,9 +574,9 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
         }
       })
 
-      const upsertedEntities: T[] = []
-      const createdEntities: T[] = []
-      const updatedEntities: T[] = []
+      const upsertedEntities: InferRepositoryReturnType<T>[] = []
+      const createdEntities: InferRepositoryReturnType<T>[] = []
+      const updatedEntities: InferRepositoryReturnType<T>[] = []
 
       data.forEach((data_) => {
         // In case the data provided are just strings, then we build an object with the primary key as the key and the data as the valuecd -
@@ -540,10 +589,10 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
         const existingEntity = existingEntitiesMap.get(key)
         if (existingEntity) {
           const updatedType = manager.assign(existingEntity, data_)
-          updatedEntities.push(updatedType)
+          updatedEntities.push(updatedType as any)
         } else {
-          const newEntity = manager.create<T>(entity, data_)
-          createdEntities.push(newEntity)
+          const newEntity = manager.create(this.entity, data_)
+          createdEntities.push(newEntity as InferRepositoryReturnType<T>)
         }
       })
 
@@ -558,7 +607,7 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
       }
 
       // TODO return the all, created, updated entities
-      return upsertedEntities
+      return upsertedEntities as InferRepositoryReturnType<T>[]
     }
 
     // UpsertWithReplace does several things to simplify module implementation.
@@ -570,11 +619,14 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
     // We only support 1-level depth of upserts. We don't support custom fields on the many-to-many pivot tables for now
     async upsertWithReplace(
       data: any[],
-      config: UpsertWithReplaceConfig<T> = {
+      config: UpsertWithReplaceConfig<InferRepositoryReturnType<T>> = {
         relations: [],
       },
       context: Context = {}
-    ): Promise<{ entities: T[]; performedActions: PerformedActions }> {
+    ): Promise<{
+      entities: InferRepositoryReturnType<T>[]
+      performedActions: PerformedActions
+    }> {
       const performedActions: PerformedActions = {
         created: {},
         updated: {},
@@ -593,7 +645,7 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
       const allRelations = manager
         .getDriver()
         .getMetadata()
-        .get(entity.name).relations
+        .get(this.entity.name).relations
 
       const nonexistentRelations = arrayDifference(
         (config.relations as any) ?? [],
@@ -624,7 +676,11 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
           )
         })
 
-        const mainEntity = this.getEntityWithId(manager, entity.name, entryCopy)
+        const mainEntity = this.getEntityWithId(
+          manager,
+          this.entity.name,
+          entryCopy
+        )
         reconstructedResponse.push({ ...mainEntity, ...reconstructedEntry })
         originalDataMap.set(mainEntity.id, entry)
 
@@ -634,7 +690,7 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
       let {
         orderedEntities: upsertedTopLevelEntities,
         performedActions: performedActions_,
-      } = await this.upsertMany_(manager, entity.name, toUpsert)
+      } = await this.upsertMany_(manager, this.entity.name, toUpsert)
 
       this.mergePerformedActions(performedActions, performedActions_)
 
@@ -653,8 +709,8 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
               // TODO: Handle ONE_TO_ONE
               // One to one and Many to one are handled outside of the assignment as they need to happen before the main entity is created
               if (
-                relation.reference === ReferenceType.ONE_TO_ONE ||
-                relation.reference === ReferenceType.MANY_TO_ONE
+                relation.kind === ReferenceKind.ONE_TO_ONE ||
+                relation.kind === ReferenceKind.MANY_TO_ONE
               ) {
                 return
               }
@@ -720,7 +776,7 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
         return this.getEntityWithId(manager, relation.type, normalizedItem)
       })
 
-      if (relation.reference === ReferenceType.MANY_TO_MANY) {
+      if (relation.kind === ReferenceKind.MANY_TO_MANY) {
         const currentPivotColumn = relation.inverseJoinColumns[0]
         const parentPivotColumn = relation.joinColumns[0]
 
@@ -747,20 +803,25 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
           }
         })
 
-        const qb = manager.qb(relation.pivotEntity)
-        await qb.insert(pivotData).onConflict().ignore().execute()
-
-        await manager.nativeDelete(relation.pivotEntity, {
-          [parentPivotColumn]: (data as any).id,
-          [currentPivotColumn]: {
-            $nin: pivotData.map((d) => d[currentPivotColumn]),
-          },
-        })
+        await promiseAll([
+          manager
+            .qb(relation.pivotEntity)
+            .insert(pivotData)
+            .onConflict()
+            .ignore()
+            .execute(),
+          manager.nativeDelete(relation.pivotEntity, {
+            [parentPivotColumn]: (data as any).id,
+            [currentPivotColumn]: {
+              $nin: pivotData.map((d) => d[currentPivotColumn]),
+            },
+          }),
+        ])
 
         return { entities: normalizedData, performedActions }
       }
 
-      if (relation.reference === ReferenceType.ONE_TO_MANY) {
+      if (relation.kind === ReferenceKind.ONE_TO_MANY) {
         const joinColumns =
           relation.targetMeta?.properties[relation.mappedBy]?.joinColumns
 
@@ -770,27 +831,23 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
           joinColumnsConstraints[joinColumn] = data[referencedColumnName]
         })
 
-        const toDeleteEntities = await manager.find<any>(
-          relation.type,
-          {
-            ...joinColumnsConstraints,
-            id: { $nin: normalizedData.map((d: any) => d.id) },
-          },
-          {
-            fields: ["id"],
-          }
+        const deletedRelations = await (
+          manager.getTransactionContext() ?? manager.getKnex()
         )
-        const toDeleteIds = toDeleteEntities.map((d: any) => d.id)
+          .queryBuilder()
+          .from(relation.targetMeta!.collection)
+          .delete()
+          .where(joinColumnsConstraints)
+          .whereNotIn(
+            "id",
+            normalizedData.map((d: any) => d.id)
+          )
+          .returning("id")
 
-        await manager.nativeDelete(relation.type, {
-          ...joinColumnsConstraints,
-          id: { $in: toDeleteIds },
-        })
-
-        if (toDeleteEntities.length) {
+        if (deletedRelations.length) {
           performedActions.deleted[relation.type] ??= []
           performedActions.deleted[relation.type].push(
-            ...toDeleteEntities.map((d) => ({ id: d.id }))
+            ...deletedRelations.map((row) => ({ id: row.id }))
           )
         }
 
@@ -824,7 +881,7 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
       }
 
       // If it is a many-to-one we ensure the ID is set for when we want to set/unset an association
-      if (relation.reference === ReferenceType.MANY_TO_ONE) {
+      if (relation.kind === ReferenceKind.MANY_TO_ONE) {
         if (originalData === null) {
           entryCopy[relation.joinColumns[0]] = null
           return null
@@ -882,7 +939,7 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
         .filter(
           ([_, propDef]: any) =>
             propDef.persist === false &&
-            propDef.reference === ReferenceType.MANY_TO_ONE
+            propDef.kind === ReferenceKind.MANY_TO_ONE
         )
         .forEach(([key]) => {
           delete resp[key]
@@ -914,38 +971,46 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
         deleted: {},
       }
 
-      await promiseAll(
-        entries.map(async (data) => {
-          const existingEntity = existingEntitiesMap.get(data.id)
-          orderedEntities.push(data)
-          if (existingEntity) {
-            if (skipUpdate) {
-              return
-            }
-            await manager.nativeUpdate(entityName, { id: data.id }, data)
-            performedActions.updated[entityName] ??= []
-            performedActions.updated[entityName].push({ id: data.id })
-          } else {
-            const qb = manager.qb(entityName)
-            if (skipUpdate) {
-              const res = await qb
-                .insert(data)
-                .onConflict()
-                .ignore()
-                .execute("all", true)
-              if (res) {
-                performedActions.created[entityName] ??= []
-                performedActions.created[entityName].push({ id: data.id })
-              }
-            } else {
-              await manager.insert(entityName, data)
-              performedActions.created[entityName] ??= []
-              performedActions.created[entityName].push({ id: data.id })
-              // await manager.insert(entityName, data)
-            }
+      const promises: Promise<any>[] = []
+      const toInsert: unknown[] = []
+      let shouldInsert = false
+
+      entries.map(async (data) => {
+        const existingEntity = existingEntitiesMap.get(data.id)
+        orderedEntities.push(data)
+        if (existingEntity) {
+          if (skipUpdate) {
+            return
           }
-        })
-      )
+          const update = manager.nativeUpdate(entityName, { id: data.id }, data)
+          promises.push(update)
+
+          performedActions.updated[entityName] ??= []
+          performedActions.updated[entityName].push({ id: data.id })
+        } else {
+          shouldInsert = true
+          toInsert.push(data)
+        }
+      })
+
+      if (shouldInsert) {
+        let insertQb = manager.qb(entityName).insert(toInsert).returning("id")
+
+        if (skipUpdate) {
+          insertQb = insertQb.onConflict().ignore()
+        }
+
+        promises.push(
+          insertQb.execute("all", true).then((res: { id: string }[]) => {
+            performedActions.created[entityName] ??= []
+            performedActions.created[entityName].push(
+              ...res.map((data) => ({ id: data.id }))
+            )
+          })
+        )
+      }
+
+      await promiseAll(promises)
 
       return { orderedEntities, performedActions }
     }
@@ -954,10 +1019,10 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
       filters:
         | string
         | string[]
-        | (FilterQuery<T> & BaseFilterable<FilterQuery<T>>)
-        | (FilterQuery<T> & BaseFilterable<FilterQuery<T>>)[],
+        | DAL.FindOptions<T>["where"]
+        | DAL.FindOptions<T>["where"][],
       sharedContext: Context = {}
-    ): Promise<[T[], Record<string, unknown[]>]> {
+    ): Promise<[InferRepositoryReturnType<T>[], Record<string, unknown[]>]> {
       if (Array.isArray(filters) && !filters.filter(Boolean).length) {
         return [[], {}]
       }
@@ -975,10 +1040,10 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
       filters:
         | string
         | string[]
-        | (FilterQuery<T> & BaseFilterable<FilterQuery<T>>)
-        | (FilterQuery<T> & BaseFilterable<FilterQuery<T>>)[],
+        | DAL.FindOptions<T>["where"]
+        | DAL.FindOptions<T>["where"][],
       sharedContext: Context = {}
-    ): Promise<[T[], Record<string, unknown[]>]> {
+    ): Promise<[InferRepositoryReturnType<T>[], Record<string, unknown[]>]> {
       if (Array.isArray(filters) && !filters.filter(Boolean).length) {
         return [[], {}]
       }
@@ -996,11 +1061,12 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
       filters:
         | string
         | string[]
-        | (FilterQuery<T> & BaseFilterable<FilterQuery<T>>)
-        | (FilterQuery<T> & BaseFilterable<FilterQuery<T>>)[]
-    ) {
-      const primaryKeys =
-        MikroOrmAbstractBaseRepository_.retrievePrimaryKeys(entity)
+        | DAL.FindOptions<T>["where"]
+        | DAL.FindOptions<T>["where"][]
+    ): DAL.FindOptions<T>["where"] {
+      const primaryKeys = MikroOrmAbstractBaseRepository_.retrievePrimaryKeys(
+        this.entity
+      )
 
       const filterArray = Array.isArray(filters) ? filters : [filters]
       const normalizedFilters: FilterQuery = {
@@ -1014,7 +1080,7 @@ export function mikroOrmBaseRepositoryFactory<T extends object = object>(
         }),
       }
 
-      return normalizedFilters
+      return normalizedFilters as DAL.FindOptions<T>["where"]
     }
   }
 

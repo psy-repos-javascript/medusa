@@ -13,7 +13,77 @@ export const generatedSidebar = [
     "type": "link",
     "path": "/examples",
     "title": "Examples",
-    "children": []
+    "isChildSidebar": true,
+    "children": [
+      {
+        "loaded": true,
+        "isPathHref": true,
+        "type": "ref",
+        "path": "/examples",
+        "title": "Example Snippets",
+        "children": []
+      },
+      {
+        "loaded": true,
+        "isPathHref": true,
+        "type": "ref",
+        "path": "/recipes",
+        "title": "Recipes",
+        "children": []
+      },
+      {
+        "loaded": true,
+        "isPathHref": true,
+        "type": "ref",
+        "path": "/plugins",
+        "title": "Plugins",
+        "children": []
+      },
+      {
+        "loaded": true,
+        "isPathHref": true,
+        "type": "ref",
+        "path": "/integrations",
+        "title": "Integrations",
+        "children": []
+      },
+      {
+        "loaded": true,
+        "isPathHref": true,
+        "type": "category",
+        "title": "Server Examples",
+        "autogenerate_tags": "example+server",
+        "autogenerate_as_ref": true,
+        "children": [
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "title": "Custom Item Price",
+            "path": "/examples/guides/custom-item-price",
+            "children": []
+          }
+        ]
+      },
+      {
+        "loaded": true,
+        "isPathHref": true,
+        "type": "category",
+        "title": "Storefront Examples",
+        "autogenerate_tags": "example+storefront",
+        "autogenerate_as_ref": true,
+        "children": [
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "ref",
+            "title": "Implement Express Checkout with Medusa",
+            "path": "https://docs.medusajs.com/resources/storefront-development/guides/express-checkout",
+            "children": []
+          }
+        ]
+      }
+    ]
   },
   {
     "loaded": true,
@@ -86,6 +156,23 @@ export const generatedSidebar = [
         "loaded": true,
         "isPathHref": true,
         "type": "link",
+        "path": "/recipes/erp",
+        "title": "Integrate ERP",
+        "children": [
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "path": "/recipes/erp/odoo",
+            "title": "Example: Odoo Integration",
+            "children": []
+          }
+        ]
+      },
+      {
+        "loaded": true,
+        "isPathHref": true,
+        "type": "link",
         "path": "/recipes/b2b",
         "title": "B2B",
         "children": []
@@ -96,7 +183,16 @@ export const generatedSidebar = [
         "type": "link",
         "path": "/recipes/commerce-automation",
         "title": "Commerce Automation",
-        "children": []
+        "children": [
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "path": "/recipes/commerce-automation/restock-notification",
+            "title": "Example: Restock Notifications",
+            "children": []
+          }
+        ]
       },
       {
         "loaded": true,
@@ -104,14 +200,6 @@ export const generatedSidebar = [
         "type": "link",
         "path": "/recipes/ecommerce",
         "title": "Ecommerce",
-        "children": []
-      },
-      {
-        "loaded": true,
-        "isPathHref": true,
-        "type": "link",
-        "path": "/recipes/integrate-ecommerce-stack",
-        "title": "Integrate Ecommerce Stack",
         "children": []
       },
       {
@@ -165,14 +253,14 @@ export const generatedSidebar = [
     "type": "link",
     "path": "/commerce-modules",
     "title": "Commerce Modules",
-    "isChildSidebar": true,
+    "hideChildren": true,
     "children": [
       {
         "loaded": true,
         "isPathHref": true,
         "type": "category",
         "title": "API Key Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
@@ -183,18 +271,14 @@ export const generatedSidebar = [
             "children": []
           },
           {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/api-key/examples",
-            "title": "Examples",
-            "children": []
+            "type": "separator"
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
             "title": "Concepts",
+            "initialOpen": false,
             "children": [
               {
                 "loaded": true,
@@ -217,9 +301,190 @@ export const generatedSidebar = [
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "References",
+            "type": "category",
+            "title": "Storefront Guides",
+            "initialOpen": false,
+            "autogenerate_tags": "storefront+apiKey,-jsSdk",
+            "autogenerate_as_ref": true,
+            "description": "Learn how to integrate the API Key Module's features into your storefront.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Use a Publishable API Key in the Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/publishable-api-keys",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Admin User Guides",
+            "initialOpen": false,
+            "autogenerate_tags": "userGuide+apiKey",
+            "autogenerate_as_ref": true,
+            "description": "Learn how to utilize and manage API Key features in the Medusa Admin dashboard.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Publishable API Keys",
+                "path": "https://docs.medusajs.com/user-guide/settings/developer/publishable-api-keys",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Secret API Keys",
+                "path": "https://docs.medusajs.com/user-guide/settings/developer/secret-api-keys",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the API Key Module, such as data models, methods, and more. These are useful for your customizations.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/api-key/workflows",
+                "title": "Workflows",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Workflows",
+                    "autogenerate_tags": "workflow+apiKey",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createApiKeysWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createApiKeysWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteApiKeysWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteApiKeysWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "revokeApiKeysWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/revokeApiKeysWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateApiKeysWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateApiKeysWorkflow",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Steps",
+                    "autogenerate_tags": "step+apiKey",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createApiKeysStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createApiKeysStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteApiKeysStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteApiKeysStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "revokeApiKeysStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/revokeApiKeysStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateApiKeysStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateApiKeysStep",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/api-key/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Admin",
+                    "autogenerate_tags": "jsSdk+admin+apiKey",
+                    "description": "The following methods or properties are used to send requests to Admin API Routes related to the API Key Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "apiKey",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/apiKey",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/api-key/admin-widget-zones",
+                "title": "Admin Widget Zones",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -243,6 +508,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/api-key/authenticate",
                         "title": "authenticate",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -251,6 +517,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/api-key/createApiKeys",
                         "title": "createApiKeys",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -259,6 +526,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/api-key/deleteApiKeys",
                         "title": "deleteApiKeys",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -267,6 +535,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/api-key/listAndCountApiKeys",
                         "title": "listAndCountApiKeys",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -275,6 +544,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/api-key/listApiKeys",
                         "title": "listApiKeys",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -283,6 +553,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/api-key/retrieveApiKey",
                         "title": "retrieveApiKey",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -291,6 +562,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/api-key/revoke",
                         "title": "revoke",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -299,6 +571,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/api-key/updateApiKeys",
                         "title": "updateApiKeys",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -307,6 +580,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/api-key/upsertApiKeys",
                         "title": "upsertApiKeys",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -328,7 +602,7 @@ export const generatedSidebar = [
                     "type": "category",
                     "title": "Data Models",
                     "hasTitleStyling": true,
-                    "autogenerate_path": "/references/api_key_models/classes",
+                    "autogenerate_path": "/references/api_key_models/variables",
                     "children": [
                       {
                         "loaded": true,
@@ -336,6 +610,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/api-key/models/ApiKey",
                         "title": "ApiKey",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -351,7 +626,7 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "category",
         "title": "Auth Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
@@ -370,18 +645,14 @@ export const generatedSidebar = [
             "children": []
           },
           {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/auth/examples",
-            "title": "Examples",
-            "children": []
+            "type": "separator"
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
             "title": "Concepts",
+            "initialOpen": false,
             "children": [
               {
                 "loaded": true,
@@ -420,8 +691,12 @@ export const generatedSidebar = [
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "Guides",
+            "type": "category",
+            "title": "Server Guides",
+            "autogenerate_tags": "server+auth",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to use the Auth Module in your customizations on the Medusa application server.",
             "children": [
               {
                 "loaded": true,
@@ -452,8 +727,89 @@ export const generatedSidebar = [
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
+            "title": "Storefront Guides",
+            "autogenerate_tags": "storefront+auth,-jsSdk",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to integrate the Auth Module's features into your storefront.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Log-out Customer in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/customers/log-out",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Login Customer in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/customers/login",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Register Customer in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/customers/register",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Reset Customer Password in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/customers/reset-password",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Retrieve Logged-In Customer in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/customers/retrieve",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Third-Party or Social Login in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/customers/third-party-login",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Admin User Guides",
+            "autogenerate_tags": "userGuide+auth",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to utilize and manage Auth features in the Medusa Admin dashboard.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Reset Password",
+                "path": "https://docs.medusajs.com/user-guide/reset-password",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
             "title": "Providers",
+            "initialOpen": false,
             "children": [
               {
                 "loaded": true,
@@ -484,9 +840,173 @@ export const generatedSidebar = [
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
             "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the Auth Module, such as data models, methods, and more. These are useful for your customizations.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/auth/workflows",
+                "title": "Workflows",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Workflows",
+                    "autogenerate_tags": "workflow+auth",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCustomerAccountWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCustomerAccountWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeCustomerAccountWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeCustomerAccountWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "acceptInviteWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/acceptInviteWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createUserAccountWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createUserAccountWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeUserAccountWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeUserAccountWorkflow",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Steps",
+                    "autogenerate_tags": "step+auth",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "setAuthAppMetadataStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/setAuthAppMetadataStep",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/auth/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "autogenerate_tags": "jsSdk+auth",
+                "autogenerate_as_ref": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "ref",
+                    "title": "callback",
+                    "path": "https://docs.medusajs.com/resources/references/js-sdk/auth/callback",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "ref",
+                    "title": "login",
+                    "path": "https://docs.medusajs.com/resources/references/js-sdk/auth/login",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "ref",
+                    "title": "logout",
+                    "path": "https://docs.medusajs.com/resources/references/js-sdk/auth/logout",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "ref",
+                    "title": "refresh",
+                    "path": "https://docs.medusajs.com/resources/references/js-sdk/auth/refresh",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "ref",
+                    "title": "register",
+                    "path": "https://docs.medusajs.com/resources/references/js-sdk/auth/register",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "ref",
+                    "title": "resetPassword",
+                    "path": "https://docs.medusajs.com/resources/references/js-sdk/auth/resetPassword",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "ref",
+                    "title": "updateProvider",
+                    "path": "https://docs.medusajs.com/resources/references/js-sdk/auth/updateProvider",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/auth/events",
+                "title": "Events Reference",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/auth/admin-widget-zones",
+                "title": "Admin Widget Zones",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -509,6 +1029,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/auth/authenticate",
                         "title": "authenticate",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -517,6 +1038,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/auth/createAuthIdentities",
                         "title": "createAuthIdentities",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -525,6 +1047,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/auth/createProviderIdentities",
                         "title": "createProviderIdentities",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -533,6 +1056,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/auth/deleteAuthIdentities",
                         "title": "deleteAuthIdentities",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -541,6 +1065,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/auth/deleteProviderIdentities",
                         "title": "deleteProviderIdentities",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -549,6 +1074,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/auth/listAndCountAuthIdentities",
                         "title": "listAndCountAuthIdentities",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -557,6 +1083,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/auth/listAuthIdentities",
                         "title": "listAuthIdentities",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -565,6 +1092,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/auth/listProviderIdentities",
                         "title": "listProviderIdentities",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -573,6 +1101,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/auth/register",
                         "title": "register",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -581,6 +1110,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/auth/retrieveAuthIdentity",
                         "title": "retrieveAuthIdentity",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -589,6 +1119,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/auth/retrieveProviderIdentity",
                         "title": "retrieveProviderIdentity",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -597,6 +1128,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/auth/updateAuthIdentities",
                         "title": "updateAuthIdentities",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -605,6 +1137,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/auth/updateProvider",
                         "title": "updateProvider",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -613,6 +1146,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/auth/updateProviderIdentities",
                         "title": "updateProviderIdentities",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -621,6 +1155,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/auth/validateCallback",
                         "title": "validateCallback",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -641,7 +1176,7 @@ export const generatedSidebar = [
                     "isPathHref": true,
                     "type": "category",
                     "title": "Data Models",
-                    "autogenerate_path": "/references/auth_models/classes",
+                    "autogenerate_path": "/references/auth_models/variables",
                     "children": [
                       {
                         "loaded": true,
@@ -649,6 +1184,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/auth/models/AuthIdentity",
                         "title": "AuthIdentity",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -657,6 +1193,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/auth/models/ProviderIdentity",
                         "title": "ProviderIdentity",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -672,7 +1209,7 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "category",
         "title": "Cart Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
@@ -683,26 +1220,14 @@ export const generatedSidebar = [
             "children": []
           },
           {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/cart/examples",
-            "title": "Examples",
-            "children": []
+            "type": "separator"
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/cart/extend",
-            "title": "Extend Module",
-            "children": []
-          },
-          {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
             "title": "Concepts",
+            "initialOpen": false,
             "children": [
               {
                 "loaded": true,
@@ -741,9 +1266,430 @@ export const generatedSidebar = [
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "References",
+            "type": "category",
+            "title": "Server Guides",
+            "autogenerate_tags": "server+cart",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to use the Cart Module in your customizations on the Medusa application server.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/cart/extend",
+                "title": "Extend Module",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Implement Custom Line Item Pricing in Medusa",
+                "path": "https://docs.medusajs.com/resources/examples/guides/custom-item-price",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Storefront Guides",
+            "autogenerate_tags": "storefront+cart,-jsSdk",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to integrate the Cart Module's features into your storefront.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Create Cart Context in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/cart/context",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Create Cart in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/cart/create",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Cart's Items in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/cart/manage-items",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Retrieve Cart in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/cart/retrieve",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Update Cart in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/cart/update",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Checkout Step 2: Set Address",
+                "path": "https://docs.medusajs.com/resources/storefront-development/checkout/address",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Checkout Step 5: Complete Cart",
+                "path": "https://docs.medusajs.com/resources/storefront-development/checkout/complete-cart",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Checkout Step 1: Enter Email",
+                "path": "https://docs.medusajs.com/resources/storefront-development/checkout/email",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Checkout Step 4: Choose Payment Provider",
+                "path": "https://docs.medusajs.com/resources/storefront-development/checkout/payment",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Payment with Stripe in React Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/checkout/payment/stripe",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Checkout Step 3: Choose Shipping Method",
+                "path": "https://docs.medusajs.com/resources/storefront-development/checkout/shipping",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the Cart Module, such as data models, methods, and more. These are useful for your customizations.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/cart/workflows",
+                "title": "Workflows",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Workflows",
+                    "autogenerate_tags": "workflow+cart",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addShippingMethodToCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addShippingMethodToCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addToCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addToCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "completeCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/completeCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "refreshCartItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshCartItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "refreshCartShippingMethodsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshCartShippingMethodsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "transferCartCustomerWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/transferCartCustomerWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCartPromotionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartPromotionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateLineItemInCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateLineItemInCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateTaxLinesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateTaxLinesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteLineItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteLineItemsWorkflow",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Steps",
+                    "autogenerate_tags": "step+cart",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addShippingMethodToCartStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/addShippingMethodToCartStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCartsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createCartsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createLineItemAdjustmentsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createLineItemAdjustmentsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createLineItemsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createLineItemsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createShippingMethodAdjustmentsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createShippingMethodAdjustmentsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "getLineItemActionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/getLineItemActionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeLineItemAdjustmentsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/removeLineItemAdjustmentsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeShippingMethodAdjustmentsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/removeShippingMethodAdjustmentsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeShippingMethodFromCartStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/removeShippingMethodFromCartStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "setTaxLinesForItemsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/setTaxLinesForItemsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCartsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateCartsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateLineItemsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateLineItemsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateShippingMethodsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateShippingMethodsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteLineItemsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteLineItemsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateLineItemsStepWithSelector",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateLineItemsStepWithSelector",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/cart/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Store",
+                    "autogenerate_tags": "jsSdk+storefront+cart",
+                    "description": "The following methods or properties are used to send requests to Store API Routes related to the Cart Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "Implement Express Checkout with Medusa",
+                        "path": "https://docs.medusajs.com/resources/storefront-development/guides/express-checkout",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cart",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/store/cart",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/cart/events",
+                "title": "Events Reference",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -766,6 +1712,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/addLineItemAdjustments",
                         "title": "addLineItemAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -774,6 +1721,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/addLineItemTaxLines",
                         "title": "addLineItemTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -782,6 +1730,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/addLineItems",
                         "title": "addLineItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -790,6 +1739,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/addShippingMethodAdjustments",
                         "title": "addShippingMethodAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -798,6 +1748,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/addShippingMethodTaxLines",
                         "title": "addShippingMethodTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -806,6 +1757,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/addShippingMethods",
                         "title": "addShippingMethods",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -814,6 +1766,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/createAddresses",
                         "title": "createAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -822,6 +1775,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/createCarts",
                         "title": "createCarts",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -830,6 +1784,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/deleteAddresses",
                         "title": "deleteAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -838,6 +1793,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/deleteCarts",
                         "title": "deleteCarts",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -846,6 +1802,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/deleteLineItemAdjustments",
                         "title": "deleteLineItemAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -854,6 +1811,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/deleteLineItemTaxLines",
                         "title": "deleteLineItemTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -862,6 +1820,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/deleteLineItems",
                         "title": "deleteLineItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -870,6 +1829,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/deleteShippingMethodAdjustments",
                         "title": "deleteShippingMethodAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -878,6 +1838,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/deleteShippingMethodTaxLines",
                         "title": "deleteShippingMethodTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -886,6 +1847,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/deleteShippingMethods",
                         "title": "deleteShippingMethods",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -894,6 +1856,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/listAddresses",
                         "title": "listAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -902,6 +1865,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/listAndCountCarts",
                         "title": "listAndCountCarts",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -910,6 +1874,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/listCarts",
                         "title": "listCarts",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -918,6 +1883,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/listLineItemAdjustments",
                         "title": "listLineItemAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -926,6 +1892,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/listLineItemTaxLines",
                         "title": "listLineItemTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -934,6 +1901,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/listLineItems",
                         "title": "listLineItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -942,6 +1910,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/listShippingMethodAdjustments",
                         "title": "listShippingMethodAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -950,6 +1919,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/listShippingMethodTaxLines",
                         "title": "listShippingMethodTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -958,6 +1928,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/listShippingMethods",
                         "title": "listShippingMethods",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -966,6 +1937,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/restoreAddresses",
                         "title": "restoreAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -974,6 +1946,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/restoreCarts",
                         "title": "restoreCarts",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -982,6 +1955,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/restoreLineItemAdjustments",
                         "title": "restoreLineItemAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -990,6 +1964,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/restoreLineItemTaxLines",
                         "title": "restoreLineItemTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -998,6 +1973,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/restoreLineItems",
                         "title": "restoreLineItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1006,6 +1982,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/restoreShippingMethodAdjustments",
                         "title": "restoreShippingMethodAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1014,6 +1991,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/restoreShippingMethodTaxLines",
                         "title": "restoreShippingMethodTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1022,6 +2000,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/restoreShippingMethods",
                         "title": "restoreShippingMethods",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1030,6 +2009,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/retrieveCart",
                         "title": "retrieveCart",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1038,6 +2018,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/retrieveLineItem",
                         "title": "retrieveLineItem",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1046,6 +2027,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/setLineItemAdjustments",
                         "title": "setLineItemAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1054,6 +2036,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/setLineItemTaxLines",
                         "title": "setLineItemTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1062,6 +2045,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/setShippingMethodAdjustments",
                         "title": "setShippingMethodAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1070,6 +2054,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/setShippingMethodTaxLines",
                         "title": "setShippingMethodTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1078,6 +2063,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/softDeleteAddresses",
                         "title": "softDeleteAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1086,6 +2072,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/softDeleteCarts",
                         "title": "softDeleteCarts",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1094,6 +2081,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/softDeleteLineItemAdjustments",
                         "title": "softDeleteLineItemAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1102,6 +2090,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/softDeleteLineItemTaxLines",
                         "title": "softDeleteLineItemTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1110,6 +2099,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/softDeleteLineItems",
                         "title": "softDeleteLineItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1118,6 +2108,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/softDeleteShippingMethodAdjustments",
                         "title": "softDeleteShippingMethodAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1126,6 +2117,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/softDeleteShippingMethodTaxLines",
                         "title": "softDeleteShippingMethodTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1134,6 +2126,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/softDeleteShippingMethods",
                         "title": "softDeleteShippingMethods",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1142,6 +2135,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/updateAddresses",
                         "title": "updateAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1150,6 +2144,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/updateCarts",
                         "title": "updateCarts",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1158,6 +2153,16 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/updateLineItems",
                         "title": "updateLineItems",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/cart/updateShippingMethods",
+                        "title": "updateShippingMethods",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -1178,7 +2183,7 @@ export const generatedSidebar = [
                     "isPathHref": true,
                     "type": "category",
                     "title": "Data Models",
-                    "autogenerate_path": "/references/cart_models/classes",
+                    "autogenerate_path": "/references/cart_models/variables",
                     "children": [
                       {
                         "loaded": true,
@@ -1186,6 +2191,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/models/Address",
                         "title": "Address",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1194,6 +2200,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/models/Cart",
                         "title": "Cart",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1202,6 +2209,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/models/LineItem",
                         "title": "LineItem",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1210,6 +2218,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/models/LineItemAdjustment",
                         "title": "LineItemAdjustment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1218,6 +2227,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/models/LineItemTaxLine",
                         "title": "LineItemTaxLine",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1226,6 +2236,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/models/ShippingMethod",
                         "title": "ShippingMethod",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1234,6 +2245,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/models/ShippingMethodAdjustment",
                         "title": "ShippingMethodAdjustment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1242,6 +2254,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/cart/models/ShippingMethodTaxLine",
                         "title": "ShippingMethodTaxLine",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -1257,7 +2270,7 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "category",
         "title": "Currency Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
@@ -1268,19 +2281,82 @@ export const generatedSidebar = [
             "children": []
           },
           {
+            "type": "separator"
+          },
+          {
             "loaded": true,
             "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/currency/examples",
-            "title": "Examples",
-            "children": []
+            "type": "sub-category",
+            "title": "Concepts",
+            "initialOpen": false,
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/currency/links-to-other-modules",
+                "title": "Link to Modules",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Admin User Guides",
+            "autogenerate_tags": "userGuide+currency",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to utilize and manage Currency features in the Medusa Admin dashboard.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Store",
+                "path": "https://docs.medusajs.com/user-guide/settings/store",
+                "children": []
+              }
+            ]
           },
           {
             "loaded": true,
             "isPathHref": true,
             "type": "sub-category",
             "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the Currency Module, such as data models, methods, and more. These are useful for your customizations.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/currency/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Admin",
+                    "autogenerate_tags": "jsSdk+admin+currency",
+                    "description": "The following methods or properties are used to send requests to Admin API Routes related to the Currency Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "currency",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/currency",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -1288,7 +2364,7 @@ export const generatedSidebar = [
                 "path": "/references/currency",
                 "title": "Main Service Reference",
                 "isChildSidebar": true,
-                "childSidebarTitle": "Cart Module's Main Service Reference",
+                "childSidebarTitle": "Currency Module's Main Service Reference",
                 "children": [
                   {
                     "loaded": true,
@@ -1303,6 +2379,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/currency/listAndCountCurrencies",
                         "title": "listAndCountCurrencies",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1311,6 +2388,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/currency/listCurrencies",
                         "title": "listCurrencies",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1319,6 +2397,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/currency/retrieveCurrency",
                         "title": "retrieveCurrency",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -1347,6 +2426,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/currency/models/Currency",
                         "title": "Currency",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -1362,7 +2442,7 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "category",
         "title": "Customer Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
@@ -1373,26 +2453,14 @@ export const generatedSidebar = [
             "children": []
           },
           {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/customer/examples",
-            "title": "Examples",
-            "children": []
+            "type": "separator"
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/customer/extend",
-            "title": "Extend Module",
-            "children": []
-          },
-          {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
             "title": "Concepts",
+            "initialOpen": false,
             "children": [
               {
                 "loaded": true,
@@ -1401,15 +2469,547 @@ export const generatedSidebar = [
                 "path": "/commerce-modules/customer/customer-accounts",
                 "title": "Customer Accounts",
                 "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/customer/links-to-other-modules",
+                "title": "Link to Modules",
+                "children": []
               }
             ]
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "References",
+            "type": "category",
+            "title": "Server Guides",
+            "autogenerate_tags": "server+customer",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to use the Customer Module in your customizations on the Medusa application server.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/customer/extend",
+                "title": "Extend Module",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Storefront Guides",
+            "autogenerate_tags": "storefront+customer,-jsSdk",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to integrate the Customer Module's features into your storefront.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Customer Addresses in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/customers/addresses",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Customer Context in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/customers/context",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Log-out Customer in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/customers/log-out",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Login Customer in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/customers/login",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Edit Customer Profile in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/customers/profile",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Register Customer in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/customers/register",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Reset Customer Password in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/customers/reset-password",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Retrieve Logged-In Customer in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/customers/retrieve",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Third-Party or Social Login in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/customers/third-party-login",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Admin User Guides",
+            "autogenerate_tags": "userGuide+customer",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to utilize and manage Customer features in the Medusa Admin dashboard.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Customer Groups",
+                "path": "https://docs.medusajs.com/user-guide/customers/groups",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Customers",
+                "path": "https://docs.medusajs.com/user-guide/customers/manage",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Customers Overview",
+                "path": "https://docs.medusajs.com/user-guide/customers",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the Customer Module, such as data models, methods, and more. These are useful for your customizations.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/customer/workflows",
+                "title": "Workflows",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Workflows",
+                    "autogenerate_tags": "workflow+customer",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCustomerAccountWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCustomerAccountWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCustomerAddressesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCustomerAddressesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCustomersWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCustomersWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteCustomerAddressesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteCustomerAddressesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteCustomersWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteCustomersWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeCustomerAccountWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeCustomerAccountWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCustomerAddressesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCustomerAddressesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCustomersWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCustomersWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCustomerGroupsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCustomerGroupsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteCustomerGroupsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteCustomerGroupsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "linkCustomerGroupsToCustomerWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/linkCustomerGroupsToCustomerWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "linkCustomersToCustomerGroupWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/linkCustomersToCustomerGroupWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCustomerGroupsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCustomerGroupsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addOrderLineItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addOrderLineItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderClaimAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderClaimAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderEditAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderEditAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderExchangeAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderExchangeAddNewItemWorkflow",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Steps",
+                    "autogenerate_tags": "step+customer",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "findOrCreateCustomerStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/findOrCreateCustomerStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCustomerAddressesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createCustomerAddressesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCustomersStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createCustomersStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteCustomerAddressesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteCustomerAddressesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteCustomersStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteCustomersStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "maybeUnsetDefaultBillingAddressesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/maybeUnsetDefaultBillingAddressesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "maybeUnsetDefaultShippingAddressesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/maybeUnsetDefaultShippingAddressesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCustomerAddressesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateCustomerAddressesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCustomersStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateCustomersStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "validateCustomerAccountCreation",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/validateCustomerAccountCreation",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCustomerGroupsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createCustomerGroupsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteCustomerGroupStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteCustomerGroupStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "linkCustomerGroupsToCustomerStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/linkCustomerGroupsToCustomerStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "linkCustomersToCustomerGroupStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/linkCustomersToCustomerGroupStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCustomerGroupsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateCustomerGroupsStep",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/customer/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Store",
+                    "autogenerate_tags": "jsSdk+storefront+customer",
+                    "description": "The following methods or properties are used to send requests to Store API Routes related to the Customer Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "customer",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/store/customer",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Admin",
+                    "autogenerate_tags": "jsSdk+admin+customer",
+                    "description": "The following methods or properties are used to send requests to Admin API Routes related to the Customer Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "customer",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/customer",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "customerGroup",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/customerGroup",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/customer/events",
+                "title": "Events Reference",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/customer/admin-widget-zones",
+                "title": "Admin Widget Zones",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -1432,6 +3032,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/addCustomerToGroup",
                         "title": "addCustomerToGroup",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1440,6 +3041,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/createCustomerAddresses",
                         "title": "createCustomerAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1448,6 +3050,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/createCustomerGroups",
                         "title": "createCustomerGroups",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1456,6 +3059,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/createCustomers",
                         "title": "createCustomers",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1464,6 +3068,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/deleteCustomerAddresses",
                         "title": "deleteCustomerAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1472,6 +3077,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/deleteCustomerGroups",
                         "title": "deleteCustomerGroups",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1480,6 +3086,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/deleteCustomers",
                         "title": "deleteCustomers",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1488,6 +3095,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/listAndCountCustomerAddresses",
                         "title": "listAndCountCustomerAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1496,6 +3104,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/listAndCountCustomerGroups",
                         "title": "listAndCountCustomerGroups",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1504,6 +3113,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/listAndCountCustomers",
                         "title": "listAndCountCustomers",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1512,6 +3122,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/listCustomerAddresses",
                         "title": "listCustomerAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1520,6 +3131,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/listCustomerGroupCustomers",
                         "title": "listCustomerGroupCustomers",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1528,6 +3140,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/listCustomerGroups",
                         "title": "listCustomerGroups",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1536,6 +3149,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/listCustomers",
                         "title": "listCustomers",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1544,6 +3158,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/removeCustomerFromGroup",
                         "title": "removeCustomerFromGroup",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1552,6 +3167,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/restoreCustomerGroups",
                         "title": "restoreCustomerGroups",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1560,6 +3176,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/restoreCustomers",
                         "title": "restoreCustomers",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1568,6 +3185,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/retrieveCustomer",
                         "title": "retrieveCustomer",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1576,6 +3194,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/retrieveCustomerGroup",
                         "title": "retrieveCustomerGroup",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1584,6 +3203,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/softDeleteCustomerGroups",
                         "title": "softDeleteCustomerGroups",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1592,6 +3212,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/softDeleteCustomers",
                         "title": "softDeleteCustomers",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1600,6 +3221,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/updateCustomerAddresses",
                         "title": "updateCustomerAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1608,6 +3230,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/updateCustomerGroups",
                         "title": "updateCustomerGroups",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1616,6 +3239,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/updateCustomers",
                         "title": "updateCustomers",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -1636,7 +3260,7 @@ export const generatedSidebar = [
                     "isPathHref": true,
                     "type": "category",
                     "title": "Data Models",
-                    "autogenerate_path": "/references/customer_models/classes",
+                    "autogenerate_path": "/references/customer_models/variables",
                     "children": [
                       {
                         "loaded": true,
@@ -1644,6 +3268,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/models/Customer",
                         "title": "Customer",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1652,6 +3277,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/models/CustomerAddress",
                         "title": "CustomerAddress",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1660,6 +3286,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/models/CustomerGroup",
                         "title": "CustomerGroup",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1668,6 +3295,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/customer/models/CustomerGroupCustomer",
                         "title": "CustomerGroupCustomer",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -1683,7 +3311,7 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "category",
         "title": "Fulfillment Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
@@ -1702,10 +3330,16 @@ export const generatedSidebar = [
             "children": []
           },
           {
+            "type": "separator"
+          },
+          {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
             "title": "Concepts",
+            "initialOpen": false,
+            "autogenerate_tags": "concept+fulfillment",
+            "autogenerate_as_ref": true,
             "children": [
               {
                 "loaded": true,
@@ -1746,14 +3380,26 @@ export const generatedSidebar = [
                 "path": "/commerce-modules/fulfillment/links-to-other-modules",
                 "title": "Links to Other Modules",
                 "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Product Shipping Requirement",
+                "path": "https://docs.medusajs.com/resources/commerce-modules/product/selling-products",
+                "children": []
               }
             ]
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "Guides",
+            "type": "category",
+            "title": "Server Guides",
+            "autogenerate_tags": "server+fulfillment",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to use the Fulfillment Module in your customizations on the Medusa application server.",
             "children": [
               {
                 "loaded": true,
@@ -1762,15 +3408,695 @@ export const generatedSidebar = [
                 "path": "/references/fulfillment/provider",
                 "title": "Create Fulfillment Provider Module",
                 "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "path": "/integrations/guides/shipstation",
+                "title": "Integrate ShipStation",
+                "children": []
               }
             ]
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "References",
+            "type": "category",
+            "title": "Storefront Guides",
+            "autogenerate_tags": "storefront+fulfillment,-jsSdk",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to integrate the Fulfillment Module's features into your storefront.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Checkout Step 3: Choose Shipping Method",
+                "path": "https://docs.medusajs.com/resources/storefront-development/checkout/shipping",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Admin User Guides",
+            "autogenerate_tags": "userGuide+fulfillment",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to utilize and manage Fulfillment features in the Medusa Admin dashboard.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Order Fulfillments",
+                "path": "https://docs.medusajs.com/user-guide/orders/fulfillments",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Locations & Shipping Overview",
+                "path": "https://docs.medusajs.com/user-guide/settings/locations-and-shipping",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Shipping Profiles",
+                "path": "https://docs.medusajs.com/user-guide/settings/locations-and-shipping/shipping-profiles",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the Fulfillment Module, such as data models, methods, and more. These are useful for your customizations.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/fulfillment/workflows",
+                "title": "Workflows",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Workflows",
+                    "autogenerate_tags": "workflow+fulfillment",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addShippingMethodToCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addShippingMethodToCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addToCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addToCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "listShippingOptionsForCartWithPricingWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/listShippingOptionsForCartWithPricingWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "refreshCartItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshCartItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "refreshCartShippingMethodsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshCartShippingMethodsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "transferCartCustomerWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/transferCartCustomerWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateLineItemInCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateLineItemInCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "batchShippingOptionRulesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/batchShippingOptionRulesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "calculateShippingOptionsPricesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/calculateShippingOptionsPricesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelFulfillmentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelFulfillmentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createFulfillmentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createFulfillmentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createReturnFulfillmentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createReturnFulfillmentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createServiceZonesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createServiceZonesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createShipmentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createShipmentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createShippingOptionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createShippingOptionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createShippingProfilesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createShippingProfilesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteFulfillmentSetsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteFulfillmentSetsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteServiceZonesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteServiceZonesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteShippingOptionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteShippingOptionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "markFulfillmentAsDeliveredWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/markFulfillmentAsDeliveredWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateFulfillmentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateFulfillmentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateServiceZonesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateServiceZonesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateShippingOptionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateShippingOptionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateShippingProfilesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateShippingProfilesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteLineItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteLineItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrderFulfillmentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderFulfillmentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmClaimRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmClaimRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmExchangeRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmExchangeRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmReturnRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmReturnRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createAndCompleteReturnOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createAndCompleteReturnOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderFulfillmentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderFulfillmentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderShipmentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderShipmentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "markOrderFulfillmentAsDeliveredWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/markOrderFulfillmentAsDeliveredWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "importProductsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/importProductsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteShippingProfileWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteShippingProfileWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createLocationFulfillmentSetWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createLocationFulfillmentSetWorkflow",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Steps",
+                    "autogenerate_tags": "step+fulfillment",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "validateAndReturnShippingMethodsDataStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/validateAndReturnShippingMethodsDataStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "validateCartShippingOptionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/validateCartShippingOptionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "calculateShippingOptionsPricesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/calculateShippingOptionsPricesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelFulfillmentStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/cancelFulfillmentStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createFulfillmentSets",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createFulfillmentSets",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createFulfillmentStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createFulfillmentStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createReturnFulfillmentStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createReturnFulfillmentStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createServiceZonesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createServiceZonesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createShippingOptionRulesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createShippingOptionRulesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createShippingProfilesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createShippingProfilesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteFulfillmentSetsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteFulfillmentSetsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteServiceZonesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteServiceZonesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteShippingOptionRulesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteShippingOptionRulesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteShippingOptionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteShippingOptionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateFulfillmentStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateFulfillmentStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateServiceZonesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateServiceZonesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateShippingOptionRulesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateShippingOptionRulesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateShippingProfilesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateShippingProfilesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "upsertShippingOptionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/upsertShippingOptionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "validateShipmentStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/validateShipmentStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "validateShippingOptionPricesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/validateShippingOptionPricesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "parseProductCsvStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/parseProductCsvStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteShippingProfilesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteShippingProfilesStep",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/fulfillment/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Store",
+                    "autogenerate_tags": "jsSdk+storefront+fulfillment",
+                    "description": "The following methods or properties are used to send requests to Store API Routes related to the Fulfillment Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "Implement Express Checkout with Medusa",
+                        "path": "https://docs.medusajs.com/resources/storefront-development/guides/express-checkout",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "fulfillment",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/store/fulfillment",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Admin",
+                    "autogenerate_tags": "jsSdk+admin+fulfillment",
+                    "description": "The following methods or properties are used to send requests to Admin API Routes related to the Fulfillment Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "fulfillment",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/fulfillment",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "fulfillmentProvider",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/fulfillmentProvider",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "fulfillmentSet",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/fulfillmentSet",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "shippingOption",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/shippingOption",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "shippingProfile",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/shippingProfile",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/fulfillment/events",
+                "title": "Events Reference",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/fulfillment/admin-widget-zones",
+                "title": "Admin Widget Zones",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -1791,8 +4117,18 @@ export const generatedSidebar = [
                         "loaded": true,
                         "isPathHref": true,
                         "type": "link",
+                        "path": "/references/fulfillment/calculateShippingOptionsPrices",
+                        "title": "calculateShippingOptionsPrices",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
                         "path": "/references/fulfillment/cancelFulfillment",
                         "title": "cancelFulfillment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1801,6 +4137,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/createFulfillment",
                         "title": "createFulfillment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1809,6 +4146,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/createFulfillmentSets",
                         "title": "createFulfillmentSets",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1817,6 +4155,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/createGeoZones",
                         "title": "createGeoZones",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1825,6 +4164,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/createReturnFulfillment",
                         "title": "createReturnFulfillment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1833,6 +4173,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/createServiceZones",
                         "title": "createServiceZones",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1841,6 +4182,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/createShippingOptionRules",
                         "title": "createShippingOptionRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1849,6 +4191,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/createShippingOptions",
                         "title": "createShippingOptions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1857,6 +4200,16 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/createShippingProfiles",
                         "title": "createShippingProfiles",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/fulfillment/deleteFulfillment",
+                        "title": "deleteFulfillment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1865,6 +4218,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/deleteFulfillmentSets",
                         "title": "deleteFulfillmentSets",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1873,6 +4227,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/deleteGeoZones",
                         "title": "deleteGeoZones",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1881,6 +4236,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/deleteServiceZones",
                         "title": "deleteServiceZones",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1889,6 +4245,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/deleteShippingOptionRules",
                         "title": "deleteShippingOptionRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1897,6 +4254,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/deleteShippingOptionTypes",
                         "title": "deleteShippingOptionTypes",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1905,6 +4263,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/deleteShippingOptions",
                         "title": "deleteShippingOptions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1913,6 +4272,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/deleteShippingProfiles",
                         "title": "deleteShippingProfiles",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1921,6 +4281,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listAndCountFulfillmentSets",
                         "title": "listAndCountFulfillmentSets",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1929,6 +4290,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listAndCountFulfillments",
                         "title": "listAndCountFulfillments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1937,6 +4299,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listAndCountGeoZones",
                         "title": "listAndCountGeoZones",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1945,6 +4308,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listAndCountServiceZones",
                         "title": "listAndCountServiceZones",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1953,6 +4317,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listAndCountShippingOptionRules",
                         "title": "listAndCountShippingOptionRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1961,6 +4326,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listAndCountShippingOptionTypes",
                         "title": "listAndCountShippingOptionTypes",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1969,6 +4335,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listAndCountShippingOptions",
                         "title": "listAndCountShippingOptions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1977,6 +4344,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listAndCountShippingProfiles",
                         "title": "listAndCountShippingProfiles",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1985,6 +4353,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listFulfillmentProviders",
                         "title": "listFulfillmentProviders",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -1993,6 +4362,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listFulfillmentSets",
                         "title": "listFulfillmentSets",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2001,6 +4371,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listFulfillments",
                         "title": "listFulfillments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2009,6 +4380,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listGeoZones",
                         "title": "listGeoZones",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2017,6 +4389,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listServiceZones",
                         "title": "listServiceZones",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2025,6 +4398,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listShippingOptionRules",
                         "title": "listShippingOptionRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2033,6 +4407,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listShippingOptionTypes",
                         "title": "listShippingOptionTypes",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2041,6 +4416,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listShippingOptions",
                         "title": "listShippingOptions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2049,6 +4425,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listShippingOptionsForContext",
                         "title": "listShippingOptionsForContext",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2057,6 +4434,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/listShippingProfiles",
                         "title": "listShippingProfiles",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2065,6 +4443,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/restoreFulfillmentSets",
                         "title": "restoreFulfillmentSets",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2073,6 +4452,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/restoreGeoZones",
                         "title": "restoreGeoZones",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2081,6 +4461,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/restoreServiceZones",
                         "title": "restoreServiceZones",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2089,6 +4470,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/restoreShippingOptions",
                         "title": "restoreShippingOptions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2097,6 +4479,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/restoreShippingProfiles",
                         "title": "restoreShippingProfiles",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2105,6 +4488,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/retrieveFulfillment",
                         "title": "retrieveFulfillment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2113,6 +4497,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/retrieveFulfillmentOptions",
                         "title": "retrieveFulfillmentOptions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2121,6 +4506,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/retrieveFulfillmentSet",
                         "title": "retrieveFulfillmentSet",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2129,6 +4515,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/retrieveGeoZone",
                         "title": "retrieveGeoZone",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2137,6 +4524,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/retrieveServiceZone",
                         "title": "retrieveServiceZone",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2145,6 +4533,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/retrieveShippingOption",
                         "title": "retrieveShippingOption",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2153,6 +4542,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/retrieveShippingOptionRule",
                         "title": "retrieveShippingOptionRule",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2161,6 +4551,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/retrieveShippingOptionType",
                         "title": "retrieveShippingOptionType",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2169,6 +4560,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/retrieveShippingProfile",
                         "title": "retrieveShippingProfile",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2177,6 +4569,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/softDeleteFulfillmentSets",
                         "title": "softDeleteFulfillmentSets",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2185,6 +4578,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/softDeleteGeoZones",
                         "title": "softDeleteGeoZones",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2193,6 +4587,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/softDeleteServiceZones",
                         "title": "softDeleteServiceZones",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2201,6 +4596,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/softDeleteShippingOptions",
                         "title": "softDeleteShippingOptions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2209,6 +4605,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/softDeleteShippingProfiles",
                         "title": "softDeleteShippingProfiles",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2217,6 +4614,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/updateFulfillment",
                         "title": "updateFulfillment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2225,6 +4623,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/updateFulfillmentSets",
                         "title": "updateFulfillmentSets",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2233,6 +4632,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/updateGeoZones",
                         "title": "updateGeoZones",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2241,6 +4641,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/updateServiceZones",
                         "title": "updateServiceZones",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2249,6 +4650,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/updateShippingOptionRules",
                         "title": "updateShippingOptionRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2257,6 +4659,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/updateShippingOptions",
                         "title": "updateShippingOptions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2265,6 +4668,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/updateShippingProfiles",
                         "title": "updateShippingProfiles",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2273,6 +4677,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/upsertServiceZones",
                         "title": "upsertServiceZones",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2281,6 +4686,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/upsertShippingOptions",
                         "title": "upsertShippingOptions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2289,6 +4695,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/upsertShippingProfiles",
                         "title": "upsertShippingProfiles",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2297,6 +4704,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/validateFulfillmentData",
                         "title": "validateFulfillmentData",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2305,6 +4713,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/validateFulfillmentOption",
                         "title": "validateFulfillmentOption",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2313,6 +4722,16 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/validateShippingOption",
                         "title": "validateShippingOption",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/fulfillment/validateShippingOptionsForPriceCalculation",
+                        "title": "validateShippingOptionsForPriceCalculation",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -2334,7 +4753,7 @@ export const generatedSidebar = [
                     "type": "category",
                     "title": "Data Models",
                     "hasTitleStyling": true,
-                    "autogenerate_path": "/references/fulfillment_models/classes",
+                    "autogenerate_path": "/references/fulfillment_models/variables",
                     "children": [
                       {
                         "loaded": true,
@@ -2342,6 +4761,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/models/Fulfillment",
                         "title": "Fulfillment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2350,6 +4770,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/models/FulfillmentAddress",
                         "title": "FulfillmentAddress",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2358,6 +4779,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/models/FulfillmentItem",
                         "title": "FulfillmentItem",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2366,6 +4788,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/models/FulfillmentLabel",
                         "title": "FulfillmentLabel",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2374,6 +4797,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/models/FulfillmentProvider",
                         "title": "FulfillmentProvider",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2382,6 +4806,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/models/FulfillmentSet",
                         "title": "FulfillmentSet",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2390,6 +4815,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/models/GeoZone",
                         "title": "GeoZone",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2398,6 +4824,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/models/ServiceZone",
                         "title": "ServiceZone",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2406,6 +4833,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/models/ShippingOption",
                         "title": "ShippingOption",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2414,6 +4842,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/models/ShippingOptionRule",
                         "title": "ShippingOptionRule",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2422,6 +4851,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/models/ShippingOptionType",
                         "title": "ShippingOptionType",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2430,6 +4860,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/fulfillment/models/ShippingProfile",
                         "title": "ShippingProfile",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -2445,29 +4876,27 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "category",
         "title": "Inventory Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
             "isPathHref": true,
             "type": "link",
             "path": "/commerce-modules/inventory",
-            "title": "Inventory Module",
+            "title": "Overview",
             "children": []
+          },
+          {
+            "type": "separator"
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/inventory/examples",
-            "title": "Examples",
-            "children": []
-          },
-          {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
             "title": "Concepts",
+            "initialOpen": false,
+            "autogenerate_tags": "concept+inventory",
+            "autogenerate_as_ref": true,
             "children": [
               {
                 "loaded": true,
@@ -2489,8 +4918,32 @@ export const generatedSidebar = [
                 "loaded": true,
                 "isPathHref": true,
                 "type": "link",
+                "path": "/commerce-modules/inventory/inventory-kit",
+                "title": "Inventory Kit",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
                 "path": "/commerce-modules/inventory/links-to-other-modules",
                 "title": "Links to Modules",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Inventory Kits",
+                "path": "https://docs.medusajs.com/resources/commerce-modules/inventory/inventory-kit",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Product Variant Inventory",
+                "path": "https://docs.medusajs.com/resources/commerce-modules/product/variant-inventory",
                 "children": []
               }
             ]
@@ -2498,9 +4951,526 @@ export const generatedSidebar = [
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "References",
+            "type": "category",
+            "title": "Storefront Guides",
+            "autogenerate_tags": "storefront+inventory,-jsSdk",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to integrate the Inventory Module's features into your storefront.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Retrieve Product Variant's Inventory in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/inventory",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Admin User Guides",
+            "autogenerate_tags": "userGuide+inventory",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to utilize and manage Inventory features in the Medusa Admin dashboard.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Inventory Items",
+                "path": "https://docs.medusajs.com/user-guide/inventory/inventory",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Inventory Overview",
+                "path": "https://docs.medusajs.com/user-guide/inventory",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Reservations",
+                "path": "https://docs.medusajs.com/user-guide/inventory/reservations",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the Inventory Module, such as data models, methods, and more. These are useful for your customizations.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/inventory/workflows",
+                "title": "Workflows",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Workflows",
+                    "autogenerate_tags": "workflow+inventory",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addToCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addToCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "completeCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/completeCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmVariantInventoryWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmVariantInventoryWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateLineItemInCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateLineItemInCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "batchInventoryItemLevelsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/batchInventoryItemLevelsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "bulkCreateDeleteLevelsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/bulkCreateDeleteLevelsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createInventoryItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createInventoryItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createInventoryLevelsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createInventoryLevelsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteInventoryItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteInventoryItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateInventoryItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateInventoryItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateInventoryLevelsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateInventoryLevelsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addOrderLineItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addOrderLineItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrderClaimWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderClaimWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrderExchangeWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderExchangeWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrderFulfillmentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderFulfillmentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmClaimRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmClaimRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmExchangeRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmExchangeRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmOrderEditRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmOrderEditRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmReturnReceiveWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmReturnReceiveWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderFulfillmentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderFulfillmentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderClaimAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderClaimAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderEditAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderEditAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderExchangeAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderExchangeAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "batchProductVariantsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/batchProductVariantsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "batchProductsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/batchProductsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createProductVariantsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createProductVariantsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createProductsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createProductsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteProductVariantsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteProductVariantsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteProductsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteProductsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createReservationsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createReservationsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteReservationsByLineItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteReservationsByLineItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteReservationsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteReservationsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateReservationsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateReservationsWorkflow",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Steps",
+                    "autogenerate_tags": "step+inventory",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmInventoryStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/confirmInventoryStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "reserveInventoryStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/reserveInventoryStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "adjustInventoryLevelsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/adjustInventoryLevelsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createInventoryItemsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createInventoryItemsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createInventoryLevelsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createInventoryLevelsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteInventoryItemStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteInventoryItemStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateInventoryItemsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateInventoryItemsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateInventoryLevelsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateInventoryLevelsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createReservationsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createReservationsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteReservationsByLineItemsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteReservationsByLineItemsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteReservationsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteReservationsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateReservationsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateReservationsStep",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/inventory/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Admin",
+                    "autogenerate_tags": "jsSdk+admin+inventory",
+                    "description": "The following methods or properties are used to send requests to Admin API Routes related to the Inventory Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "inventoryItem",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/inventoryItem",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "reservation",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/reservation",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/inventory/admin-widget-zones",
+                "title": "Admin Widget Zones",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -2523,6 +5493,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/adjustInventory",
                         "title": "adjustInventory",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2531,6 +5502,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/confirmInventory",
                         "title": "confirmInventory",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2539,6 +5511,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/createInventoryItems",
                         "title": "createInventoryItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2547,6 +5520,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/createInventoryLevels",
                         "title": "createInventoryLevels",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2555,6 +5529,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/createReservationItems",
                         "title": "createReservationItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2563,6 +5538,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/deleteInventoryItemLevelByLocationId",
                         "title": "deleteInventoryItemLevelByLocationId",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2571,6 +5547,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/deleteInventoryItems",
                         "title": "deleteInventoryItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2579,6 +5556,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/deleteInventoryLevel",
                         "title": "deleteInventoryLevel",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2587,6 +5565,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/deleteInventoryLevels",
                         "title": "deleteInventoryLevels",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2595,6 +5574,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/deleteReservationItemByLocationId",
                         "title": "deleteReservationItemByLocationId",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2603,6 +5583,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/deleteReservationItems",
                         "title": "deleteReservationItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2611,6 +5592,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/deleteReservationItemsByLineItem",
                         "title": "deleteReservationItemsByLineItem",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2619,6 +5601,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/listAndCountInventoryItems",
                         "title": "listAndCountInventoryItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2627,6 +5610,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/listAndCountInventoryLevels",
                         "title": "listAndCountInventoryLevels",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2635,6 +5619,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/listAndCountReservationItems",
                         "title": "listAndCountReservationItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2643,6 +5628,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/listInventoryItems",
                         "title": "listInventoryItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2651,6 +5637,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/listInventoryLevels",
                         "title": "listInventoryLevels",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2659,6 +5646,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/listReservationItems",
                         "title": "listReservationItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2667,6 +5655,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/restoreInventoryItems",
                         "title": "restoreInventoryItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2675,6 +5664,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/restoreInventoryLevels",
                         "title": "restoreInventoryLevels",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2683,6 +5673,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/restoreReservationItems",
                         "title": "restoreReservationItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2691,6 +5682,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/restoreReservationItemsByLineItem",
                         "title": "restoreReservationItemsByLineItem",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2699,6 +5691,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/retrieveAvailableQuantity",
                         "title": "retrieveAvailableQuantity",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2707,6 +5700,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/retrieveInventoryItem",
                         "title": "retrieveInventoryItem",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2715,6 +5709,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/retrieveInventoryLevel",
                         "title": "retrieveInventoryLevel",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2723,6 +5718,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/retrieveInventoryLevelByItemAndLocation",
                         "title": "retrieveInventoryLevelByItemAndLocation",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2731,6 +5727,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/retrieveReservationItem",
                         "title": "retrieveReservationItem",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2739,6 +5736,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/retrieveReservedQuantity",
                         "title": "retrieveReservedQuantity",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2747,6 +5745,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/retrieveStockedQuantity",
                         "title": "retrieveStockedQuantity",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2755,6 +5754,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/softDeleteInventoryItems",
                         "title": "softDeleteInventoryItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2763,6 +5763,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/softDeleteInventoryLevels",
                         "title": "softDeleteInventoryLevels",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2771,6 +5772,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/softDeleteReservationItems",
                         "title": "softDeleteReservationItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2779,6 +5781,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/updateInventoryItems",
                         "title": "updateInventoryItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2787,6 +5790,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/updateInventoryLevels",
                         "title": "updateInventoryLevels",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2795,6 +5799,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/updateReservationItems",
                         "title": "updateReservationItems",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -2815,7 +5820,7 @@ export const generatedSidebar = [
                     "isPathHref": true,
                     "type": "category",
                     "title": "Data Models",
-                    "autogenerate_path": "/references/inventory_next_models/classes",
+                    "autogenerate_path": "/references/inventory_next_models/variables",
                     "children": [
                       {
                         "loaded": true,
@@ -2823,6 +5828,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/models/InventoryItem",
                         "title": "InventoryItem",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2831,6 +5837,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/models/InventoryLevel",
                         "title": "InventoryLevel",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2839,6 +5846,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/inventory-next/models/ReservationItem",
                         "title": "ReservationItem",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -2854,21 +5862,25 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "category",
         "title": "Order Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
             "isPathHref": true,
             "type": "link",
             "path": "/commerce-modules/order",
-            "title": "Order Module",
+            "title": "Overview",
             "children": []
+          },
+          {
+            "type": "separator"
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
             "title": "Concepts",
+            "initialOpen": false,
             "children": [
               {
                 "loaded": true,
@@ -2963,9 +5975,1249 @@ export const generatedSidebar = [
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "References",
+            "type": "category",
+            "title": "Storefront Guides",
+            "autogenerate_tags": "storefront+order,-jsSdk",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to integrate the Order Module's features into your storefront.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Checkout Step 5: Complete Cart",
+                "path": "https://docs.medusajs.com/resources/storefront-development/checkout/complete-cart",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Admin User Guides",
+            "autogenerate_tags": "userGuide+order",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to utilize and manage Order features in the Medusa Admin dashboard.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Order Claims",
+                "path": "https://docs.medusajs.com/user-guide/orders/claims",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Edit Order Items",
+                "path": "https://docs.medusajs.com/user-guide/orders/edit",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Order Exchanges",
+                "path": "https://docs.medusajs.com/user-guide/orders/exchanges",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Order Fulfillments",
+                "path": "https://docs.medusajs.com/user-guide/orders/fulfillments",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Order Details",
+                "path": "https://docs.medusajs.com/user-guide/orders/manage",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Orders Overview",
+                "path": "https://docs.medusajs.com/user-guide/orders",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Order Payments",
+                "path": "https://docs.medusajs.com/user-guide/orders/payments",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Order Returns",
+                "path": "https://docs.medusajs.com/user-guide/orders/returns",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Return Reasons",
+                "path": "https://docs.medusajs.com/user-guide/settings/return-reasons",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the Order Module, such as data models, methods, and more. These are useful for your customizations.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/order/workflows",
+                "title": "Workflows",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Workflows",
+                    "autogenerate_tags": "workflow+order",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "completeCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/completeCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "acceptOrderTransferWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/acceptOrderTransferWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addOrderLineItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addOrderLineItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "archiveOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/archiveOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "beginClaimOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/beginClaimOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "beginExchangeOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/beginExchangeOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "beginOrderEditOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/beginOrderEditOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "beginReceiveReturnWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/beginReceiveReturnWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "beginReturnOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/beginReturnOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelBeginOrderClaimWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelBeginOrderClaimWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelBeginOrderEditWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelBeginOrderEditWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelBeginOrderExchangeWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelBeginOrderExchangeWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrderChangeWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderChangeWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrderClaimWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderClaimWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrderExchangeWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderExchangeWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrderFulfillmentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderFulfillmentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrderTransferRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderTransferRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelReturnReceiveWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelReturnReceiveWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelReturnRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelReturnRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelReturnWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelReturnWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "completeOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/completeOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmClaimRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmClaimRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmExchangeRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmExchangeRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmOrderEditRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmOrderEditRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmReturnReceiveWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmReturnReceiveWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmReturnRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmReturnRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createAndCompleteReturnOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createAndCompleteReturnOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createClaimShippingMethodWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createClaimShippingMethodWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createExchangeShippingMethodWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createExchangeShippingMethodWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderChangeWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderChangeWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderEditShippingMethodWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderEditShippingMethodWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderFulfillmentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderFulfillmentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderShipmentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderShipmentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createReturnShippingMethodWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createReturnShippingMethodWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "declineOrderChangeWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/declineOrderChangeWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "declineOrderTransferRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/declineOrderTransferRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteOrderChangeActionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteOrderChangeActionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteOrderChangeWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteOrderChangeWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "dismissItemReturnRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/dismissItemReturnRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "markPaymentCollectionAsPaid",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/markPaymentCollectionAsPaid",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderClaimAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderClaimAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderClaimItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderClaimItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderClaimRequestItemReturnWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderClaimRequestItemReturnWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderEditAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderEditAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderEditUpdateItemQuantityWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderEditUpdateItemQuantityWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderExchangeAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderExchangeAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderExchangeRequestItemReturnWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderExchangeRequestItemReturnWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "receiveItemReturnRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/receiveItemReturnRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeAddItemClaimActionWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeAddItemClaimActionWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeClaimShippingMethodWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeClaimShippingMethodWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeExchangeShippingMethodWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeExchangeShippingMethodWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeItemClaimActionWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeItemClaimActionWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeItemExchangeActionWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeItemExchangeActionWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeItemOrderEditActionWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeItemOrderEditActionWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeItemReceiveReturnActionWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeItemReceiveReturnActionWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeItemReturnActionWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeItemReturnActionWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeOrderEditShippingMethodWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeOrderEditShippingMethodWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeReturnShippingMethodWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeReturnShippingMethodWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "requestItemReturnWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/requestItemReturnWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "requestOrderEditRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/requestOrderEditRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "requestOrderTransferWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/requestOrderTransferWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateClaimAddItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateClaimAddItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateClaimItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateClaimItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateClaimShippingMethodWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateClaimShippingMethodWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateExchangeAddItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateExchangeAddItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateExchangeShippingMethodWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateExchangeShippingMethodWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateOrderChangeActionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateOrderChangeActionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateOrderChangesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateOrderChangesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateOrderEditAddItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateOrderEditAddItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateOrderEditItemQuantityWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateOrderEditItemQuantityWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateOrderEditShippingMethodWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateOrderEditShippingMethodWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateOrderTaxLinesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateOrderTaxLinesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateReceiveItemReturnRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateReceiveItemReturnRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateRequestItemReturnWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateRequestItemReturnWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateReturnShippingMethodWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateReturnShippingMethodWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateReturnWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateReturnWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "capturePaymentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/capturePaymentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "processPaymentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/processPaymentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "refundPaymentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refundPaymentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "refundPaymentsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refundPaymentsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createReturnReasonsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createReturnReasonsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteReturnReasonsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteReturnReasonsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateReturnReasonsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateReturnReasonsWorkflow",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Steps",
+                    "autogenerate_tags": "step+order",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addOrderTransactionStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/addOrderTransactionStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "archiveOrdersStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/archiveOrdersStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrderChangeStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/cancelOrderChangeStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrderClaimStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/cancelOrderClaimStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrderExchangeStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/cancelOrderExchangeStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrderFulfillmentStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/cancelOrderFulfillmentStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrderReturnStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/cancelOrderReturnStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrdersStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/cancelOrdersStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "completeOrdersStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/completeOrdersStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCompleteReturnStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createCompleteReturnStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderChangeStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createOrderChangeStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderClaimItemsFromActionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createOrderClaimItemsFromActionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderClaimsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createOrderClaimsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderExchangeItemsFromActionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createOrderExchangeItemsFromActionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderExchangesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createOrderExchangesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderLineItemsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createOrderLineItemsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrdersStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createOrdersStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createReturnsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createReturnsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "declineOrderChangeStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/declineOrderChangeStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteClaimsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteClaimsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteExchangesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteExchangesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteOrderChangeActionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteOrderChangeActionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteOrderChangesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteOrderChangesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteOrderShippingMethods",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteOrderShippingMethods",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteReturnsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteReturnsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "previewOrderChangeStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/previewOrderChangeStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "registerOrderChangesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/registerOrderChangesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "registerOrderFulfillmentStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/registerOrderFulfillmentStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "registerOrderShipmentStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/registerOrderShipmentStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "setOrderTaxLinesForItemsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/setOrderTaxLinesForItemsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateOrderChangeActionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateOrderChangeActionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateOrderChangesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateOrderChangesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateOrderShippingMethodsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateOrderShippingMethodsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateOrdersStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateOrdersStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createReturnReasonsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createReturnReasonsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteReturnReasonStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteReturnReasonStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateReturnReasonsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateReturnReasonsStep",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/order/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Store",
+                    "autogenerate_tags": "jsSdk+storefront+order",
+                    "description": "The following methods or properties are used to send requests to Store API Routes related to the Order Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "Implement Express Checkout with Medusa",
+                        "path": "https://docs.medusajs.com/resources/storefront-development/guides/express-checkout",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "order",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/store/order",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Admin",
+                    "autogenerate_tags": "jsSdk+admin+order",
+                    "description": "The following methods or properties are used to send requests to Admin API Routes related to the Order Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "claim",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/claim",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "exchange",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/exchange",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "order",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/order",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderEdit",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/orderEdit",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "refundReason",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/refundReason",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "return",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/return",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "returnReason",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/returnReason",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/order/events",
+                "title": "Events Reference",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/order/admin-widget-zones",
+                "title": "Admin Widget Zones",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -2988,6 +7240,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/addOrderAction",
                         "title": "addOrderAction",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -2996,6 +7249,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/addOrderTransactions",
                         "title": "addOrderTransactions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3004,6 +7258,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/applyPendingOrderActions",
                         "title": "applyPendingOrderActions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3012,6 +7267,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/archive",
                         "title": "archive",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3020,6 +7276,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/cancel",
                         "title": "cancel",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3028,6 +7285,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/cancelClaim",
                         "title": "cancelClaim",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3036,6 +7294,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/cancelExchange",
                         "title": "cancelExchange",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3044,6 +7303,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/cancelFulfillment",
                         "title": "cancelFulfillment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3052,6 +7312,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/cancelOrderChange",
                         "title": "cancelOrderChange",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3060,6 +7321,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/cancelReturn",
                         "title": "cancelReturn",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3068,6 +7330,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/completeOrder",
                         "title": "completeOrder",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3076,6 +7339,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/confirmOrderChange",
                         "title": "confirmOrderChange",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3084,6 +7348,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createClaim",
                         "title": "createClaim",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3092,6 +7357,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createExchange",
                         "title": "createExchange",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3100,6 +7366,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createOrderAddresses",
                         "title": "createOrderAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3108,6 +7375,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createOrderChange",
                         "title": "createOrderChange",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3116,6 +7384,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createOrderClaimItems",
                         "title": "createOrderClaimItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3124,6 +7393,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createOrderClaims",
                         "title": "createOrderClaims",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3132,6 +7402,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createOrderExchangeItems",
                         "title": "createOrderExchangeItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3140,6 +7411,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createOrderExchanges",
                         "title": "createOrderExchanges",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3148,6 +7420,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createOrderLineItemAdjustments",
                         "title": "createOrderLineItemAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3156,6 +7429,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createOrderLineItemTaxLines",
                         "title": "createOrderLineItemTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3164,6 +7438,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createOrderLineItems",
                         "title": "createOrderLineItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3172,6 +7447,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createOrderShippingMethodAdjustments",
                         "title": "createOrderShippingMethodAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3180,6 +7456,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createOrderShippingMethodTaxLines",
                         "title": "createOrderShippingMethodTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3188,6 +7465,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createOrderShippingMethods",
                         "title": "createOrderShippingMethods",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3196,6 +7474,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createOrders",
                         "title": "createOrders",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3204,6 +7483,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createReturn",
                         "title": "createReturn",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3212,6 +7492,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createReturnItems",
                         "title": "createReturnItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3220,6 +7501,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createReturnReasons",
                         "title": "createReturnReasons",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3228,6 +7510,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/createReturns",
                         "title": "createReturns",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3236,6 +7519,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/declineOrderChange",
                         "title": "declineOrderChange",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3244,6 +7528,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteOrderAddresses",
                         "title": "deleteOrderAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3252,6 +7537,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteOrderChangeActions",
                         "title": "deleteOrderChangeActions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3260,6 +7546,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteOrderChanges",
                         "title": "deleteOrderChanges",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3268,6 +7555,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteOrderClaimItemImages",
                         "title": "deleteOrderClaimItemImages",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3276,6 +7564,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteOrderClaimItems",
                         "title": "deleteOrderClaimItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3284,6 +7573,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteOrderClaims",
                         "title": "deleteOrderClaims",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3292,6 +7582,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteOrderExchangeItems",
                         "title": "deleteOrderExchangeItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3300,6 +7591,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteOrderExchanges",
                         "title": "deleteOrderExchanges",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3308,6 +7600,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteOrderLineItemAdjustments",
                         "title": "deleteOrderLineItemAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3316,6 +7609,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteOrderLineItemTaxLines",
                         "title": "deleteOrderLineItemTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3324,6 +7618,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteOrderLineItems",
                         "title": "deleteOrderLineItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3332,6 +7627,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteOrderShippingMethodAdjustments",
                         "title": "deleteOrderShippingMethodAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3340,6 +7636,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteOrderShippingMethodTaxLines",
                         "title": "deleteOrderShippingMethodTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3348,6 +7645,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteOrderShippingMethods",
                         "title": "deleteOrderShippingMethods",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3356,6 +7654,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteOrderTransactions",
                         "title": "deleteOrderTransactions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3364,6 +7663,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteOrders",
                         "title": "deleteOrders",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3372,6 +7672,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteReturnItems",
                         "title": "deleteReturnItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3380,6 +7681,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteReturnReasons",
                         "title": "deleteReturnReasons",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3388,6 +7690,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/deleteReturns",
                         "title": "deleteReturns",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3396,6 +7699,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listAndCountOrderClaims",
                         "title": "listAndCountOrderClaims",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3404,6 +7708,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listAndCountOrderExchanges",
                         "title": "listAndCountOrderExchanges",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3412,6 +7717,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listAndCountOrders",
                         "title": "listAndCountOrders",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3420,6 +7726,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listAndCountReturns",
                         "title": "listAndCountReturns",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3428,6 +7735,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listOrderAddresses",
                         "title": "listOrderAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3436,6 +7744,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listOrderChangeActions",
                         "title": "listOrderChangeActions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3444,6 +7753,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listOrderChanges",
                         "title": "listOrderChanges",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3452,6 +7762,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listOrderClaims",
                         "title": "listOrderClaims",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3460,6 +7771,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listOrderExchanges",
                         "title": "listOrderExchanges",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3468,6 +7780,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listOrderLineItemAdjustments",
                         "title": "listOrderLineItemAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3476,6 +7789,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listOrderLineItemTaxLines",
                         "title": "listOrderLineItemTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3484,6 +7798,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listOrderLineItems",
                         "title": "listOrderLineItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3492,6 +7807,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listOrderShippingMethodAdjustments",
                         "title": "listOrderShippingMethodAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3500,6 +7816,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listOrderShippingMethodTaxLines",
                         "title": "listOrderShippingMethodTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3508,6 +7825,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listOrderShippingMethods",
                         "title": "listOrderShippingMethods",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3516,6 +7834,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listOrderTransactions",
                         "title": "listOrderTransactions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3524,6 +7843,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listOrders",
                         "title": "listOrders",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3532,6 +7852,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listReturnReasons",
                         "title": "listReturnReasons",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3540,6 +7861,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/listReturns",
                         "title": "listReturns",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3548,6 +7870,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/previewOrderChange",
                         "title": "previewOrderChange",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3556,6 +7879,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/receiveReturn",
                         "title": "receiveReturn",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3564,6 +7888,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/registerDelivery",
                         "title": "registerDelivery",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3572,6 +7897,16 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/registerFulfillment",
                         "title": "registerFulfillment",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/order/registerOrderChange",
+                        "title": "registerOrderChange",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3580,6 +7915,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/registerShipment",
                         "title": "registerShipment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3588,6 +7924,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/restoreOrderAddresses",
                         "title": "restoreOrderAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3596,6 +7933,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/restoreOrderChangeActions",
                         "title": "restoreOrderChangeActions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3604,6 +7942,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/restoreOrderChanges",
                         "title": "restoreOrderChanges",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3612,6 +7951,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/restoreOrderClaims",
                         "title": "restoreOrderClaims",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3620,6 +7960,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/restoreOrderExchanges",
                         "title": "restoreOrderExchanges",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3628,6 +7969,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/restoreOrderLineItemAdjustments",
                         "title": "restoreOrderLineItemAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3636,6 +7978,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/restoreOrderLineItemTaxLines",
                         "title": "restoreOrderLineItemTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3644,6 +7987,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/restoreOrderLineItems",
                         "title": "restoreOrderLineItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3652,6 +7996,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/restoreOrderShippingMethodAdjustments",
                         "title": "restoreOrderShippingMethodAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3660,6 +8005,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/restoreOrderShippingMethodTaxLines",
                         "title": "restoreOrderShippingMethodTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3668,6 +8014,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/restoreOrderShippingMethods",
                         "title": "restoreOrderShippingMethods",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3676,6 +8023,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/restoreOrderTransactions",
                         "title": "restoreOrderTransactions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3684,6 +8032,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/restoreOrders",
                         "title": "restoreOrders",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3692,6 +8041,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/restoreReturnReasons",
                         "title": "restoreReturnReasons",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3700,6 +8050,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/restoreReturns",
                         "title": "restoreReturns",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3708,6 +8059,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/retrieveOrder",
                         "title": "retrieveOrder",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3716,6 +8068,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/retrieveOrderChange",
                         "title": "retrieveOrderChange",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3724,6 +8077,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/retrieveOrderChangeAction",
                         "title": "retrieveOrderChangeAction",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3732,6 +8086,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/retrieveOrderClaim",
                         "title": "retrieveOrderClaim",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3740,6 +8095,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/retrieveOrderExchange",
                         "title": "retrieveOrderExchange",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3748,6 +8104,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/retrieveOrderLineItem",
                         "title": "retrieveOrderLineItem",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3756,6 +8113,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/retrieveReturn",
                         "title": "retrieveReturn",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3764,6 +8122,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/retrieveReturnReason",
                         "title": "retrieveReturnReason",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3772,6 +8131,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/revertLastVersion",
                         "title": "revertLastVersion",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3780,6 +8140,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/setOrderLineItemAdjustments",
                         "title": "setOrderLineItemAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3788,6 +8149,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/setOrderLineItemTaxLines",
                         "title": "setOrderLineItemTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3796,6 +8158,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/setOrderShippingMethodAdjustments",
                         "title": "setOrderShippingMethodAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3804,6 +8167,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/setOrderShippingMethodTaxLines",
                         "title": "setOrderShippingMethodTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3812,6 +8176,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/softDeleteOrderAddresses",
                         "title": "softDeleteOrderAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3820,6 +8185,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/softDeleteOrderChangeActions",
                         "title": "softDeleteOrderChangeActions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3828,6 +8194,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/softDeleteOrderChanges",
                         "title": "softDeleteOrderChanges",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3836,6 +8203,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/softDeleteOrderClaims",
                         "title": "softDeleteOrderClaims",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3844,6 +8212,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/softDeleteOrderExchanges",
                         "title": "softDeleteOrderExchanges",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3852,6 +8221,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/softDeleteOrderLineItemAdjustments",
                         "title": "softDeleteOrderLineItemAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3860,6 +8230,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/softDeleteOrderLineItemTaxLines",
                         "title": "softDeleteOrderLineItemTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3868,6 +8239,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/softDeleteOrderLineItems",
                         "title": "softDeleteOrderLineItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3876,6 +8248,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/softDeleteOrderShippingMethodAdjustments",
                         "title": "softDeleteOrderShippingMethodAdjustments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3884,6 +8257,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/softDeleteOrderShippingMethodTaxLines",
                         "title": "softDeleteOrderShippingMethodTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3892,6 +8266,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/softDeleteOrderShippingMethods",
                         "title": "softDeleteOrderShippingMethods",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3900,6 +8275,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/softDeleteOrderTransactions",
                         "title": "softDeleteOrderTransactions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3908,6 +8284,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/softDeleteOrders",
                         "title": "softDeleteOrders",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3916,6 +8293,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/softDeleteReturnReasons",
                         "title": "softDeleteReturnReasons",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3924,6 +8302,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/softDeleteReturns",
                         "title": "softDeleteReturns",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3932,6 +8311,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/undoLastChange",
                         "title": "undoLastChange",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3940,6 +8320,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/updateOrderAddresses",
                         "title": "updateOrderAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3948,6 +8329,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/updateOrderChangeActions",
                         "title": "updateOrderChangeActions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3956,6 +8338,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/updateOrderChanges",
                         "title": "updateOrderChanges",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3964,6 +8347,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/updateOrderClaims",
                         "title": "updateOrderClaims",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3972,6 +8356,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/updateOrderExchanges",
                         "title": "updateOrderExchanges",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3980,6 +8365,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/updateOrderItem",
                         "title": "updateOrderItem",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3988,6 +8374,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/updateOrderLineItems",
                         "title": "updateOrderLineItems",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -3996,6 +8383,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/updateOrderShippingMethods",
                         "title": "updateOrderShippingMethods",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4004,6 +8392,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/updateOrders",
                         "title": "updateOrders",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4012,6 +8401,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/updateReturnReasons",
                         "title": "updateReturnReasons",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4020,6 +8410,43 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/updateReturns",
                         "title": "updateReturns",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/order/upsertOrderLineItemAdjustments",
+                        "title": "upsertOrderLineItemAdjustments",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/order/upsertOrderLineItemTaxLines",
+                        "title": "upsertOrderLineItemTaxLines",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/order/upsertOrderShippingMethodAdjustments",
+                        "title": "upsertOrderShippingMethodAdjustments",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/order/upsertOrderShippingMethodTaxLines",
+                        "title": "upsertOrderShippingMethodTaxLines",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -4041,7 +8468,7 @@ export const generatedSidebar = [
                     "type": "category",
                     "title": "Data Models",
                     "hasTitleStyling": true,
-                    "autogenerate_path": "/references/order_models/classes",
+                    "autogenerate_path": "/references/order_models/variables",
                     "children": [
                       {
                         "loaded": true,
@@ -4049,6 +8476,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/Order",
                         "title": "Order",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4057,6 +8485,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderAddress",
                         "title": "OrderAddress",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4065,6 +8494,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderChange",
                         "title": "OrderChange",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4073,6 +8503,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderChangeAction",
                         "title": "OrderChangeAction",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4081,6 +8512,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderClaim",
                         "title": "OrderClaim",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4089,6 +8521,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderClaimItem",
                         "title": "OrderClaimItem",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4097,6 +8530,16 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderClaimItemImage",
                         "title": "OrderClaimItemImage",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/order/models/OrderCreditLine",
+                        "title": "OrderCreditLine",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4105,6 +8548,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderExchange",
                         "title": "OrderExchange",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4113,6 +8557,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderExchangeItem",
                         "title": "OrderExchangeItem",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4121,6 +8566,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderItem",
                         "title": "OrderItem",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4129,6 +8575,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderLineItem",
                         "title": "OrderLineItem",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4137,6 +8584,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderLineItemAdjustment",
                         "title": "OrderLineItemAdjustment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4145,6 +8593,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderLineItemTaxLine",
                         "title": "OrderLineItemTaxLine",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4153,6 +8602,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderShipping",
                         "title": "OrderShipping",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4161,6 +8611,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderShippingMethod",
                         "title": "OrderShippingMethod",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4169,6 +8620,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderShippingMethodAdjustment",
                         "title": "OrderShippingMethodAdjustment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4177,6 +8629,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderShippingMethodTaxLine",
                         "title": "OrderShippingMethodTaxLine",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4185,6 +8638,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderSummary",
                         "title": "OrderSummary",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4193,6 +8647,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/OrderTransaction",
                         "title": "OrderTransaction",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4201,6 +8656,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/Return",
                         "title": "Return",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4209,6 +8665,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/ReturnItem",
                         "title": "ReturnItem",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4217,6 +8674,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/order/models/ReturnReason",
                         "title": "ReturnReason",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -4232,7 +8690,7 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "category",
         "title": "Payment Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
@@ -4251,18 +8709,14 @@ export const generatedSidebar = [
             "children": []
           },
           {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/payment/examples",
-            "title": "Examples",
-            "children": []
+            "type": "separator"
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
             "title": "Concepts",
+            "initialOpen": false,
             "children": [
               {
                 "loaded": true,
@@ -4300,6 +8754,14 @@ export const generatedSidebar = [
                 "loaded": true,
                 "isPathHref": true,
                 "type": "link",
+                "path": "/commerce-modules/payment/account-holder",
+                "title": "Account Holder",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
                 "path": "/commerce-modules/payment/webhook-events",
                 "title": "Webhook Events",
                 "children": []
@@ -4317,8 +8779,12 @@ export const generatedSidebar = [
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "Guides",
+            "type": "category",
+            "title": "Server Guides",
+            "autogenerate_tags": "server+payment",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to use the Payment Module in your customizations on the Medusa application server.",
             "children": [
               {
                 "loaded": true,
@@ -4341,8 +8807,73 @@ export const generatedSidebar = [
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "Payment Providers",
+            "type": "category",
+            "title": "Storefront Guides",
+            "autogenerate_tags": "storefront+payment,-jsSdk",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to integrate the Payment Module's features into your storefront.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Customize the Stripe Integration in the Next.js Starter",
+                "path": "https://docs.medusajs.com/resources/nextjs-starter/guides/customize-stripe",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Checkout Step 5: Complete Cart",
+                "path": "https://docs.medusajs.com/resources/storefront-development/checkout/complete-cart",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Checkout Step 4: Choose Payment Provider",
+                "path": "https://docs.medusajs.com/resources/storefront-development/checkout/payment",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Payment with Stripe in React Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/checkout/payment/stripe",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Admin User Guides",
+            "autogenerate_tags": "userGuide+payment",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to utilize and manage Payment features in the Medusa Admin dashboard.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Order Payments",
+                "path": "https://docs.medusajs.com/user-guide/orders/payments",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Providers",
+            "initialOpen": false,
             "children": [
               {
                 "loaded": true,
@@ -4357,9 +8888,473 @@ export const generatedSidebar = [
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
             "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the Payment Module, such as data models, methods, and more. These are useful for your customizations.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/payment/workflows",
+                "title": "Workflows",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Workflows",
+                    "autogenerate_tags": "workflow+payment",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addShippingMethodToCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addShippingMethodToCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addToCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addToCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "completeCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/completeCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createPaymentCollectionForCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createPaymentCollectionForCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "refreshCartItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshCartItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "refreshPaymentCollectionForCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshPaymentCollectionForCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "transferCartCustomerWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/transferCartCustomerWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateLineItemInCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateLineItemInCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteLineItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteLineItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/cancelOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmClaimRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmClaimRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmExchangeRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmExchangeRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmOrderEditRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmOrderEditRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "confirmReturnRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/confirmReturnRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrUpdateOrderPaymentCollectionWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrUpdateOrderPaymentCollectionWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderPaymentCollectionWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderPaymentCollectionWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "markPaymentCollectionAsPaid",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/markPaymentCollectionAsPaid",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "requestOrderEditRequestWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/requestOrderEditRequestWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "capturePaymentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/capturePaymentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "processPaymentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/processPaymentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "refundPaymentWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refundPaymentWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "refundPaymentsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refundPaymentsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createPaymentSessionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createPaymentSessionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createRefundReasonsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createRefundReasonsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deletePaymentSessionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deletePaymentSessionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteRefundReasonsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteRefundReasonsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateRefundReasonsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateRefundReasonsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createRegionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createRegionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateRegionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateRegionsWorkflow",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Steps",
+                    "autogenerate_tags": "step+payment",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createPaymentCollectionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createPaymentCollectionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "authorizePaymentSessionStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/authorizePaymentSessionStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "cancelPaymentStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/cancelPaymentStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "capturePaymentStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/capturePaymentStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "refundPaymentStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/refundPaymentStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "refundPaymentsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/refundPaymentsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createPaymentAccountHolderStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createPaymentAccountHolderStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createPaymentSessionStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createPaymentSessionStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createRefundReasonStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createRefundReasonStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deletePaymentSessionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deletePaymentSessionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteRefundReasonsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteRefundReasonsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updatePaymentCollectionStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updatePaymentCollectionStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateRefundReasonsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateRefundReasonsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "setRegionsPaymentProvidersStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/setRegionsPaymentProvidersStep",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/payment/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Store",
+                    "autogenerate_tags": "jsSdk+storefront+payment",
+                    "description": "The following methods or properties are used to send requests to Store API Routes related to the Payment Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "Implement Express Checkout with Medusa",
+                        "path": "https://docs.medusajs.com/resources/storefront-development/guides/express-checkout",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "payment",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/store/payment",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Admin",
+                    "autogenerate_tags": "jsSdk+admin+payment",
+                    "description": "The following methods or properties are used to send requests to Admin API Routes related to the Payment Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "payment",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/payment",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "paymentCollection",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/paymentCollection",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/payment/events",
+                "title": "Events Reference",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -4382,6 +9377,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/authorizePaymentSession",
                         "title": "authorizePaymentSession",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4390,6 +9386,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/cancelPayment",
                         "title": "cancelPayment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4398,6 +9395,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/capturePayment",
                         "title": "capturePayment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4406,6 +9404,16 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/completePaymentCollections",
                         "title": "completePaymentCollections",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/payment/createAccountHolder",
+                        "title": "createAccountHolder",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4414,6 +9422,16 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/createPaymentCollections",
                         "title": "createPaymentCollections",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/payment/createPaymentMethods",
+                        "title": "createPaymentMethods",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4422,6 +9440,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/createPaymentSession",
                         "title": "createPaymentSession",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4430,6 +9449,25 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/createRefundReasons",
                         "title": "createRefundReasons",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/payment/deleteAccountHolder",
+                        "title": "deleteAccountHolder",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/payment/deleteCaptures",
+                        "title": "deleteCaptures",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4438,6 +9476,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/deletePaymentCollections",
                         "title": "deletePaymentCollections",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4446,6 +9485,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/deletePaymentSession",
                         "title": "deletePaymentSession",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4454,6 +9494,16 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/deleteRefundReasons",
                         "title": "deleteRefundReasons",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/payment/deleteRefunds",
+                        "title": "deleteRefunds",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4462,6 +9512,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/getWebhookActionAndData",
                         "title": "getWebhookActionAndData",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4470,6 +9521,16 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/listAndCountPaymentCollections",
                         "title": "listAndCountPaymentCollections",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/payment/listAndCountPaymentMethods",
+                        "title": "listAndCountPaymentMethods",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4478,6 +9539,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/listAndCountPaymentProviders",
                         "title": "listAndCountPaymentProviders",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4486,6 +9548,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/listCaptures",
                         "title": "listCaptures",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4494,6 +9557,16 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/listPaymentCollections",
                         "title": "listPaymentCollections",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/payment/listPaymentMethods",
+                        "title": "listPaymentMethods",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4502,6 +9575,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/listPaymentProviders",
                         "title": "listPaymentProviders",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4510,6 +9584,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/listPaymentSessions",
                         "title": "listPaymentSessions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4518,6 +9593,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/listPayments",
                         "title": "listPayments",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4526,6 +9602,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/listRefundReasons",
                         "title": "listRefundReasons",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4534,6 +9611,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/listRefunds",
                         "title": "listRefunds",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4542,6 +9620,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/refundPayment",
                         "title": "refundPayment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4550,6 +9629,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/restorePaymentCollections",
                         "title": "restorePaymentCollections",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4558,6 +9638,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/restoreRefundReasons",
                         "title": "restoreRefundReasons",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4566,6 +9647,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/retrievePaymentCollection",
                         "title": "retrievePaymentCollection",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4574,6 +9656,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/retrievePaymentSession",
                         "title": "retrievePaymentSession",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4582,6 +9665,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/softDeletePaymentCollections",
                         "title": "softDeletePaymentCollections",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4590,6 +9674,16 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/softDeleteRefundReasons",
                         "title": "softDeleteRefundReasons",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/payment/updateAccountHolder",
+                        "title": "updateAccountHolder",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4598,6 +9692,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/updatePayment",
                         "title": "updatePayment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4606,6 +9701,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/updatePaymentCollections",
                         "title": "updatePaymentCollections",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4614,6 +9710,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/updatePaymentSession",
                         "title": "updatePaymentSession",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4622,6 +9719,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/updateRefundReasons",
                         "title": "updateRefundReasons",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4630,6 +9728,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/upsertPaymentCollections",
                         "title": "upsertPaymentCollections",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -4650,14 +9749,24 @@ export const generatedSidebar = [
                     "isPathHref": true,
                     "type": "category",
                     "title": "Data Models",
-                    "autogenerate_path": "/references/payment_models/classes",
+                    "autogenerate_path": "/references/payment_models/variables",
                     "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/payment/models/AccountHolder",
+                        "title": "AccountHolder",
+                        "description": "",
+                        "children": []
+                      },
                       {
                         "loaded": true,
                         "isPathHref": true,
                         "type": "link",
                         "path": "/references/payment/models/Capture",
                         "title": "Capture",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4666,6 +9775,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/models/Payment",
                         "title": "Payment",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4674,14 +9784,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/models/PaymentCollection",
                         "title": "PaymentCollection",
-                        "children": []
-                      },
-                      {
-                        "loaded": true,
-                        "isPathHref": true,
-                        "type": "link",
-                        "path": "/references/payment/models/PaymentMethodToken",
-                        "title": "PaymentMethodToken",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4690,6 +9793,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/models/PaymentProvider",
                         "title": "PaymentProvider",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4698,6 +9802,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/models/PaymentSession",
                         "title": "PaymentSession",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4706,6 +9811,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/models/Refund",
                         "title": "Refund",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4714,6 +9820,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/payment/models/RefundReason",
                         "title": "RefundReason",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -4729,29 +9836,25 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "category",
         "title": "Pricing Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
             "isPathHref": true,
             "type": "link",
             "path": "/commerce-modules/pricing",
-            "title": "Pricing Module",
+            "title": "Overview",
             "children": []
+          },
+          {
+            "type": "separator"
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/pricing/examples",
-            "title": "Examples",
-            "children": []
-          },
-          {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
             "title": "Concepts",
+            "initialOpen": false,
             "children": [
               {
                 "loaded": true,
@@ -4798,9 +9901,506 @@ export const generatedSidebar = [
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "References",
+            "type": "category",
+            "title": "Server Guides",
+            "autogenerate_tags": "server+pricing",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to use the Pricing Module in your customizations on the Medusa application server.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Get Variant Prices",
+                "path": "https://docs.medusajs.com/resources/commerce-modules/product/guides/price",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Get Variant Price with Taxes",
+                "path": "https://docs.medusajs.com/resources/commerce-modules/product/guides/price-with-taxes",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Implement Custom Line Item Pricing in Medusa",
+                "path": "https://docs.medusajs.com/resources/examples/guides/custom-item-price",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Storefront Guides",
+            "autogenerate_tags": "storefront+pricing,-jsSdk",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to integrate the Pricing Module's features into your storefront.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Example: Show Sale Price",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/price/examples/sale-price",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Example: Show Variant's Price",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/price/examples/show-price",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Example: Show Price with Taxes",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/price/examples/tax-price",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Retrieve Product Variant's Prices in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/price",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Admin User Guides",
+            "autogenerate_tags": "userGuide+pricing",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to utilize and manage Pricing features in the Medusa Admin dashboard.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Create a Price List",
+                "path": "https://docs.medusajs.com/user-guide/price-lists/create",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Price Lists",
+                "path": "https://docs.medusajs.com/user-guide/price-lists/manage",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Price Lists Overview",
+                "path": "https://docs.medusajs.com/user-guide/price-lists",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the Pricing Module, such as data models, methods, and more. These are useful for your customizations.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/pricing/workflows",
+                "title": "Workflows",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Workflows",
+                    "autogenerate_tags": "workflow+pricing",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createShippingOptionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createShippingOptionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateShippingOptionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateShippingOptionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "batchPriceListPricesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/batchPriceListPricesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createPriceListPricesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createPriceListPricesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createPriceListsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createPriceListsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deletePriceListsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deletePriceListsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removePriceListPricesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removePriceListPricesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updatePriceListPricesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updatePriceListPricesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updatePriceListsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updatePriceListsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createPricePreferencesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createPricePreferencesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deletePricePreferencesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deletePricePreferencesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updatePricePreferencesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updatePricePreferencesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "batchProductVariantsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/batchProductVariantsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "batchProductsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/batchProductsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createProductVariantsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createProductVariantsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createProductsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createProductsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateProductVariantsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateProductVariantsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateProductsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateProductsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "upsertVariantPricesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/upsertVariantPricesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createRegionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createRegionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateRegionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateRegionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createStoresWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createStoresWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateStoresWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateStoresWorkflow",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Steps",
+                    "autogenerate_tags": "step+pricing",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createShippingOptionsPriceSetsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createShippingOptionsPriceSetsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "setShippingOptionsPricesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/setShippingOptionsPricesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createPriceListPricesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createPriceListPricesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createPriceListsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createPriceListsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deletePriceListsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deletePriceListsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removePriceListPricesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/removePriceListPricesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updatePriceListPricesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updatePriceListPricesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updatePriceListsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updatePriceListsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "validatePriceListsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/validatePriceListsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createPricePreferencesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createPricePreferencesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createPriceSetsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createPriceSetsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deletePricePreferencesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deletePricePreferencesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updatePricePreferencesAsArrayStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updatePricePreferencesAsArrayStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updatePricePreferencesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updatePricePreferencesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updatePriceSetsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updatePriceSetsStep",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/pricing/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Admin",
+                    "autogenerate_tags": "jsSdk+admin+pricing",
+                    "description": "The following methods or properties are used to send requests to Admin API Routes related to the Pricing Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "priceList",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/priceList",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "pricePreference",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/pricePreference",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/pricing/admin-widget-zones",
+                "title": "Admin Widget Zones",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -4823,6 +10423,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/addPriceListPrices",
                         "title": "addPriceListPrices",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4831,6 +10432,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/addPrices",
                         "title": "addPrices",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4839,6 +10441,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/calculatePrices",
                         "title": "calculatePrices",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4847,6 +10450,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/createPriceLists",
                         "title": "createPriceLists",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4855,6 +10459,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/createPricePreferences",
                         "title": "createPricePreferences",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4863,6 +10468,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/createPriceRules",
                         "title": "createPriceRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4871,6 +10477,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/createPriceSets",
                         "title": "createPriceSets",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4879,6 +10486,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/deletePriceListRules",
                         "title": "deletePriceListRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4887,6 +10495,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/deletePriceLists",
                         "title": "deletePriceLists",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4895,6 +10504,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/deletePricePreferences",
                         "title": "deletePricePreferences",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4903,6 +10513,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/deletePriceRules",
                         "title": "deletePriceRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4911,6 +10522,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/deletePriceSets",
                         "title": "deletePriceSets",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4919,6 +10531,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/listAndCountPriceListRules",
                         "title": "listAndCountPriceListRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4927,6 +10540,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/listAndCountPriceLists",
                         "title": "listAndCountPriceLists",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4935,6 +10549,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/listAndCountPriceRules",
                         "title": "listAndCountPriceRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4943,6 +10558,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/listAndCountPriceSets",
                         "title": "listAndCountPriceSets",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4951,6 +10567,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/listAndCountPrices",
                         "title": "listAndCountPrices",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4959,6 +10576,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/listPriceListRules",
                         "title": "listPriceListRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4967,6 +10585,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/listPriceLists",
                         "title": "listPriceLists",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4975,6 +10594,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/listPricePreferences",
                         "title": "listPricePreferences",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4983,6 +10603,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/listPriceRules",
                         "title": "listPriceRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4991,6 +10612,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/listPriceSets",
                         "title": "listPriceSets",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -4999,6 +10621,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/listPrices",
                         "title": "listPrices",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5007,6 +10630,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/removePriceListRules",
                         "title": "removePriceListRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5015,6 +10639,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/removePrices",
                         "title": "removePrices",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5023,6 +10648,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/restorePriceLists",
                         "title": "restorePriceLists",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5031,6 +10657,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/restorePricePreferences",
                         "title": "restorePricePreferences",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5039,6 +10666,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/restorePrices",
                         "title": "restorePrices",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5047,6 +10675,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/retrievePriceList",
                         "title": "retrievePriceList",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5055,6 +10684,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/retrievePriceListRule",
                         "title": "retrievePriceListRule",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5063,6 +10693,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/retrievePricePreference",
                         "title": "retrievePricePreference",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5071,6 +10702,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/retrievePriceRule",
                         "title": "retrievePriceRule",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5079,6 +10711,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/retrievePriceSet",
                         "title": "retrievePriceSet",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5087,6 +10720,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/setPriceListRules",
                         "title": "setPriceListRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5095,6 +10729,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/softDeletePriceLists",
                         "title": "softDeletePriceLists",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5103,6 +10738,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/softDeletePricePreferences",
                         "title": "softDeletePricePreferences",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5111,6 +10747,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/softDeletePrices",
                         "title": "softDeletePrices",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5119,6 +10756,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/updatePriceListPrices",
                         "title": "updatePriceListPrices",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5127,6 +10765,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/updatePriceLists",
                         "title": "updatePriceLists",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5135,6 +10774,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/updatePricePreferences",
                         "title": "updatePricePreferences",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5143,6 +10783,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/updatePriceRules",
                         "title": "updatePriceRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5151,6 +10792,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/updatePriceSets",
                         "title": "updatePriceSets",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5159,6 +10801,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/upsertPricePreferences",
                         "title": "upsertPricePreferences",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5167,6 +10810,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/upsertPriceSets",
                         "title": "upsertPriceSets",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -5188,7 +10832,7 @@ export const generatedSidebar = [
                     "type": "category",
                     "title": "Data Models",
                     "hasTitleStyling": true,
-                    "autogenerate_path": "/references/pricing_models/classes",
+                    "autogenerate_path": "/references/pricing_models/variables",
                     "children": [
                       {
                         "loaded": true,
@@ -5196,6 +10840,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/models/Price",
                         "title": "Price",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5204,6 +10849,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/models/PriceList",
                         "title": "PriceList",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5212,6 +10858,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/models/PriceListRule",
                         "title": "PriceListRule",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5220,6 +10867,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/models/PricePreference",
                         "title": "PricePreference",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5228,6 +10876,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/models/PriceRule",
                         "title": "PriceRule",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5236,6 +10885,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/pricing/models/PriceSet",
                         "title": "PriceSet",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -5251,7 +10901,7 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "category",
         "title": "Product Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
@@ -5262,27 +10912,33 @@ export const generatedSidebar = [
             "children": []
           },
           {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/product/examples",
-            "title": "Examples",
-            "children": []
+            "type": "separator"
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/product/extend",
-            "title": "Extend Module",
-            "children": []
-          },
-          {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
             "title": "Concepts",
+            "initialOpen": false,
+            "autogenerate_tags": "concept+product",
+            "autogenerate_as_ref": true,
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/product/variant-inventory",
+                "title": "Variant Inventory",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/product/selling-products",
+                "title": "Selling Use Cases",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -5290,16 +10946,35 @@ export const generatedSidebar = [
                 "path": "/commerce-modules/product/links-to-other-modules",
                 "title": "Links to Other Modules",
                 "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Inventory Kits",
+                "path": "https://docs.medusajs.com/resources/commerce-modules/inventory/inventory-kit",
+                "children": []
               }
             ]
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "Guides",
-            "autogenerate_path": "/commerce-modules/product/guides",
+            "type": "category",
+            "title": "Server Guides",
+            "autogenerate_tags": "server+product",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to use the Product Module in your customizations on the Medusa application server.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/product/extend",
+                "title": "Extend Module",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -5315,15 +10990,847 @@ export const generatedSidebar = [
                 "path": "/commerce-modules/product/guides/price-with-taxes",
                 "title": "Get Variant Price with Taxes",
                 "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Get Variant Prices",
+                "path": "https://docs.medusajs.com/resources/commerce-modules/product/guides/price",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Get Variant Price with Taxes",
+                "path": "https://docs.medusajs.com/resources/commerce-modules/product/guides/price-with-taxes",
+                "children": []
               }
             ]
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "References",
+            "type": "category",
+            "title": "Storefront Guides",
+            "autogenerate_tags": "storefront+product,-jsSdk",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to integrate the Product Module's features into your storefront.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "List Product Categories in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/categories/list",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Retrieve Nested Categories in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/categories/nested-categories",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Retrieve a Category's Products in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/categories/products",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Retrieve a Category in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/categories/retrieve",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "List Product Collections in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/collections/list",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Retrieve a Collection's Products in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/collections/products",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Retrieve a Collection in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/collections/retrieve",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Retrieve Product Variant's Inventory in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/inventory",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "List Products in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/list",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Example: Show Sale Price",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/price/examples/sale-price",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Example: Show Variant's Price",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/price/examples/show-price",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Example: Show Price with Taxes",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/price/examples/tax-price",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Retrieve Product Variant's Prices in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/price",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Retrieve a Product in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/retrieve",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Select Product Variants in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/variants",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Admin User Guides",
+            "autogenerate_tags": "userGuide+product",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to utilize and manage Product features in the Medusa Admin dashboard.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Product Categories",
+                "path": "https://docs.medusajs.com/user-guide/products/categories",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Product Collections",
+                "path": "https://docs.medusajs.com/user-guide/products/collections",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Create Bundle Product",
+                "path": "https://docs.medusajs.com/user-guide/products/create/bundle",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Create Multi-Part Product",
+                "path": "https://docs.medusajs.com/user-guide/products/create/multi-part",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Create Product",
+                "path": "https://docs.medusajs.com/user-guide/products/create",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Edit Product",
+                "path": "https://docs.medusajs.com/user-guide/products/edit",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Export Products",
+                "path": "https://docs.medusajs.com/user-guide/products/export",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Import Products",
+                "path": "https://docs.medusajs.com/user-guide/products/import",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Products Overview",
+                "path": "https://docs.medusajs.com/user-guide/products",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Product Variants",
+                "path": "https://docs.medusajs.com/user-guide/products/variants",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Product Tags",
+                "path": "https://docs.medusajs.com/user-guide/settings/product-tags",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Product Types",
+                "path": "https://docs.medusajs.com/user-guide/settings/product-types",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the Product Module, such as data models, methods, and more. These are useful for your customizations.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/product/workflows",
+                "title": "Workflows",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Workflows",
+                    "autogenerate_tags": "workflow+product",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "batchLinkProductsToCategoryWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/batchLinkProductsToCategoryWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "batchLinkProductsToCollectionWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/batchLinkProductsToCollectionWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "batchProductVariantsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/batchProductVariantsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "batchProductsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/batchProductsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCollectionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCollectionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createProductOptionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createProductOptionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createProductTagsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createProductTagsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createProductTypesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createProductTypesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createProductVariantsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createProductVariantsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createProductsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createProductsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteCollectionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteCollectionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteProductOptionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteProductOptionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteProductTagsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteProductTagsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteProductTypesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteProductTypesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteProductVariantsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteProductVariantsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteProductsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteProductsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "importProductsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/importProductsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCollectionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCollectionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateProductOptionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateProductOptionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateProductTagsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateProductTagsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateProductTypesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateProductTypesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateProductVariantsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateProductVariantsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateProductsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateProductsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createProductCategoriesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createProductCategoriesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteProductCategoriesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteProductCategoriesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateProductCategoriesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateProductCategoriesWorkflow",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Steps",
+                    "autogenerate_tags": "step+product",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "batchLinkProductsToCategoryStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/batchLinkProductsToCategoryStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "batchLinkProductsToCollectionStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/batchLinkProductsToCollectionStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCollectionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createCollectionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createProductOptionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createProductOptionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createProductTagsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createProductTagsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createProductTypesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createProductTypesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createProductVariantsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createProductVariantsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createProductsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createProductsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteCollectionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteCollectionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteProductOptionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteProductOptionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteProductTagsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteProductTagsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteProductTypesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteProductTypesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteProductVariantsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteProductVariantsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteProductsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteProductsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "getProductsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/getProductsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "groupProductsForBatchStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/groupProductsForBatchStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "parseProductCsvStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/parseProductCsvStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCollectionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateCollectionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateProductOptionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateProductOptionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateProductTagsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateProductTagsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateProductTypesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateProductTypesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateProductVariantsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateProductVariantsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateProductsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateProductsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createProductCategoriesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createProductCategoriesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteProductCategoriesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteProductCategoriesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateProductCategoriesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateProductCategoriesStep",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/product/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Store",
+                    "autogenerate_tags": "jsSdk+storefront+product",
+                    "description": "The following methods or properties are used to send requests to Store API Routes related to the Product Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "Implement Express Checkout with Medusa",
+                        "path": "https://docs.medusajs.com/resources/storefront-development/guides/express-checkout",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "category",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/store/category",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "collection",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/store/collection",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "product",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/store/product",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Admin",
+                    "autogenerate_tags": "jsSdk+admin+product",
+                    "description": "The following methods or properties are used to send requests to Admin API Routes related to the Product Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "product",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/product",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "productCategory",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/productCategory",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "productCollection",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/productCollection",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "productTag",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/productTag",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "productType",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/productType",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "productVariant",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/productVariant",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/product/events",
+                "title": "Events Reference",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/product/admin-widget-zones",
+                "title": "Admin Widget Zones",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -5346,6 +11853,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/createProductCategories",
                         "title": "createProductCategories",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5354,6 +11862,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/createProductCollections",
                         "title": "createProductCollections",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5362,6 +11871,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/createProductOptionValues",
                         "title": "createProductOptionValues",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5370,6 +11880,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/createProductOptions",
                         "title": "createProductOptions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5378,6 +11889,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/createProductTags",
                         "title": "createProductTags",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5386,6 +11898,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/createProductTypes",
                         "title": "createProductTypes",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5394,6 +11907,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/createProductVariants",
                         "title": "createProductVariants",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5402,6 +11916,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/createProducts",
                         "title": "createProducts",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5410,6 +11925,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/deleteProductCategories",
                         "title": "deleteProductCategories",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5418,6 +11934,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/deleteProductCollections",
                         "title": "deleteProductCollections",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5426,6 +11943,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/deleteProductOptionValues",
                         "title": "deleteProductOptionValues",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5434,6 +11952,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/deleteProductOptions",
                         "title": "deleteProductOptions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5442,6 +11961,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/deleteProductTags",
                         "title": "deleteProductTags",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5450,6 +11970,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/deleteProductTypes",
                         "title": "deleteProductTypes",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5458,6 +11979,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/deleteProductVariants",
                         "title": "deleteProductVariants",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5466,6 +11988,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/deleteProducts",
                         "title": "deleteProducts",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5474,6 +11997,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/listAndCountProductCategories",
                         "title": "listAndCountProductCategories",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5482,6 +12006,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/listAndCountProductCollections",
                         "title": "listAndCountProductCollections",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5490,6 +12015,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/listAndCountProductOptionValues",
                         "title": "listAndCountProductOptionValues",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5498,6 +12024,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/listAndCountProductOptions",
                         "title": "listAndCountProductOptions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5506,6 +12033,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/listAndCountProductTags",
                         "title": "listAndCountProductTags",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5514,6 +12042,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/listAndCountProductTypes",
                         "title": "listAndCountProductTypes",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5522,6 +12051,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/listAndCountProductVariants",
                         "title": "listAndCountProductVariants",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5530,6 +12060,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/listAndCountProducts",
                         "title": "listAndCountProducts",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5538,6 +12069,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/listProductCategories",
                         "title": "listProductCategories",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5546,6 +12078,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/listProductCollections",
                         "title": "listProductCollections",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5554,6 +12087,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/listProductOptionValues",
                         "title": "listProductOptionValues",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5562,6 +12096,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/listProductOptions",
                         "title": "listProductOptions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5570,6 +12105,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/listProductTags",
                         "title": "listProductTags",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5578,6 +12114,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/listProductTypes",
                         "title": "listProductTypes",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5586,6 +12123,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/listProductVariants",
                         "title": "listProductVariants",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5594,6 +12132,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/listProducts",
                         "title": "listProducts",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5602,6 +12141,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/restoreProductCategories",
                         "title": "restoreProductCategories",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5610,6 +12150,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/restoreProductCollections",
                         "title": "restoreProductCollections",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5618,6 +12159,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/restoreProductOptionValues",
                         "title": "restoreProductOptionValues",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5626,6 +12168,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/restoreProductOptions",
                         "title": "restoreProductOptions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5634,6 +12177,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/restoreProductTags",
                         "title": "restoreProductTags",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5642,6 +12186,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/restoreProductTypes",
                         "title": "restoreProductTypes",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5650,6 +12195,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/restoreProductVariants",
                         "title": "restoreProductVariants",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5658,6 +12204,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/restoreProducts",
                         "title": "restoreProducts",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5666,6 +12213,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/retrieveProduct",
                         "title": "retrieveProduct",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5674,6 +12222,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/retrieveProductCategory",
                         "title": "retrieveProductCategory",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5682,6 +12231,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/retrieveProductCollection",
                         "title": "retrieveProductCollection",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5690,6 +12240,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/retrieveProductOption",
                         "title": "retrieveProductOption",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5698,6 +12249,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/retrieveProductTag",
                         "title": "retrieveProductTag",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5706,6 +12258,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/retrieveProductType",
                         "title": "retrieveProductType",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5714,6 +12267,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/retrieveProductVariant",
                         "title": "retrieveProductVariant",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5722,6 +12276,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/softDeleteProductCategories",
                         "title": "softDeleteProductCategories",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5730,6 +12285,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/softDeleteProductCollections",
                         "title": "softDeleteProductCollections",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5738,6 +12294,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/softDeleteProductOptionValues",
                         "title": "softDeleteProductOptionValues",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5746,6 +12303,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/softDeleteProductOptions",
                         "title": "softDeleteProductOptions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5754,6 +12312,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/softDeleteProductTags",
                         "title": "softDeleteProductTags",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5762,6 +12321,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/softDeleteProductTypes",
                         "title": "softDeleteProductTypes",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5770,6 +12330,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/softDeleteProductVariants",
                         "title": "softDeleteProductVariants",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5778,6 +12339,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/softDeleteProducts",
                         "title": "softDeleteProducts",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5786,6 +12348,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/updateProductCategories",
                         "title": "updateProductCategories",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5794,6 +12357,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/updateProductCollections",
                         "title": "updateProductCollections",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5802,6 +12366,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/updateProductOptionValues",
                         "title": "updateProductOptionValues",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5810,6 +12375,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/updateProductOptions",
                         "title": "updateProductOptions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5818,6 +12384,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/updateProductTags",
                         "title": "updateProductTags",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5826,6 +12393,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/updateProductTypes",
                         "title": "updateProductTypes",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5834,6 +12402,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/updateProductVariants",
                         "title": "updateProductVariants",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5842,6 +12411,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/updateProducts",
                         "title": "updateProducts",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5850,6 +12420,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/upsertProductCategories",
                         "title": "upsertProductCategories",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5858,6 +12429,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/upsertProductCollections",
                         "title": "upsertProductCollections",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5866,6 +12438,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/upsertProductOptions",
                         "title": "upsertProductOptions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5874,6 +12447,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/upsertProductTags",
                         "title": "upsertProductTags",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5882,6 +12456,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/upsertProductTypes",
                         "title": "upsertProductTypes",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5890,6 +12465,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/upsertProductVariants",
                         "title": "upsertProductVariants",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5898,6 +12474,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/upsertProducts",
                         "title": "upsertProducts",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -5919,22 +12496,15 @@ export const generatedSidebar = [
                     "type": "category",
                     "title": "Data Models",
                     "hasTitleStyling": true,
-                    "autogenerate_path": "/references/product_models/classes",
+                    "autogenerate_path": "/references/product_models/variables",
                     "children": [
-                      {
-                        "loaded": true,
-                        "isPathHref": true,
-                        "type": "link",
-                        "path": "/references/product/models/Image",
-                        "title": "Image",
-                        "children": []
-                      },
                       {
                         "loaded": true,
                         "isPathHref": true,
                         "type": "link",
                         "path": "/references/product/models/Product",
                         "title": "Product",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5943,6 +12513,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/models/ProductCategory",
                         "title": "ProductCategory",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5951,6 +12522,16 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/models/ProductCollection",
                         "title": "ProductCollection",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/product/models/ProductImage",
+                        "title": "ProductImage",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5959,6 +12540,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/models/ProductOption",
                         "title": "ProductOption",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5967,6 +12549,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/models/ProductOptionValue",
                         "title": "ProductOptionValue",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5975,6 +12558,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/models/ProductTag",
                         "title": "ProductTag",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5983,6 +12567,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/models/ProductType",
                         "title": "ProductType",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -5991,6 +12576,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/product/models/ProductVariant",
                         "title": "ProductVariant",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -6006,37 +12592,25 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "category",
         "title": "Promotion Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
             "isPathHref": true,
             "type": "link",
             "path": "/commerce-modules/promotion",
-            "title": "Promotion Module",
+            "title": "Overview",
             "children": []
+          },
+          {
+            "type": "separator"
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/promotion/examples",
-            "title": "Examples",
-            "children": []
-          },
-          {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/promotion/extend",
-            "title": "Extend Module",
-            "children": []
-          },
-          {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
             "title": "Concepts",
+            "initialOpen": false,
             "children": [
               {
                 "loaded": true,
@@ -6083,9 +12657,438 @@ export const generatedSidebar = [
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "References",
+            "type": "category",
+            "title": "Server Guides",
+            "autogenerate_tags": "server+promotion",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to use the Promotion Module in your customizations on the Medusa application server.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/promotion/extend",
+                "title": "Extend Module",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Admin User Guides",
+            "autogenerate_tags": "userGuide+promotion",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to utilize and manage Promotion features in the Medusa Admin dashboard.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Campaigns",
+                "path": "https://docs.medusajs.com/user-guide/promotions/campaigns",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Create a Promotion",
+                "path": "https://docs.medusajs.com/user-guide/promotions/create",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Promotions",
+                "path": "https://docs.medusajs.com/user-guide/promotions/manage",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Promotions Overview",
+                "path": "https://docs.medusajs.com/user-guide/promotions",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the Promotion Module, such as data models, methods, and more. These are useful for your customizations.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/promotion/workflows",
+                "title": "Workflows",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Workflows",
+                    "autogenerate_tags": "workflow+promotion",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addShippingMethodToCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addShippingMethodToCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addToCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addToCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "refreshCartItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshCartItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "transferCartCustomerWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/transferCartCustomerWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCartPromotionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartPromotionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateLineItemInCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateLineItemInCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteLineItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteLineItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addOrRemoveCampaignPromotionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addOrRemoveCampaignPromotionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "batchPromotionRulesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/batchPromotionRulesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCampaignsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCampaignsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createPromotionRulesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createPromotionRulesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createPromotionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createPromotionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteCampaignsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteCampaignsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deletePromotionRulesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deletePromotionRulesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deletePromotionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deletePromotionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCampaignsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCampaignsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updatePromotionRulesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updatePromotionRulesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updatePromotionsStatusWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updatePromotionsStatusWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updatePromotionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updatePromotionsWorkflow",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Steps",
+                    "autogenerate_tags": "step+promotion",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "getActionsToComputeFromPromotionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/getActionsToComputeFromPromotionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "getPromotionCodesToApply",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/getPromotionCodesToApply",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "prepareAdjustmentsFromPromotionActionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/prepareAdjustmentsFromPromotionActionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCartPromotionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateCartPromotionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addCampaignPromotionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/addCampaignPromotionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addRulesToPromotionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/addRulesToPromotionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCampaignsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createCampaignsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createPromotionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createPromotionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteCampaignsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteCampaignsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deletePromotionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deletePromotionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeCampaignPromotionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/removeCampaignPromotionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeRulesFromPromotionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/removeRulesFromPromotionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCampaignsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateCampaignsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updatePromotionRulesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updatePromotionRulesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updatePromotionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updatePromotionsStep",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/promotion/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Admin",
+                    "autogenerate_tags": "jsSdk+admin+promotion",
+                    "description": "The following methods or properties are used to send requests to Admin API Routes related to the Promotion Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "campaign",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/campaign",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "promotion",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/promotion",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/promotion/admin-widget-zones",
+                "title": "Admin Widget Zones",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -6109,6 +13112,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/addPromotionBuyRules",
                         "title": "addPromotionBuyRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6117,6 +13121,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/addPromotionRules",
                         "title": "addPromotionRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6125,6 +13130,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/addPromotionTargetRules",
                         "title": "addPromotionTargetRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6133,6 +13139,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/addPromotionsToCampaign",
                         "title": "addPromotionsToCampaign",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6141,6 +13148,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/computeActions",
                         "title": "computeActions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6149,6 +13157,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/createCampaigns",
                         "title": "createCampaigns",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6157,6 +13166,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/createPromotions",
                         "title": "createPromotions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6165,6 +13175,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/deleteCampaigns",
                         "title": "deleteCampaigns",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6173,6 +13184,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/deletePromotions",
                         "title": "deletePromotions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6181,6 +13193,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/listAndCountCampaigns",
                         "title": "listAndCountCampaigns",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6189,6 +13202,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/listAndCountPromotions",
                         "title": "listAndCountPromotions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6197,6 +13211,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/listCampaigns",
                         "title": "listCampaigns",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6205,6 +13220,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/listPromotionRules",
                         "title": "listPromotionRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6213,6 +13229,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/listPromotions",
                         "title": "listPromotions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6221,6 +13238,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/registerUsage",
                         "title": "registerUsage",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6229,6 +13247,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/removePromotionBuyRules",
                         "title": "removePromotionBuyRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6237,6 +13256,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/removePromotionRules",
                         "title": "removePromotionRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6245,6 +13265,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/removePromotionTargetRules",
                         "title": "removePromotionTargetRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6253,6 +13274,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/removePromotionsFromCampaign",
                         "title": "removePromotionsFromCampaign",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6261,6 +13283,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/restoreCampaigns",
                         "title": "restoreCampaigns",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6269,6 +13292,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/restorePromotions",
                         "title": "restorePromotions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6277,6 +13301,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/retrieveCampaign",
                         "title": "retrieveCampaign",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6285,6 +13310,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/retrievePromotion",
                         "title": "retrievePromotion",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6293,6 +13319,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/revertUsage",
                         "title": "revertUsage",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6301,6 +13328,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/softDeleteCampaigns",
                         "title": "softDeleteCampaigns",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6309,6 +13337,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/softDeletePromotions",
                         "title": "softDeletePromotions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6317,6 +13346,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/updateCampaigns",
                         "title": "updateCampaigns",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6325,6 +13355,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/updatePromotionRules",
                         "title": "updatePromotionRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6333,6 +13364,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/updatePromotions",
                         "title": "updatePromotions",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -6354,7 +13386,7 @@ export const generatedSidebar = [
                     "type": "category",
                     "title": "Data Models",
                     "hasTitleStyling": true,
-                    "autogenerate_path": "/references/promotion_models/classes",
+                    "autogenerate_path": "/references/promotion_models/variables",
                     "children": [
                       {
                         "loaded": true,
@@ -6362,6 +13394,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/models/ApplicationMethod",
                         "title": "ApplicationMethod",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6370,6 +13403,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/models/Campaign",
                         "title": "Campaign",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6378,6 +13412,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/models/CampaignBudget",
                         "title": "CampaignBudget",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6386,6 +13421,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/models/Promotion",
                         "title": "Promotion",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6394,6 +13430,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/models/PromotionRule",
                         "title": "PromotionRule",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6402,6 +13439,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/promotion/models/PromotionRuleValue",
                         "title": "PromotionRuleValue",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -6417,7 +13455,7 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "category",
         "title": "Region Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
@@ -6428,18 +13466,14 @@ export const generatedSidebar = [
             "children": []
           },
           {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/region/examples",
-            "title": "Examples",
-            "children": []
+            "type": "separator"
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
             "title": "Concepts",
+            "initialOpen": false,
             "children": [
               {
                 "loaded": true,
@@ -6454,9 +13488,329 @@ export const generatedSidebar = [
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "References",
+            "type": "category",
+            "title": "Storefront Guides",
+            "autogenerate_tags": "storefront+region,-jsSdk",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to integrate the Region Module's features into your storefront.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Region Context in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/regions/context",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "List Regions in Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/regions/list",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Store and Retrieve Region",
+                "path": "https://docs.medusajs.com/resources/storefront-development/regions/store-retrieve-region",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Admin User Guides",
+            "autogenerate_tags": "userGuide+region",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to utilize and manage Region features in the Medusa Admin dashboard.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Regions",
+                "path": "https://docs.medusajs.com/user-guide/settings/regions",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the Region Module, such as data models, methods, and more. These are useful for your customizations.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/region/workflows",
+                "title": "Workflows",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Workflows",
+                    "autogenerate_tags": "workflow+region",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createShippingOptionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createShippingOptionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateShippingOptionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateShippingOptionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addOrderLineItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addOrderLineItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderClaimAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderClaimAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderEditAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderEditAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderExchangeAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderExchangeAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "exportProductsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/exportProductsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "importProductsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/importProductsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createRegionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createRegionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteRegionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteRegionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateRegionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateRegionsWorkflow",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Steps",
+                    "autogenerate_tags": "step+region",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "findOneOrAnyRegionStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/findOneOrAnyRegionStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "validateShippingOptionPricesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/validateShippingOptionPricesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "generateProductCsvStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/generateProductCsvStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "parseProductCsvStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/parseProductCsvStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createRegionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createRegionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteRegionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteRegionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateRegionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateRegionsStep",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/region/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Store",
+                    "autogenerate_tags": "jsSdk+storefront+region",
+                    "description": "The following methods or properties are used to send requests to Store API Routes related to the Region Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "Implement Express Checkout with Medusa",
+                        "path": "https://docs.medusajs.com/resources/storefront-development/guides/express-checkout",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "region",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/store/region",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Admin",
+                    "autogenerate_tags": "jsSdk+admin+region",
+                    "description": "The following methods or properties are used to send requests to Admin API Routes related to the Region Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "region",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/region",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/region/events",
+                "title": "Events Reference",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/region/admin-widget-zones",
+                "title": "Admin Widget Zones",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -6479,6 +13833,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/region/createRegions",
                         "title": "createRegions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6487,6 +13842,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/region/deleteRegions",
                         "title": "deleteRegions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6495,6 +13851,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/region/listAndCountCountries",
                         "title": "listAndCountCountries",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6503,6 +13860,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/region/listAndCountRegions",
                         "title": "listAndCountRegions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6511,6 +13869,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/region/listCountries",
                         "title": "listCountries",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6519,6 +13878,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/region/listRegions",
                         "title": "listRegions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6527,6 +13887,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/region/restoreRegions",
                         "title": "restoreRegions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6535,6 +13896,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/region/retrieveCountry",
                         "title": "retrieveCountry",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6543,6 +13905,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/region/retrieveRegion",
                         "title": "retrieveRegion",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6551,6 +13914,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/region/softDeleteRegions",
                         "title": "softDeleteRegions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6559,6 +13923,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/region/updateRegions",
                         "title": "updateRegions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6567,6 +13932,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/region/upsertRegions",
                         "title": "upsertRegions",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -6595,6 +13961,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/region/models/Country",
                         "title": "Country",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6603,6 +13970,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/region/models/Region",
                         "title": "Region",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -6618,7 +13986,7 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "category",
         "title": "Sales Channel Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
@@ -6629,18 +13997,16 @@ export const generatedSidebar = [
             "children": []
           },
           {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/sales-channel/examples",
-            "title": "Examples",
-            "children": []
+            "type": "separator"
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
             "title": "Concepts",
+            "initialOpen": false,
+            "autogenerate_tags": "concept+salesChannel",
+            "autogenerate_as_ref": true,
             "children": [
               {
                 "loaded": true,
@@ -6657,15 +14023,300 @@ export const generatedSidebar = [
                 "path": "/commerce-modules/sales-channel/links-to-other-modules",
                 "title": "Links to Modules",
                 "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Product Variant Inventory",
+                "path": "https://docs.medusajs.com/resources/commerce-modules/product/variant-inventory",
+                "children": []
               }
             ]
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "References",
+            "type": "category",
+            "title": "Storefront Guides",
+            "autogenerate_tags": "storefront+salesChannel,-jsSdk",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to integrate the Sales Channel Module's features into your storefront.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Use a Publishable API Key in the Storefront",
+                "path": "https://docs.medusajs.com/resources/storefront-development/publishable-api-keys",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Admin User Guides",
+            "autogenerate_tags": "userGuide+salesChannel",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to utilize and manage Sales Channel features in the Medusa Admin dashboard.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Sales Channels",
+                "path": "https://docs.medusajs.com/user-guide/settings/sales-channels",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the Sales Channel Module, such as data models, methods, and more. These are useful for your customizations.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/sales-channel/workflows",
+                "title": "Workflows",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Workflows",
+                    "autogenerate_tags": "workflow+salesChannel",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "linkSalesChannelsToApiKeyWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/linkSalesChannelsToApiKeyWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createDefaultsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createDefaultsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addOrderLineItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addOrderLineItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderClaimAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderClaimAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderEditAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderEditAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderExchangeAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderExchangeAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "importProductsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/importProductsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createSalesChannelsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createSalesChannelsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteSalesChannelsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteSalesChannelsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateSalesChannelsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateSalesChannelsWorkflow",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Steps",
+                    "autogenerate_tags": "step+salesChannel",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "validateSalesChannelsExistStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/validateSalesChannelsExistStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "findSalesChannelStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/findSalesChannelStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "parseProductCsvStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/parseProductCsvStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createDefaultSalesChannelStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createDefaultSalesChannelStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createSalesChannelsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createSalesChannelsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteSalesChannelsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteSalesChannelsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateSalesChannelsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateSalesChannelsStep",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/sales-channel/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Admin",
+                    "autogenerate_tags": "jsSdk+admin+salesChannel",
+                    "description": "The following methods or properties are used to send requests to Admin API Routes related to the Sales Channel Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "salesChannel",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/salesChannel",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/sales-channel/events",
+                "title": "Events Reference",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/sales-channel/admin-widget-zones",
+                "title": "Admin Widget Zones",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -6688,6 +14339,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/sales-channel/createSalesChannels",
                         "title": "createSalesChannels",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6696,6 +14348,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/sales-channel/deleteSalesChannels",
                         "title": "deleteSalesChannels",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6704,6 +14357,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/sales-channel/listAndCountSalesChannels",
                         "title": "listAndCountSalesChannels",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6712,6 +14366,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/sales-channel/listSalesChannels",
                         "title": "listSalesChannels",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6720,6 +14375,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/sales-channel/restoreSalesChannels",
                         "title": "restoreSalesChannels",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6728,6 +14384,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/sales-channel/retrieveSalesChannel",
                         "title": "retrieveSalesChannel",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6736,6 +14393,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/sales-channel/softDeleteSalesChannels",
                         "title": "softDeleteSalesChannels",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6744,6 +14402,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/sales-channel/updateSalesChannels",
                         "title": "updateSalesChannels",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6752,6 +14411,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/sales-channel/upsertSalesChannels",
                         "title": "upsertSalesChannels",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -6772,7 +14432,7 @@ export const generatedSidebar = [
                     "isPathHref": true,
                     "type": "category",
                     "title": "Data Models",
-                    "autogenerate_path": "/references/sales_channel_models/classes",
+                    "autogenerate_path": "/references/sales_channel_models/variables",
                     "children": [
                       {
                         "loaded": true,
@@ -6780,6 +14440,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/sales-channel/models/SalesChannel",
                         "title": "SalesChannel",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -6795,29 +14456,27 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "category",
         "title": "Stock Location Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
             "isPathHref": true,
             "type": "link",
             "path": "/commerce-modules/stock-location",
-            "title": "Stock Location Module",
+            "title": "Overview",
             "children": []
+          },
+          {
+            "type": "separator"
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/stock-location/examples",
-            "title": "Examples",
-            "children": []
-          },
-          {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
             "title": "Concepts",
+            "initialOpen": false,
+            "autogenerate_tags": "concept+stockLocation",
+            "autogenerate_as_ref": true,
             "children": [
               {
                 "loaded": true,
@@ -6834,15 +14493,176 @@ export const generatedSidebar = [
                 "path": "/commerce-modules/stock-location/links-to-other-modules",
                 "title": "Links to Modules",
                 "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Inventory Kits",
+                "path": "https://docs.medusajs.com/resources/commerce-modules/inventory/inventory-kit",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Product Variant Inventory",
+                "path": "https://docs.medusajs.com/resources/commerce-modules/product/variant-inventory",
+                "children": []
               }
             ]
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "References",
+            "type": "category",
+            "title": "Admin User Guides",
+            "autogenerate_tags": "userGuide+stockLocation",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to utilize and manage Stock Location features in the Medusa Admin dashboard.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Locations",
+                "path": "https://docs.medusajs.com/user-guide/settings/locations-and-shipping/locations",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Locations & Shipping Overview",
+                "path": "https://docs.medusajs.com/user-guide/settings/locations-and-shipping",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the Stock Location Module, such as data models, methods, and more. These are useful for your customizations.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/stock-location/workflows",
+                "title": "Workflows",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Workflows",
+                    "autogenerate_tags": "workflow+stockLocation",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createStockLocationsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createStockLocationsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteStockLocationsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteStockLocationsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateStockLocationsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateStockLocationsWorkflow",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Steps",
+                    "autogenerate_tags": "step+stockLocation",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createStockLocations",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createStockLocations",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteStockLocationsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteStockLocationsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateStockLocationsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateStockLocationsStep",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/stock-location/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Admin",
+                    "autogenerate_tags": "jsSdk+admin+stockLocation",
+                    "description": "The following methods or properties are used to send requests to Admin API Routes related to the Stock Location Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "stockLocation",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/stockLocation",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/stock-location/admin-widget-zones",
+                "title": "Admin Widget Zones",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -6865,6 +14685,16 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/stock-location-next/createStockLocations",
                         "title": "createStockLocations",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/stock-location-next/deleteStockLocationAddresses",
+                        "title": "deleteStockLocationAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6873,6 +14703,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/stock-location-next/deleteStockLocations",
                         "title": "deleteStockLocations",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6881,6 +14712,16 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/stock-location-next/listAndCountStockLocations",
                         "title": "listAndCountStockLocations",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/stock-location-next/listStockLocationAddresses",
+                        "title": "listStockLocationAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6889,6 +14730,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/stock-location-next/listStockLocations",
                         "title": "listStockLocations",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6897,6 +14739,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/stock-location-next/restoreStockLocations",
                         "title": "restoreStockLocations",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6905,6 +14748,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/stock-location-next/retrieveStockLocation",
                         "title": "retrieveStockLocation",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6913,6 +14757,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/stock-location-next/softDeleteStockLocations",
                         "title": "softDeleteStockLocations",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6921,6 +14766,16 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/stock-location-next/updateStockLocations",
                         "title": "updateStockLocations",
+                        "description": "",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "link",
+                        "path": "/references/stock-location-next/upsertStockLocationAddresses",
+                        "title": "upsertStockLocationAddresses",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6929,6 +14784,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/stock-location-next/upsertStockLocations",
                         "title": "upsertStockLocations",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -6949,7 +14805,7 @@ export const generatedSidebar = [
                     "isPathHref": true,
                     "type": "category",
                     "title": "Data Models",
-                    "autogenerate_path": "/references/stock_location_next_models/classes",
+                    "autogenerate_path": "/references/stock_location_next_models/variables",
                     "children": [
                       {
                         "loaded": true,
@@ -6957,6 +14813,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/stock-location-next/models/StockLocation",
                         "title": "StockLocation",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -6965,6 +14822,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/stock-location-next/models/StockLocationAddress",
                         "title": "StockLocationAddress",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -6980,30 +14838,267 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "category",
         "title": "Store Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
             "isPathHref": true,
             "type": "link",
             "path": "/commerce-modules/store",
-            "title": "Store Module",
+            "title": "Overview",
             "children": []
+          },
+          {
+            "type": "separator"
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/store/examples",
-            "title": "Examples",
-            "children": []
-          },
-          {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "sub-category",
-            "title": "References",
+            "type": "category",
+            "title": "Concepts",
+            "initialOpen": false,
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/store/links-to-other-modules",
+                "title": "Link to Modules",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Admin User Guides",
+            "autogenerate_tags": "userGuide+store",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to utilize and manage Store features in the Medusa Admin dashboard.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Store",
+                "path": "https://docs.medusajs.com/user-guide/settings/store",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the Store Module, such as data models, methods, and more. These are useful for your customizations.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/store/workflows",
+                "title": "Workflows",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Workflows",
+                    "autogenerate_tags": "workflow+store",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createDefaultsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createDefaultsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addOrderLineItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addOrderLineItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderClaimAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderClaimAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderEditAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderEditAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderExchangeAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderExchangeAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createStoresWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createStoresWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteStoresWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteStoresWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateStoresWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateStoresWorkflow",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Steps",
+                    "autogenerate_tags": "step+store",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "findOneOrAnyRegionStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/findOneOrAnyRegionStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "findSalesChannelStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/findSalesChannelStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createDefaultStoreStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createDefaultStoreStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createStoresStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createStoresStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteStoresStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteStoresStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateStoresStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateStoresStep",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/store/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Admin",
+                    "autogenerate_tags": "jsSdk+admin+store",
+                    "description": "The following methods or properties are used to send requests to Admin API Routes related to the Store Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "store",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/store",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/store/admin-widget-zones",
+                "title": "Admin Widget Zones",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -7026,6 +15121,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/store/createStores",
                         "title": "createStores",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7034,6 +15130,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/store/deleteStores",
                         "title": "deleteStores",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7042,6 +15139,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/store/listAndCountStores",
                         "title": "listAndCountStores",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7050,6 +15148,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/store/listStores",
                         "title": "listStores",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7058,6 +15157,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/store/restoreStores",
                         "title": "restoreStores",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7066,6 +15166,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/store/retrieveStore",
                         "title": "retrieveStore",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7074,6 +15175,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/store/softDeleteStores",
                         "title": "softDeleteStores",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7082,6 +15184,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/store/updateStores",
                         "title": "updateStores",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7090,6 +15193,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/store/upsertStores",
                         "title": "upsertStores",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -7110,7 +15214,7 @@ export const generatedSidebar = [
                     "isPathHref": true,
                     "type": "category",
                     "title": "Data Models",
-                    "autogenerate_path": "/references/store_models/classes",
+                    "autogenerate_path": "/references/store_models/variables",
                     "children": [
                       {
                         "loaded": true,
@@ -7118,6 +15222,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/store/models/Store",
                         "title": "Store",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7126,6 +15231,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/store/models/StoreCurrency",
                         "title": "StoreCurrency",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -7141,7 +15247,7 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "category",
         "title": "Tax Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
@@ -7160,18 +15266,14 @@ export const generatedSidebar = [
             "children": []
           },
           {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/tax/examples",
-            "title": "Examples",
-            "children": []
+            "type": "separator"
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
+            "type": "category",
             "title": "Concepts",
+            "initialOpen": false,
             "children": [
               {
                 "loaded": true,
@@ -7202,8 +15304,12 @@ export const generatedSidebar = [
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "Guides",
+            "type": "category",
+            "title": "Server Guides",
+            "autogenerate_tags": "server+tax",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to use the Tax Module in your customizations on the Medusa application server.",
             "children": [
               {
                 "loaded": true,
@@ -7212,15 +15318,436 @@ export const generatedSidebar = [
                 "path": "/references/tax/provider",
                 "title": "Tax Provider Reference",
                 "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Get Variant Price with Taxes",
+                "path": "https://docs.medusajs.com/resources/commerce-modules/product/guides/price-with-taxes",
+                "children": []
               }
             ]
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "References",
+            "type": "category",
+            "title": "Storefront Guides",
+            "autogenerate_tags": "storefront+tax,-jsSdk",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to integrate the Tax Module's features into your storefront.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Example: Show Price with Taxes",
+                "path": "https://docs.medusajs.com/resources/storefront-development/products/price/examples/tax-price",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Admin User Guides",
+            "autogenerate_tags": "userGuide+tax",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to utilize and manage Tax features in the Medusa Admin dashboard.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Tax Regions",
+                "path": "https://docs.medusajs.com/user-guide/settings/tax-regions",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the Tax Module, such as data models, methods, and more. These are useful for your customizations.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/tax/workflows",
+                "title": "Workflows",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Workflows",
+                    "autogenerate_tags": "workflow+tax",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addShippingMethodToCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addShippingMethodToCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "addToCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/addToCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "refreshCartItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshCartItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "transferCartCustomerWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/transferCartCustomerWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateLineItemInCartWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateLineItemInCartWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateTaxLinesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateTaxLinesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteLineItemsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteLineItemsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createClaimShippingMethodWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createClaimShippingMethodWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createExchangeShippingMethodWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createExchangeShippingMethodWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderEditShippingMethodWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderEditShippingMethodWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createOrderWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createOrderWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createReturnShippingMethodWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createReturnShippingMethodWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderClaimAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderClaimAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderEditAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderEditAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "orderExchangeAddNewItemWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/orderExchangeAddNewItemWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateOrderTaxLinesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateOrderTaxLinesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createTaxRateRulesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createTaxRateRulesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createTaxRatesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createTaxRatesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createTaxRegionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createTaxRegionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteTaxRateRulesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteTaxRateRulesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteTaxRatesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteTaxRatesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteTaxRegionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteTaxRegionsWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "setTaxRateRulesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/setTaxRateRulesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateTaxRatesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateTaxRatesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateTaxRegionsWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateTaxRegionsWorkflow",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Steps",
+                    "autogenerate_tags": "step+tax",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createTaxRateRulesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createTaxRateRulesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createTaxRatesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createTaxRatesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createTaxRegionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createTaxRegionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteTaxRateRulesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteTaxRateRulesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteTaxRatesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteTaxRatesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteTaxRegionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteTaxRegionsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "getItemTaxLinesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/getItemTaxLinesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "listTaxRateRuleIdsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/listTaxRateRuleIdsStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateTaxRatesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateTaxRatesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateTaxRegionsStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateTaxRegionsStep",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/tax/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Admin",
+                    "autogenerate_tags": "jsSdk+admin+tax",
+                    "description": "The following methods or properties are used to send requests to Admin API Routes related to the Tax Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "taxRate",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/taxRate",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "taxRegion",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/taxRegion",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/tax/admin-widget-zones",
+                "title": "Admin Widget Zones",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -7243,6 +15770,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/createTaxRateRules",
                         "title": "createTaxRateRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7251,6 +15779,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/createTaxRates",
                         "title": "createTaxRates",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7259,6 +15788,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/createTaxRegions",
                         "title": "createTaxRegions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7267,6 +15797,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/deleteTaxRateRules",
                         "title": "deleteTaxRateRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7275,6 +15806,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/deleteTaxRates",
                         "title": "deleteTaxRates",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7283,6 +15815,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/deleteTaxRegions",
                         "title": "deleteTaxRegions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7291,6 +15824,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/getTaxLines",
                         "title": "getTaxLines",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7299,6 +15833,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/listAndCountTaxRates",
                         "title": "listAndCountTaxRates",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7307,6 +15842,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/listTaxRateRules",
                         "title": "listTaxRateRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7315,6 +15851,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/listTaxRates",
                         "title": "listTaxRates",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7323,6 +15860,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/listTaxRegions",
                         "title": "listTaxRegions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7331,6 +15869,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/restoreTaxRateRules",
                         "title": "restoreTaxRateRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7339,6 +15878,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/restoreTaxRates",
                         "title": "restoreTaxRates",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7347,6 +15887,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/restoreTaxRegions",
                         "title": "restoreTaxRegions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7355,6 +15896,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/retrieveTaxRate",
                         "title": "retrieveTaxRate",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7363,6 +15905,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/softDeleteTaxRateRules",
                         "title": "softDeleteTaxRateRules",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7371,6 +15914,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/softDeleteTaxRates",
                         "title": "softDeleteTaxRates",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7379,6 +15923,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/softDeleteTaxRegions",
                         "title": "softDeleteTaxRegions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7387,6 +15932,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/updateTaxRates",
                         "title": "updateTaxRates",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7395,6 +15941,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/updateTaxRegions",
                         "title": "updateTaxRegions",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7403,6 +15950,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/upsertTaxRates",
                         "title": "upsertTaxRates",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -7423,7 +15971,7 @@ export const generatedSidebar = [
                     "isPathHref": true,
                     "type": "category",
                     "title": "Data Models",
-                    "autogenerate_path": "/references/tax_models/classes",
+                    "autogenerate_path": "/references/tax_models/variables",
                     "children": [
                       {
                         "loaded": true,
@@ -7431,6 +15979,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/models/TaxProvider",
                         "title": "TaxProvider",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7439,6 +15988,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/models/TaxRate",
                         "title": "TaxRate",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7447,6 +15997,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/models/TaxRateRule",
                         "title": "TaxRateRule",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7455,6 +16006,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/tax/models/TaxRegion",
                         "title": "TaxRegion",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -7470,14 +16022,14 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "category",
         "title": "User Module",
-        "initialOpen": false,
+        "isChildSidebar": true,
         "children": [
           {
             "loaded": true,
             "isPathHref": true,
             "type": "link",
             "path": "/commerce-modules/user",
-            "title": "User Module",
+            "title": "Overview",
             "children": []
           },
           {
@@ -7489,18 +16041,17 @@ export const generatedSidebar = [
             "children": []
           },
           {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "link",
-            "path": "/commerce-modules/user/examples",
-            "title": "Examples",
-            "children": []
+            "type": "separator"
           },
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "Guides",
+            "type": "category",
+            "title": "Server Guides",
+            "autogenerate_tags": "server+user",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to use the User Module in your customizations on the Medusa application server.",
             "children": [
               {
                 "loaded": true,
@@ -7515,9 +16066,266 @@ export const generatedSidebar = [
           {
             "loaded": true,
             "isPathHref": true,
-            "type": "sub-category",
-            "title": "References",
+            "type": "category",
+            "title": "Admin User Guides",
+            "autogenerate_tags": "userGuide+user",
+            "initialOpen": false,
+            "autogenerate_as_ref": true,
+            "description": "Learn how to utilize and manage User features in the Medusa Admin dashboard.",
             "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Reset Password",
+                "path": "https://docs.medusajs.com/user-guide/reset-password",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Profile",
+                "path": "https://docs.medusajs.com/user-guide/settings/profile",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Invites",
+                "path": "https://docs.medusajs.com/user-guide/settings/users/invites",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "ref",
+                "title": "Manage Users",
+                "path": "https://docs.medusajs.com/user-guide/settings/users",
+                "children": []
+              }
+            ]
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "References",
+            "initialOpen": false,
+            "description": "Find references for tools and resources related to the User Module, such as data models, methods, and more. These are useful for your customizations.",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/user/workflows",
+                "title": "Workflows",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Workflows",
+                    "autogenerate_tags": "workflow+user",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "acceptInviteWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/acceptInviteWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createInvitesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createInvitesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteInvitesWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteInvitesWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "refreshInviteTokensWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/refreshInviteTokensWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createUserAccountWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createUserAccountWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createUsersWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/createUsersWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteUsersWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/deleteUsersWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "removeUserAccountWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/removeUserAccountWorkflow",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateUsersWorkflow",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/updateUsersWorkflow",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "category",
+                    "title": "Steps",
+                    "autogenerate_tags": "step+user",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createInviteStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createInviteStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteInvitesStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteInvitesStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "refreshInviteTokensStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/refreshInviteTokensStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "validateTokenStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/validateTokenStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "createUsersStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/createUsersStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "deleteUsersStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/deleteUsersStep",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "updateUsersStep",
+                        "path": "https://docs.medusajs.com/resources/references/medusa-workflows/steps/updateUsersStep",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/user/js-sdk",
+                "title": "JS SDK",
+                "hideChildren": true,
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "sub-category",
+                    "title": "Admin",
+                    "autogenerate_tags": "jsSdk+admin+user",
+                    "description": "The following methods or properties are used to send requests to Admin API Routes related to the User Module.",
+                    "autogenerate_as_ref": true,
+                    "children": [
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "invite",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/invite",
+                        "children": []
+                      },
+                      {
+                        "loaded": true,
+                        "isPathHref": true,
+                        "type": "ref",
+                        "title": "user",
+                        "path": "https://docs.medusajs.com/resources/references/js-sdk/admin/user",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/user/events",
+                "title": "Events Reference",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/commerce-modules/user/admin-widget-zones",
+                "title": "Admin Widget Zones",
+                "children": []
+              },
               {
                 "loaded": true,
                 "isPathHref": true,
@@ -7540,6 +16348,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/createInvites",
                         "title": "createInvites",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7548,6 +16357,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/createUsers",
                         "title": "createUsers",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7556,6 +16366,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/deleteInvites",
                         "title": "deleteInvites",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7564,6 +16375,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/deleteUsers",
                         "title": "deleteUsers",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7572,6 +16384,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/listAndCountInvites",
                         "title": "listAndCountInvites",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7580,6 +16393,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/listAndCountUsers",
                         "title": "listAndCountUsers",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7588,6 +16402,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/listInvites",
                         "title": "listInvites",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7596,6 +16411,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/listUsers",
                         "title": "listUsers",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7604,6 +16420,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/refreshInviteTokens",
                         "title": "refreshInviteTokens",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7612,6 +16429,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/restoreInvites",
                         "title": "restoreInvites",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7620,6 +16438,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/restoreUsers",
                         "title": "restoreUsers",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7628,6 +16447,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/retrieveInvite",
                         "title": "retrieveInvite",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7636,6 +16456,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/retrieveUser",
                         "title": "retrieveUser",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7644,6 +16465,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/softDeleteInvites",
                         "title": "softDeleteInvites",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7652,6 +16474,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/softDeleteUsers",
                         "title": "softDeleteUsers",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7660,6 +16483,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/updateInvites",
                         "title": "updateInvites",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7668,6 +16492,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/updateUsers",
                         "title": "updateUsers",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7676,6 +16501,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/validateInviteToken",
                         "title": "validateInviteToken",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -7697,7 +16523,7 @@ export const generatedSidebar = [
                     "type": "category",
                     "title": "Data Models",
                     "hasTitleStyling": true,
-                    "autogenerate_path": "/references/user_models/classes",
+                    "autogenerate_path": "/references/user_models/variables",
                     "children": [
                       {
                         "loaded": true,
@@ -7705,6 +16531,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/models/Invite",
                         "title": "Invite",
+                        "description": "",
                         "children": []
                       },
                       {
@@ -7713,6 +16540,7 @@ export const generatedSidebar = [
                         "type": "link",
                         "path": "/references/user/models/User",
                         "title": "User",
+                        "description": "",
                         "children": []
                       }
                     ]
@@ -7833,7 +16661,7 @@ export const generatedSidebar = [
         "loaded": true,
         "isPathHref": true,
         "type": "category",
-        "title": "File Provider Modules",
+        "title": "File Module Providers",
         "children": [
           {
             "loaded": true,
@@ -7881,7 +16709,7 @@ export const generatedSidebar = [
         "loaded": true,
         "isPathHref": true,
         "type": "category",
-        "title": "Notification Provider Modules",
+        "title": "Notification Module Providers",
         "children": [
           {
             "loaded": true,
@@ -7927,6 +16755,14 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/notification-provider-module",
                 "title": "Create Notification Provider",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/integrations/guides/resend",
+                "title": "Integrate Resend",
                 "children": []
               }
             ]
@@ -7979,6 +16815,46 @@ export const generatedSidebar = [
         "loaded": true,
         "isPathHref": true,
         "type": "category",
+        "title": "Auth",
+        "children": [
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "path": "/commerce-modules/auth/auth-providers/google",
+            "title": "Google",
+            "children": []
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "path": "/commerce-modules/auth/auth-providers/github",
+            "title": "GitHub",
+            "children": []
+          }
+        ]
+      },
+      {
+        "loaded": true,
+        "isPathHref": true,
+        "type": "category",
+        "title": "CMS",
+        "children": [
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "path": "/integrations/guides/sanity",
+            "title": "Sanity",
+            "children": []
+          }
+        ]
+      },
+      {
+        "loaded": true,
+        "isPathHref": true,
+        "type": "category",
         "title": "File",
         "children": [
           {
@@ -7995,6 +16871,22 @@ export const generatedSidebar = [
         "loaded": true,
         "isPathHref": true,
         "type": "category",
+        "title": "Fulfillment",
+        "children": [
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "path": "/integrations/guides/shipstation",
+            "title": "ShipStation",
+            "children": []
+          }
+        ]
+      },
+      {
+        "loaded": true,
+        "isPathHref": true,
+        "type": "category",
         "title": "Notification",
         "children": [
           {
@@ -8003,6 +16895,14 @@ export const generatedSidebar = [
             "type": "link",
             "path": "/architectural-modules/notification/sendgrid",
             "title": "SendGrid",
+            "children": []
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "path": "/integrations/guides/resend",
+            "title": "Resend",
             "children": []
           }
         ]
@@ -8022,6 +16922,24 @@ export const generatedSidebar = [
             "children": []
           }
         ]
+      }
+    ]
+  },
+  {
+    "loaded": true,
+    "isPathHref": true,
+    "type": "ref",
+    "path": "/plugins",
+    "title": "Plugins",
+    "isChildSidebar": true,
+    "children": [
+      {
+        "loaded": true,
+        "isPathHref": true,
+        "type": "link",
+        "title": "Overview",
+        "path": "/plugins",
+        "children": []
       },
       {
         "loaded": true,
@@ -8033,8 +16951,9 @@ export const generatedSidebar = [
             "loaded": true,
             "isPathHref": true,
             "type": "link",
-            "path": "/integrations/guides/sanity",
-            "title": "Sanity",
+            "title": "Wishlist",
+            "path": "/plugins/guides/wishlist",
+            "description": "Learn how to build a wishlist plugin.",
             "children": []
           }
         ]
@@ -8052,21 +16971,42 @@ export const generatedSidebar = [
       {
         "loaded": true,
         "isPathHref": true,
-        "type": "link",
-        "path": "/storefront-development/tips",
-        "title": "Tips",
-        "children": []
+        "type": "category",
+        "title": "General",
+        "children": [
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "path": "/storefront-development/tips",
+            "title": "Tips",
+            "children": []
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "path": "/storefront-development/publishable-api-keys",
+            "title": "Publishable API Key",
+            "children": []
+          }
+        ]
       },
       {
         "loaded": true,
         "isPathHref": true,
-        "type": "link",
-        "path": "/storefront-development/publishable-api-keys",
-        "title": "Publishable API Key",
-        "children": []
-      },
-      {
-        "type": "separator"
+        "type": "category",
+        "title": "Examples",
+        "children": [
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "path": "/storefront-development/guides/express-checkout",
+            "title": "Express Checkout Storefront",
+            "children": []
+          }
+        ]
       },
       {
         "loaded": true,
@@ -8118,14 +17058,6 @@ export const generatedSidebar = [
             "loaded": true,
             "isPathHref": true,
             "type": "link",
-            "path": "/storefront-development/products",
-            "title": "Overview",
-            "children": []
-          },
-          {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "link",
             "path": "/storefront-development/products/list",
             "title": "List Products",
             "children": []
@@ -8160,6 +17092,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/storefront-development/products/price/examples/show-price",
                 "title": "Example: Show Variant's Price",
+                "description": "",
                 "children": []
               },
               {
@@ -8168,6 +17101,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/storefront-development/products/price/examples/sale-price",
                 "title": "Example: Show Sale Price",
+                "description": "",
                 "children": []
               },
               {
@@ -8176,6 +17110,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/storefront-development/products/price/examples/tax-price",
                 "title": "Example: Show Price with Taxes",
+                "description": "",
                 "children": []
               }
             ]
@@ -8187,80 +17122,78 @@ export const generatedSidebar = [
             "path": "/storefront-development/products/inventory",
             "title": "Retrieve Variant Inventory",
             "children": []
+          }
+        ]
+      },
+      {
+        "loaded": true,
+        "isPathHref": true,
+        "type": "category",
+        "title": "Product Categories",
+        "children": [
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "path": "/storefront-development/products/categories/list",
+            "title": "List Categories",
+            "children": []
           },
           {
             "loaded": true,
             "isPathHref": true,
             "type": "link",
-            "path": "/storefront-development/products/categories",
-            "title": "Categories",
-            "children": [
-              {
-                "loaded": true,
-                "isPathHref": true,
-                "type": "link",
-                "path": "/storefront-development/products/categories/list",
-                "title": "List Categories",
-                "children": []
-              },
-              {
-                "loaded": true,
-                "isPathHref": true,
-                "type": "link",
-                "path": "/storefront-development/products/categories/retrieve",
-                "title": "Retrieve a Category",
-                "children": []
-              },
-              {
-                "loaded": true,
-                "isPathHref": true,
-                "type": "link",
-                "path": "/storefront-development/products/categories/products",
-                "title": "Retrieve a Category's Products",
-                "children": []
-              },
-              {
-                "loaded": true,
-                "isPathHref": true,
-                "type": "link",
-                "path": "/storefront-development/products/categories/nested-categories",
-                "title": "Retrieve Nested Categories",
-                "children": []
-              }
-            ]
+            "path": "/storefront-development/products/categories/retrieve",
+            "title": "Retrieve a Category",
+            "children": []
           },
           {
             "loaded": true,
             "isPathHref": true,
             "type": "link",
-            "path": "/storefront-development/products/collections",
-            "title": "Collections",
-            "children": [
-              {
-                "loaded": true,
-                "isPathHref": true,
-                "type": "link",
-                "path": "/storefront-development/products/collections/list",
-                "title": "List Collections",
-                "children": []
-              },
-              {
-                "loaded": true,
-                "isPathHref": true,
-                "type": "link",
-                "path": "/storefront-development/products/collections/retrieve",
-                "title": "Retrieve a Collection",
-                "children": []
-              },
-              {
-                "loaded": true,
-                "isPathHref": true,
-                "type": "link",
-                "path": "/storefront-development/products/collections/products",
-                "title": "Retrieve a Collection's Products",
-                "children": []
-              }
-            ]
+            "path": "/storefront-development/products/categories/products",
+            "title": "Retrieve a Category's Products",
+            "children": []
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "path": "/storefront-development/products/categories/nested-categories",
+            "title": "Retrieve Nested Categories",
+            "children": []
+          }
+        ]
+      },
+      {
+        "loaded": true,
+        "isPathHref": true,
+        "type": "category",
+        "title": "Product Collections",
+        "children": [
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "path": "/storefront-development/products/collections/list",
+            "title": "List Collections",
+            "children": []
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "path": "/storefront-development/products/collections/retrieve",
+            "title": "Retrieve a Collection",
+            "children": []
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "path": "/storefront-development/products/collections/products",
+            "title": "Retrieve a Collection's Products",
+            "children": []
           }
         ]
       },
@@ -8270,14 +17203,6 @@ export const generatedSidebar = [
         "type": "category",
         "title": "Carts",
         "children": [
-          {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "link",
-            "path": "/storefront-development/cart",
-            "title": "Overview",
-            "children": []
-          },
           {
             "loaded": true,
             "isPathHref": true,
@@ -8347,7 +17272,7 @@ export const generatedSidebar = [
             "isPathHref": true,
             "type": "link",
             "path": "/storefront-development/checkout/address",
-            "title": "2. Enter Address",
+            "title": "2. Set Address",
             "children": []
           },
           {
@@ -8391,14 +17316,6 @@ export const generatedSidebar = [
         "type": "category",
         "title": "Customers",
         "children": [
-          {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "link",
-            "path": "/storefront-development/customers",
-            "title": "Overview",
-            "children": []
-          },
           {
             "loaded": true,
             "isPathHref": true,
@@ -8525,6 +17442,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/medusa-cli/commands/new",
                 "title": "new",
+                "description": "",
                 "children": []
               },
               {
@@ -8533,6 +17451,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/medusa-cli/commands/develop",
                 "title": "develop",
+                "description": "",
                 "children": []
               },
               {
@@ -8541,6 +17460,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/medusa-cli/commands/start",
                 "title": "start",
+                "description": "",
                 "children": []
               },
               {
@@ -8549,6 +17469,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/medusa-cli/commands/user",
                 "title": "user",
+                "description": "",
                 "children": []
               },
               {
@@ -8557,6 +17478,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/medusa-cli/commands/build",
                 "title": "build",
+                "description": "",
                 "children": []
               },
               {
@@ -8565,6 +17487,16 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/medusa-cli/commands/db",
                 "title": "db",
+                "description": "",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/medusa-cli/commands/plugin",
+                "title": "plugin",
+                "description": "",
                 "children": []
               },
               {
@@ -8573,6 +17505,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/medusa-cli/commands/exec",
                 "title": "exec",
+                "description": "",
                 "children": []
               },
               {
@@ -8581,6 +17514,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/medusa-cli/commands/start-cluster",
                 "title": "start-cluster",
+                "description": "",
                 "children": []
               },
               {
@@ -8589,6 +17523,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/medusa-cli/commands/telemtry",
                 "title": "telemetry",
+                "description": "",
                 "children": []
               }
             ]
@@ -8618,6 +17553,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/auth/callback",
                 "title": "callback",
+                "description": "",
                 "children": []
               },
               {
@@ -8626,6 +17562,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/auth/login",
                 "title": "login",
+                "description": "",
                 "children": []
               },
               {
@@ -8634,6 +17571,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/auth/logout",
                 "title": "logout",
+                "description": "",
                 "children": []
               },
               {
@@ -8642,6 +17580,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/auth/refresh",
                 "title": "refresh",
+                "description": "",
                 "children": []
               },
               {
@@ -8650,6 +17589,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/auth/register",
                 "title": "register",
+                "description": "",
                 "children": []
               },
               {
@@ -8658,6 +17598,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/auth/resetPassword",
                 "title": "resetPassword",
+                "description": "",
                 "children": []
               },
               {
@@ -8666,6 +17607,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/auth/updateProvider",
                 "title": "updateProvider",
+                "description": "",
                 "children": []
               }
             ]
@@ -8684,6 +17626,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/store/cart",
                 "title": "cart",
+                "description": "",
                 "children": []
               },
               {
@@ -8692,6 +17635,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/store/category",
                 "title": "category",
+                "description": "",
                 "children": []
               },
               {
@@ -8700,6 +17644,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/store/collection",
                 "title": "collection",
+                "description": "",
                 "children": []
               },
               {
@@ -8708,6 +17653,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/store/customer",
                 "title": "customer",
+                "description": "",
                 "children": []
               },
               {
@@ -8716,6 +17662,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/store/fulfillment",
                 "title": "fulfillment",
+                "description": "",
                 "children": []
               },
               {
@@ -8724,6 +17671,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/store/order",
                 "title": "order",
+                "description": "",
                 "children": []
               },
               {
@@ -8732,6 +17680,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/store/payment",
                 "title": "payment",
+                "description": "",
                 "children": []
               },
               {
@@ -8740,6 +17689,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/store/product",
                 "title": "product",
+                "description": "",
                 "children": []
               },
               {
@@ -8748,6 +17698,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/store/region",
                 "title": "region",
+                "description": "",
                 "children": []
               }
             ]
@@ -8766,6 +17717,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/apiKey",
                 "title": "apiKey",
+                "description": "",
                 "children": []
               },
               {
@@ -8774,6 +17726,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/campaign",
                 "title": "campaign",
+                "description": "",
                 "children": []
               },
               {
@@ -8782,6 +17735,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/claim",
                 "title": "claim",
+                "description": "",
                 "children": []
               },
               {
@@ -8790,6 +17744,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/currency",
                 "title": "currency",
+                "description": "",
                 "children": []
               },
               {
@@ -8798,6 +17753,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/customer",
                 "title": "customer",
+                "description": "",
                 "children": []
               },
               {
@@ -8806,6 +17762,16 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/customerGroup",
                 "title": "customerGroup",
+                "description": "",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/references/js-sdk/admin/draftOrder",
+                "title": "draftOrder",
+                "description": "",
                 "children": []
               },
               {
@@ -8814,6 +17780,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/exchange",
                 "title": "exchange",
+                "description": "",
                 "children": []
               },
               {
@@ -8822,6 +17789,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/fulfillment",
                 "title": "fulfillment",
+                "description": "",
                 "children": []
               },
               {
@@ -8830,6 +17798,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/fulfillmentProvider",
                 "title": "fulfillmentProvider",
+                "description": "",
                 "children": []
               },
               {
@@ -8838,6 +17807,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/fulfillmentSet",
                 "title": "fulfillmentSet",
+                "description": "",
                 "children": []
               },
               {
@@ -8846,6 +17816,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/inventoryItem",
                 "title": "inventoryItem",
+                "description": "",
                 "children": []
               },
               {
@@ -8854,6 +17825,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/invite",
                 "title": "invite",
+                "description": "",
                 "children": []
               },
               {
@@ -8862,6 +17834,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/notification",
                 "title": "notification",
+                "description": "",
                 "children": []
               },
               {
@@ -8870,6 +17843,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/order",
                 "title": "order",
+                "description": "",
                 "children": []
               },
               {
@@ -8878,6 +17852,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/orderEdit",
                 "title": "orderEdit",
+                "description": "",
                 "children": []
               },
               {
@@ -8886,6 +17861,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/payment",
                 "title": "payment",
+                "description": "",
                 "children": []
               },
               {
@@ -8894,6 +17870,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/paymentCollection",
                 "title": "paymentCollection",
+                "description": "",
                 "children": []
               },
               {
@@ -8902,6 +17879,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/priceList",
                 "title": "priceList",
+                "description": "",
                 "children": []
               },
               {
@@ -8910,6 +17888,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/pricePreference",
                 "title": "pricePreference",
+                "description": "",
                 "children": []
               },
               {
@@ -8918,6 +17897,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/product",
                 "title": "product",
+                "description": "",
                 "children": []
               },
               {
@@ -8926,6 +17906,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/productCategory",
                 "title": "productCategory",
+                "description": "",
                 "children": []
               },
               {
@@ -8934,6 +17915,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/productCollection",
                 "title": "productCollection",
+                "description": "",
                 "children": []
               },
               {
@@ -8942,6 +17924,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/productTag",
                 "title": "productTag",
+                "description": "",
                 "children": []
               },
               {
@@ -8950,6 +17933,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/productType",
                 "title": "productType",
+                "description": "",
                 "children": []
               },
               {
@@ -8958,6 +17942,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/productVariant",
                 "title": "productVariant",
+                "description": "",
                 "children": []
               },
               {
@@ -8966,6 +17951,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/promotion",
                 "title": "promotion",
+                "description": "",
                 "children": []
               },
               {
@@ -8974,6 +17960,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/refundReason",
                 "title": "refundReason",
+                "description": "",
                 "children": []
               },
               {
@@ -8982,6 +17969,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/region",
                 "title": "region",
+                "description": "",
                 "children": []
               },
               {
@@ -8990,6 +17978,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/reservation",
                 "title": "reservation",
+                "description": "",
                 "children": []
               },
               {
@@ -8998,6 +17987,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/return",
                 "title": "return",
+                "description": "",
                 "children": []
               },
               {
@@ -9006,6 +17996,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/returnReason",
                 "title": "returnReason",
+                "description": "",
                 "children": []
               },
               {
@@ -9014,6 +18005,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/salesChannel",
                 "title": "salesChannel",
+                "description": "",
                 "children": []
               },
               {
@@ -9022,6 +18014,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/shippingOption",
                 "title": "shippingOption",
+                "description": "",
                 "children": []
               },
               {
@@ -9030,6 +18023,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/shippingProfile",
                 "title": "shippingProfile",
+                "description": "",
                 "children": []
               },
               {
@@ -9038,6 +18032,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/stockLocation",
                 "title": "stockLocation",
+                "description": "",
                 "children": []
               },
               {
@@ -9046,6 +18041,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/store",
                 "title": "store",
+                "description": "",
                 "children": []
               },
               {
@@ -9054,6 +18050,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/taxRate",
                 "title": "taxRate",
+                "description": "",
                 "children": []
               },
               {
@@ -9062,6 +18059,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/taxRegion",
                 "title": "taxRegion",
+                "description": "",
                 "children": []
               },
               {
@@ -9070,6 +18068,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/upload",
                 "title": "upload",
+                "description": "",
                 "children": []
               },
               {
@@ -9078,6 +18077,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/user",
                 "title": "user",
+                "description": "",
                 "children": []
               },
               {
@@ -9086,6 +18086,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/js-sdk/admin/workflowExecution",
                 "title": "workflowExecution",
+                "description": "",
                 "children": []
               }
             ]
@@ -9097,13 +18098,36 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "link",
         "path": "/nextjs-starter",
-        "title": "Next.js Starter",
-        "children": []
+        "title": "Next.js Starter Storefront",
+        "isChildSidebar": true,
+        "children": [
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "path": "/nextjs-starter",
+            "title": "Overview",
+            "children": []
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "category",
+            "title": "Payment",
+            "children": [
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/nextjs-starter/guides/customize-stripe",
+                "title": "Customize Stripe Integration",
+                "children": []
+              }
+            ]
+          }
+        ]
       }
     ]
-  },
-  {
-    "type": "separator"
   },
   {
     "loaded": true,
@@ -9130,8 +18154,19 @@ export const generatedSidebar = [
           {
             "loaded": true,
             "isPathHref": true,
+            "type": "link",
+            "title": "Medusa Cloud",
+            "path": "https://medusajs.com/contact",
+            "children": []
+          },
+          {
+            "type": "separator"
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
             "type": "category",
-            "title": "Medusa Application",
+            "title": "Self-Hosting",
             "children": [
               {
                 "loaded": true,
@@ -9155,23 +18190,6 @@ export const generatedSidebar = [
             "loaded": true,
             "isPathHref": true,
             "type": "category",
-            "title": "Medusa Admin",
-            "autogenerate_path": "/deployment/admin",
-            "children": [
-              {
-                "loaded": true,
-                "isPathHref": true,
-                "type": "link",
-                "path": "/deployment/admin/vercel",
-                "title": "Vercel",
-                "children": []
-              }
-            ]
-          },
-          {
-            "loaded": true,
-            "isPathHref": true,
-            "type": "category",
             "title": "Next.js Starter",
             "autogenerate_path": "/deployment/storefront",
             "children": [
@@ -9181,6 +18199,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/deployment/storefront/vercel",
                 "title": "Vercel",
+                "description": "",
                 "children": []
               }
             ]
@@ -9255,6 +18274,22 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/troubleshooting/dist-imports",
                 "title": "Importing from /dist",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/troubleshooting/workflow-errors",
+                "title": "Workflow Errors",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/troubleshooting/test-errors",
+                "title": "Test Errors",
                 "children": []
               }
             ]
@@ -9363,6 +18398,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/admin-components/layouts/single-column",
                 "title": "Single Column",
+                "description": "",
                 "children": []
               },
               {
@@ -9371,6 +18407,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/admin-components/layouts/two-column",
                 "title": "Two Column",
+                "description": "",
                 "children": []
               }
             ]
@@ -9388,6 +18425,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/admin-components/components/action-menu",
                 "title": "Action Menu",
+                "description": "",
                 "children": []
               },
               {
@@ -9396,6 +18434,16 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/admin-components/components/container",
                 "title": "Container",
+                "description": "",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/admin-components/components/data-table",
+                "title": "Data Table",
+                "description": "",
                 "children": []
               },
               {
@@ -9404,6 +18452,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/admin-components/components/forms",
                 "title": "Forms",
+                "description": "",
                 "children": []
               },
               {
@@ -9412,6 +18461,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/admin-components/components/header",
                 "title": "Header",
+                "description": "",
                 "children": []
               },
               {
@@ -9420,6 +18470,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/admin-components/components/json-view-section",
                 "title": "JSON View",
+                "description": "",
                 "children": []
               },
               {
@@ -9428,6 +18479,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/admin-components/components/section-row",
                 "title": "Section Row",
+                "description": "",
                 "children": []
               },
               {
@@ -9436,6 +18488,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/admin-components/components/table",
                 "title": "Table",
+                "description": "",
                 "children": []
               }
             ]
@@ -9479,7 +18532,8 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "link",
         "path": "/references/workflows",
-        "title": "Workflow API",
+        "title": "Workflows SDK",
+        "childSidebarTitle": "Workflows SDK Reference",
         "isChildSidebar": true,
         "children": [
           {
@@ -9495,6 +18549,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/workflows/createHook",
                 "title": "createHook",
+                "description": "",
                 "children": []
               },
               {
@@ -9503,6 +18558,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/workflows/createStep",
                 "title": "createStep",
+                "description": "",
                 "children": []
               },
               {
@@ -9511,6 +18567,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/workflows/createWorkflow",
                 "title": "createWorkflow",
+                "description": "",
                 "children": []
               },
               {
@@ -9519,6 +18576,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/workflows/parallelize",
                 "title": "parallelize",
+                "description": "",
                 "children": []
               },
               {
@@ -9527,14 +18585,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/workflows/transform",
                 "title": "transform",
-                "children": []
-              },
-              {
-                "loaded": true,
-                "isPathHref": true,
-                "type": "link",
-                "path": "/references/workflows/when",
-                "title": "when",
+                "description": "",
                 "children": []
               }
             ]
@@ -9546,8 +18597,8 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "link",
         "path": "/references/data-model",
-        "title": "Data Model API",
-        "childSidebarTitle": "Data Model API Reference",
+        "title": "Data Model Language",
+        "childSidebarTitle": "Data Model Language Reference",
         "isChildSidebar": true,
         "children": [
           {
@@ -9574,6 +18625,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/property-types/array",
                 "title": "array",
+                "description": "",
                 "children": []
               },
               {
@@ -9582,6 +18634,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/property-types/bignumber",
                 "title": "bigNumber",
+                "description": "",
                 "children": []
               },
               {
@@ -9590,6 +18643,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/property-types/boolean",
                 "title": "boolean",
+                "description": "",
                 "children": []
               },
               {
@@ -9598,6 +18652,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/property-types/datetime",
                 "title": "dateTime",
+                "description": "",
                 "children": []
               },
               {
@@ -9606,6 +18661,16 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/property-types/enum",
                 "title": "enum",
+                "description": "",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
+                "path": "/references/data-model/property-types/float",
+                "title": "float",
+                "description": "",
                 "children": []
               },
               {
@@ -9614,6 +18679,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/property-types/id",
                 "title": "id",
+                "description": "",
                 "children": []
               },
               {
@@ -9622,6 +18688,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/property-types/json",
                 "title": "json",
+                "description": "",
                 "children": []
               },
               {
@@ -9630,6 +18697,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/property-types/number",
                 "title": "number",
+                "description": "",
                 "children": []
               },
               {
@@ -9638,6 +18706,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/property-types/text",
                 "title": "text",
+                "description": "",
                 "children": []
               }
             ]
@@ -9655,6 +18724,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/relationship-methods/belongsto",
                 "title": "belongsTo",
+                "description": "",
                 "children": []
               },
               {
@@ -9663,6 +18733,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/relationship-methods/hasmany",
                 "title": "hasMany",
+                "description": "",
                 "children": []
               },
               {
@@ -9671,6 +18742,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/relationship-methods/hasone",
                 "title": "hasOne",
+                "description": "",
                 "children": []
               },
               {
@@ -9679,6 +18751,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/relationship-methods/manytomany",
                 "title": "manyToMany",
+                "description": "",
                 "children": []
               }
             ]
@@ -9696,6 +18769,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/model-methods/cascades",
                 "title": "cascades",
+                "description": "",
                 "children": []
               },
               {
@@ -9704,6 +18778,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/model-methods/indexes",
                 "title": "indexes",
+                "description": "",
                 "children": []
               }
             ]
@@ -9719,8 +18794,18 @@ export const generatedSidebar = [
                 "loaded": true,
                 "isPathHref": true,
                 "type": "link",
+                "path": "/references/data-model/property-configuration/computed",
+                "title": "computed",
+                "description": "",
+                "children": []
+              },
+              {
+                "loaded": true,
+                "isPathHref": true,
+                "type": "link",
                 "path": "/references/data-model/property-configuration/default",
                 "title": "default",
+                "description": "",
                 "children": []
               },
               {
@@ -9729,6 +18814,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/property-configuration/index",
                 "title": "index",
+                "description": "",
                 "children": []
               },
               {
@@ -9737,6 +18823,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/property-configuration/nullable",
                 "title": "nullable",
+                "description": "",
                 "children": []
               },
               {
@@ -9745,6 +18832,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/references/data-model/property-configuration/unique",
                 "title": "unique",
+                "description": "",
                 "children": []
               }
             ]
@@ -9756,7 +18844,7 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "link",
         "path": "/service-factory-reference",
-        "title": "Service Factory Reference",
+        "title": "Service Factory",
         "isChildSidebar": true,
         "children": [
           {
@@ -9772,6 +18860,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/service-factory-reference/methods/create",
                 "title": "create",
+                "description": "",
                 "children": []
               },
               {
@@ -9780,6 +18869,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/service-factory-reference/methods/delete",
                 "title": "delete",
+                "description": "",
                 "children": []
               },
               {
@@ -9788,6 +18878,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/service-factory-reference/methods/list",
                 "title": "list",
+                "description": "",
                 "children": []
               },
               {
@@ -9796,6 +18887,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/service-factory-reference/methods/listAndCount",
                 "title": "listAndCount",
+                "description": "",
                 "children": []
               },
               {
@@ -9804,6 +18896,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/service-factory-reference/methods/restore",
                 "title": "restore",
+                "description": "",
                 "children": []
               },
               {
@@ -9812,6 +18905,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/service-factory-reference/methods/retrieve",
                 "title": "retrieve",
+                "description": "",
                 "children": []
               },
               {
@@ -9820,6 +18914,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/service-factory-reference/methods/soft-delete",
                 "title": "softDelete",
+                "description": "",
                 "children": []
               },
               {
@@ -9828,6 +18923,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/service-factory-reference/methods/update",
                 "title": "update",
+                "description": "",
                 "children": []
               }
             ]
@@ -9845,6 +18941,7 @@ export const generatedSidebar = [
                 "type": "link",
                 "path": "/service-factory-reference/tips/filtering",
                 "title": "Filtering",
+                "description": "",
                 "children": []
               }
             ]
@@ -9856,7 +18953,7 @@ export const generatedSidebar = [
         "isPathHref": true,
         "type": "link",
         "path": "/references/helper-steps",
-        "title": "Helper Steps Reference",
+        "title": "Helper Steps",
         "isChildSidebar": true,
         "autogenerate_path": "/references/helper_steps/functions",
         "children": [
@@ -9866,6 +18963,7 @@ export const generatedSidebar = [
             "type": "link",
             "path": "/references/helper-steps/createRemoteLinkStep",
             "title": "createRemoteLinkStep",
+            "description": "",
             "children": []
           },
           {
@@ -9874,6 +18972,7 @@ export const generatedSidebar = [
             "type": "link",
             "path": "/references/helper-steps/dismissRemoteLinkStep",
             "title": "dismissRemoteLinkStep",
+            "description": "",
             "children": []
           },
           {
@@ -9882,6 +18981,7 @@ export const generatedSidebar = [
             "type": "link",
             "path": "/references/helper-steps/emitEventStep",
             "title": "emitEventStep",
+            "description": "",
             "children": []
           },
           {
@@ -9890,6 +18990,7 @@ export const generatedSidebar = [
             "type": "link",
             "path": "/references/helper-steps/removeRemoteLinkStep",
             "title": "removeRemoteLinkStep",
+            "description": "",
             "children": []
           },
           {
@@ -9898,6 +18999,7 @@ export const generatedSidebar = [
             "type": "link",
             "path": "/references/helper-steps/updateRemoteLinksStep",
             "title": "updateRemoteLinksStep",
+            "description": "",
             "children": []
           },
           {
@@ -9906,6 +19008,7 @@ export const generatedSidebar = [
             "type": "link",
             "path": "/references/helper-steps/useQueryGraphStep",
             "title": "useQueryGraphStep",
+            "description": "",
             "children": []
           },
           {
@@ -9914,6 +19017,16 @@ export const generatedSidebar = [
             "type": "link",
             "path": "/references/helper-steps/useRemoteQueryStep",
             "title": "useRemoteQueryStep",
+            "description": "",
+            "children": []
+          },
+          {
+            "loaded": true,
+            "isPathHref": true,
+            "type": "link",
+            "path": "/references/helper-steps/validatePresenceOfStep",
+            "title": "validatePresenceOfStep",
+            "description": "",
             "children": []
           }
         ]
@@ -9922,7 +19035,7 @@ export const generatedSidebar = [
         "loaded": true,
         "isPathHref": true,
         "type": "link",
-        "title": "Medusa Workflows Reference",
+        "title": "Core Workflows",
         "path": "/medusa-workflows-reference",
         "isChildSidebar": true,
         "custom_autogenerate": "core-flows",
@@ -9951,6 +19064,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createApiKeysWorkflow",
                     "title": "createApiKeysWorkflow",
+                    "description": "Create secret or publishable API keys.",
                     "children": []
                   },
                   {
@@ -9959,6 +19073,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteApiKeysWorkflow",
                     "title": "deleteApiKeysWorkflow",
+                    "description": "Delete secret or publishable API keys.",
                     "children": []
                   },
                   {
@@ -9967,6 +19082,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/linkSalesChannelsToApiKeyWorkflow",
                     "title": "linkSalesChannelsToApiKeyWorkflow",
+                    "description": "Manage the sales channels of a publishable API key.",
                     "children": []
                   },
                   {
@@ -9975,6 +19091,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/revokeApiKeysWorkflow",
                     "title": "revokeApiKeysWorkflow",
+                    "description": "Revoke secret or publishable API keys.",
                     "children": []
                   },
                   {
@@ -9983,6 +19100,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateApiKeysWorkflow",
                     "title": "updateApiKeysWorkflow",
+                    "description": "Update secret or publishable API keys.",
                     "children": []
                   }
                 ],
@@ -9998,6 +19116,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createApiKeysStep",
                     "title": "createApiKeysStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10006,6 +19125,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteApiKeysStep",
                     "title": "deleteApiKeysStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10014,6 +19134,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/linkSalesChannelsToApiKeyStep",
                     "title": "linkSalesChannelsToApiKeyStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10022,6 +19143,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/revokeApiKeysStep",
                     "title": "revokeApiKeysStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10030,6 +19152,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateApiKeysStep",
                     "title": "updateApiKeysStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10038,6 +19161,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/validateSalesChannelsExistStep",
                     "title": "validateSalesChannelsExistStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -10061,6 +19185,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/generateResetPasswordTokenWorkflow",
                     "title": "generateResetPasswordTokenWorkflow",
+                    "description": "Generate a reset password token for a user or customer.",
                     "children": []
                   }
                 ],
@@ -10076,6 +19201,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/setAuthAppMetadataStep",
                     "title": "setAuthAppMetadataStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -10099,6 +19225,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/addShippingMethodToCartWorkflow",
                     "title": "addShippingMethodToCartWorkflow",
+                    "description": "Add a shipping method to a cart.",
                     "children": []
                   },
                   {
@@ -10107,6 +19234,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/addToCartWorkflow",
                     "title": "addToCartWorkflow",
+                    "description": "Add a line item to a cart.",
                     "children": []
                   },
                   {
@@ -10115,6 +19243,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/completeCartWorkflow",
                     "title": "completeCartWorkflow",
+                    "description": "Complete a cart and place an order.",
                     "children": []
                   },
                   {
@@ -10123,6 +19252,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/confirmVariantInventoryWorkflow",
                     "title": "confirmVariantInventoryWorkflow",
+                    "description": "Validate that a variant is in-stock before adding to the cart.",
                     "children": []
                   },
                   {
@@ -10131,6 +19261,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createCartWorkflow",
                     "title": "createCartWorkflow",
+                    "description": "Create a cart specifying region, items, and more.",
                     "children": []
                   },
                   {
@@ -10139,6 +19270,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createPaymentCollectionForCartWorkflow",
                     "title": "createPaymentCollectionForCartWorkflow",
+                    "description": "Create payment collection for cart.",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/listShippingOptionsForCartWithPricingWorkflow",
+                    "title": "listShippingOptionsForCartWithPricingWorkflow",
+                    "description": "List a cart's shipping options with prices.",
                     "children": []
                   },
                   {
@@ -10147,6 +19288,25 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/listShippingOptionsForCartWorkflow",
                     "title": "listShippingOptionsForCartWorkflow",
+                    "description": "List a cart's shipping options.",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/refreshCartItemsWorkflow",
+                    "title": "refreshCartItemsWorkflow",
+                    "description": "Refresh a cart's details after an update.",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/refreshCartShippingMethodsWorkflow",
+                    "title": "refreshCartShippingMethodsWorkflow",
+                    "description": "Refresh a cart's shipping methods after an update.",
                     "children": []
                   },
                   {
@@ -10155,6 +19315,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/refreshPaymentCollectionForCartWorkflow",
                     "title": "refreshPaymentCollectionForCartWorkflow",
+                    "description": "Refresh a cart's payment collection details.",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/transferCartCustomerWorkflow",
+                    "title": "transferCartCustomerWorkflow",
+                    "description": "Refresh a cart's payment collection details.",
                     "children": []
                   },
                   {
@@ -10163,6 +19333,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateCartPromotionsWorkflow",
                     "title": "updateCartPromotionsWorkflow",
+                    "description": "Update a cart's applied promotions to add, replace, or remove them.",
                     "children": []
                   },
                   {
@@ -10171,6 +19342,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateCartWorkflow",
                     "title": "updateCartWorkflow",
+                    "description": "Update a cart's details, such as region, address, and more.",
                     "children": []
                   },
                   {
@@ -10179,6 +19351,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateLineItemInCartWorkflow",
                     "title": "updateLineItemInCartWorkflow",
+                    "description": "Update a cart's line item.",
                     "children": []
                   },
                   {
@@ -10187,6 +19360,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateTaxLinesWorkflow",
                     "title": "updateTaxLinesWorkflow",
+                    "description": "Update a cart's tax lines.",
                     "children": []
                   }
                 ],
@@ -10202,6 +19376,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/addShippingMethodToCartStep",
                     "title": "addShippingMethodToCartStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10210,6 +19385,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/confirmInventoryStep",
                     "title": "confirmInventoryStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10218,6 +19394,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createCartsStep",
                     "title": "createCartsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10226,6 +19403,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createLineItemAdjustmentsStep",
                     "title": "createLineItemAdjustmentsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10234,6 +19412,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createLineItemsStep",
                     "title": "createLineItemsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10242,6 +19421,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createPaymentCollectionsStep",
                     "title": "createPaymentCollectionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10250,6 +19430,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createShippingMethodAdjustmentsStep",
                     "title": "createShippingMethodAdjustmentsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10258,6 +19439,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/findOneOrAnyRegionStep",
                     "title": "findOneOrAnyRegionStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10266,6 +19448,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/findOrCreateCustomerStep",
                     "title": "findOrCreateCustomerStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10274,6 +19457,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/findSalesChannelStep",
                     "title": "findSalesChannelStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10282,6 +19466,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/getActionsToComputeFromPromotionsStep",
                     "title": "getActionsToComputeFromPromotionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10290,6 +19475,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/getLineItemActionsStep",
                     "title": "getLineItemActionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10298,6 +19484,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/getPromotionCodesToApply",
                     "title": "getPromotionCodesToApply",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10306,6 +19493,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/getVariantPriceSetsStep",
                     "title": "getVariantPriceSetsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10314,6 +19502,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/getVariantsStep",
                     "title": "getVariantsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10322,14 +19511,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/prepareAdjustmentsFromPromotionActionsStep",
                     "title": "prepareAdjustmentsFromPromotionActionsStep",
-                    "children": []
-                  },
-                  {
-                    "loaded": true,
-                    "isPathHref": true,
-                    "type": "link",
-                    "path": "/references/medusa-workflows/steps/refreshCartShippingMethodsStep",
-                    "title": "refreshCartShippingMethodsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10338,6 +19520,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/removeLineItemAdjustmentsStep",
                     "title": "removeLineItemAdjustmentsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10346,6 +19529,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/removeShippingMethodAdjustmentsStep",
                     "title": "removeShippingMethodAdjustmentsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10354,6 +19538,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/removeShippingMethodFromCartStep",
                     "title": "removeShippingMethodFromCartStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10362,6 +19547,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/reserveInventoryStep",
                     "title": "reserveInventoryStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10370,6 +19556,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/retrieveCartStep",
                     "title": "retrieveCartStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10378,6 +19565,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/setTaxLinesForItemsStep",
                     "title": "setTaxLinesForItemsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10386,6 +19574,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateCartPromotionsStep",
                     "title": "updateCartPromotionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10394,6 +19583,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateCartsStep",
                     "title": "updateCartsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10402,6 +19592,25 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateLineItemsStep",
                     "title": "updateLineItemsStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/updateShippingMethodsStep",
+                    "title": "updateShippingMethodsStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/validateAndReturnShippingMethodsDataStep",
+                    "title": "validateAndReturnShippingMethodsDataStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10410,6 +19619,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/validateCartPaymentsStep",
                     "title": "validateCartPaymentsStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/validateCartShippingOptionsPriceStep",
+                    "title": "validateCartShippingOptionsPriceStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10418,6 +19637,34 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/validateCartShippingOptionsStep",
                     "title": "validateCartShippingOptionsStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/validateCartStep",
+                    "title": "validateCartStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/validateLineItemPricesStep",
+                    "title": "validateLineItemPricesStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/validateShippingStep",
+                    "title": "validateShippingStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10426,6 +19673,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/validateVariantPricesStep",
                     "title": "validateVariantPricesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10434,6 +19682,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/validateExistingPaymentCollectionStep",
                     "title": "validateExistingPaymentCollectionStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -10457,6 +19706,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/batchLinksWorkflow",
                     "title": "batchLinksWorkflow",
+                    "description": "Manage links between two records of linked data models.",
                     "children": []
                   },
                   {
@@ -10465,6 +19715,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createLinksWorkflow",
                     "title": "createLinksWorkflow",
+                    "description": "Create links between two records of linked data models.",
                     "children": []
                   },
                   {
@@ -10473,6 +19724,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/dismissLinksWorkflow",
                     "title": "dismissLinksWorkflow",
+                    "description": "Dismiss links between two records of linked data models.",
                     "children": []
                   },
                   {
@@ -10481,6 +19733,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateLinksWorkflow",
                     "title": "updateLinksWorkflow",
+                    "description": "Update links between two records of linked data models.",
                     "children": []
                   }
                 ],
@@ -10496,6 +19749,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createRemoteLinkStep",
                     "title": "createRemoteLinkStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10504,6 +19758,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/dismissRemoteLinkStep",
                     "title": "dismissRemoteLinkStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10512,6 +19767,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/emitEventStep",
                     "title": "emitEventStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10520,6 +19776,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/removeRemoteLinkStep",
                     "title": "removeRemoteLinkStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10528,6 +19785,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateRemoteLinksStep",
                     "title": "updateRemoteLinksStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10536,6 +19794,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/useQueryGraphStep",
                     "title": "useQueryGraphStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10544,6 +19803,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/useRemoteQueryStep",
                     "title": "useRemoteQueryStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/validatePresenceOfStep",
+                    "title": "validatePresenceOfStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -10567,6 +19836,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createCustomerAccountWorkflow",
                     "title": "createCustomerAccountWorkflow",
+                    "description": "Create or register a customer account.",
                     "children": []
                   },
                   {
@@ -10575,6 +19845,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createCustomerAddressesWorkflow",
                     "title": "createCustomerAddressesWorkflow",
+                    "description": "Create one or more customer addresses.",
                     "children": []
                   },
                   {
@@ -10583,6 +19854,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createCustomersWorkflow",
                     "title": "createCustomersWorkflow",
+                    "description": "Create one or more customers.",
                     "children": []
                   },
                   {
@@ -10591,6 +19863,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteCustomerAddressesWorkflow",
                     "title": "deleteCustomerAddressesWorkflow",
+                    "description": "Delete one or more customer addresses.",
                     "children": []
                   },
                   {
@@ -10599,6 +19872,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteCustomersWorkflow",
                     "title": "deleteCustomersWorkflow",
+                    "description": "Delete one or more customers.",
                     "children": []
                   },
                   {
@@ -10607,6 +19881,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeCustomerAccountWorkflow",
                     "title": "removeCustomerAccountWorkflow",
+                    "description": "Delete a customer account and its auth identity association.",
                     "children": []
                   },
                   {
@@ -10615,6 +19890,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateCustomerAddressesWorkflow",
                     "title": "updateCustomerAddressesWorkflow",
+                    "description": "Update one or more customer addresses.",
                     "children": []
                   },
                   {
@@ -10623,6 +19899,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateCustomersWorkflow",
                     "title": "updateCustomersWorkflow",
+                    "description": "Update one or more customers.",
                     "children": []
                   }
                 ],
@@ -10638,6 +19915,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createCustomerAddressesStep",
                     "title": "createCustomerAddressesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10646,6 +19924,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createCustomersStep",
                     "title": "createCustomersStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10654,6 +19933,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteCustomerAddressesStep",
                     "title": "deleteCustomerAddressesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10662,6 +19942,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteCustomersStep",
                     "title": "deleteCustomersStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10670,6 +19951,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/maybeUnsetDefaultBillingAddressesStep",
                     "title": "maybeUnsetDefaultBillingAddressesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10678,6 +19960,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/maybeUnsetDefaultShippingAddressesStep",
                     "title": "maybeUnsetDefaultShippingAddressesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10686,6 +19969,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateCustomerAddressesStep",
                     "title": "updateCustomerAddressesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10694,6 +19978,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateCustomersStep",
                     "title": "updateCustomersStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/validateCustomerAccountCreation",
+                    "title": "validateCustomerAccountCreation",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -10717,6 +20011,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createCustomerGroupsWorkflow",
                     "title": "createCustomerGroupsWorkflow",
+                    "description": "Create one or more customer groups.",
                     "children": []
                   },
                   {
@@ -10725,6 +20020,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteCustomerGroupsWorkflow",
                     "title": "deleteCustomerGroupsWorkflow",
+                    "description": "Delete one or more customer groups.",
                     "children": []
                   },
                   {
@@ -10733,6 +20029,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/linkCustomerGroupsToCustomerWorkflow",
                     "title": "linkCustomerGroupsToCustomerWorkflow",
+                    "description": "Manage groups of a customer.",
                     "children": []
                   },
                   {
@@ -10741,6 +20038,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/linkCustomersToCustomerGroupWorkflow",
                     "title": "linkCustomersToCustomerGroupWorkflow",
+                    "description": "Manage the customers of a customer group.",
                     "children": []
                   },
                   {
@@ -10749,6 +20047,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateCustomerGroupsWorkflow",
                     "title": "updateCustomerGroupsWorkflow",
+                    "description": "Update one or more customer groups.",
                     "children": []
                   }
                 ],
@@ -10764,6 +20063,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createCustomerGroupsStep",
                     "title": "createCustomerGroupsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10772,6 +20072,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteCustomerGroupStep",
                     "title": "deleteCustomerGroupStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10780,6 +20081,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/linkCustomerGroupsToCustomerStep",
                     "title": "linkCustomerGroupsToCustomerStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10788,6 +20090,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/linkCustomersToCustomerGroupStep",
                     "title": "linkCustomersToCustomerGroupStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10796,6 +20099,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateCustomerGroupsStep",
                     "title": "updateCustomerGroupsStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -10819,6 +20123,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createDefaultsWorkflow",
                     "title": "createDefaultsWorkflow",
+                    "description": "Create default data for a Medusa application.",
                     "children": []
                   }
                 ],
@@ -10834,6 +20139,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createDefaultStoreStep",
                     "title": "createDefaultStoreStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -10857,6 +20163,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteFilesWorkflow",
                     "title": "deleteFilesWorkflow",
+                    "description": "Delete files from the database and storage.",
                     "children": []
                   },
                   {
@@ -10865,6 +20172,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/uploadFilesWorkflow",
                     "title": "uploadFilesWorkflow",
+                    "description": "Upload files using the installed File Module Provider.",
                     "children": []
                   }
                 ],
@@ -10880,6 +20188,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteFilesStep",
                     "title": "deleteFilesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -10888,6 +20197,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/uploadFilesStep",
                     "title": "uploadFilesStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -10911,6 +20221,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/batchShippingOptionRulesWorkflow",
                     "title": "batchShippingOptionRulesWorkflow",
+                    "description": "Manage shipping option rules.",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/calculateShippingOptionsPricesWorkflow",
+                    "title": "calculateShippingOptionsPricesWorkflow",
+                    "description": "Calculate shipping option prices in a cart.",
                     "children": []
                   },
                   {
@@ -10919,6 +20239,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelFulfillmentWorkflow",
                     "title": "cancelFulfillmentWorkflow",
+                    "description": "Cancel a fulfillment.",
                     "children": []
                   },
                   {
@@ -10927,6 +20248,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createFulfillmentWorkflow",
                     "title": "createFulfillmentWorkflow",
+                    "description": "Create a fulfillment.",
                     "children": []
                   },
                   {
@@ -10935,6 +20257,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createReturnFulfillmentWorkflow",
                     "title": "createReturnFulfillmentWorkflow",
+                    "description": "Create a fulfillment for a return.",
                     "children": []
                   },
                   {
@@ -10943,6 +20266,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createServiceZonesWorkflow",
                     "title": "createServiceZonesWorkflow",
+                    "description": "Create one or more service zones.",
                     "children": []
                   },
                   {
@@ -10951,6 +20275,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createShipmentWorkflow",
                     "title": "createShipmentWorkflow",
+                    "description": "Create a shipment for a fulfillment.",
                     "children": []
                   },
                   {
@@ -10959,6 +20284,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createShippingOptionsWorkflow",
                     "title": "createShippingOptionsWorkflow",
+                    "description": "Create shipping options.",
                     "children": []
                   },
                   {
@@ -10967,6 +20293,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createShippingProfilesWorkflow",
                     "title": "createShippingProfilesWorkflow",
+                    "description": "Create one or more shipping profiles.",
                     "children": []
                   },
                   {
@@ -10975,6 +20302,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteFulfillmentSetsWorkflow",
                     "title": "deleteFulfillmentSetsWorkflow",
+                    "description": "Delete one or more fulfillment sets.",
                     "children": []
                   },
                   {
@@ -10983,6 +20311,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteServiceZonesWorkflow",
                     "title": "deleteServiceZonesWorkflow",
+                    "description": "Delete one or more service zones.",
                     "children": []
                   },
                   {
@@ -10991,6 +20320,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteShippingOptionsWorkflow",
                     "title": "deleteShippingOptionsWorkflow",
+                    "description": "Delete one or more shipping options.",
                     "children": []
                   },
                   {
@@ -10999,6 +20329,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/markFulfillmentAsDeliveredWorkflow",
                     "title": "markFulfillmentAsDeliveredWorkflow",
+                    "description": "Mark a fulfillment as delivered.",
                     "children": []
                   },
                   {
@@ -11007,6 +20338,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateFulfillmentWorkflow",
                     "title": "updateFulfillmentWorkflow",
+                    "description": "Update a fulfillment.",
                     "children": []
                   },
                   {
@@ -11015,6 +20347,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateServiceZonesWorkflow",
                     "title": "updateServiceZonesWorkflow",
+                    "description": "Update one or more service zones.",
                     "children": []
                   },
                   {
@@ -11023,6 +20356,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateShippingOptionsWorkflow",
                     "title": "updateShippingOptionsWorkflow",
+                    "description": "Update one or more shipping options.",
                     "children": []
                   },
                   {
@@ -11031,6 +20365,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateShippingProfilesWorkflow",
                     "title": "updateShippingProfilesWorkflow",
+                    "description": "Update one or more shipping profiles.",
                     "children": []
                   }
                 ],
@@ -11044,8 +20379,27 @@ export const generatedSidebar = [
                     "loaded": true,
                     "isPathHref": true,
                     "type": "link",
+                    "path": "/references/medusa-workflows/steps/buildPriceSet",
+                    "title": "buildPriceSet",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/calculateShippingOptionsPricesStep",
+                    "title": "calculateShippingOptionsPricesStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
                     "path": "/references/medusa-workflows/steps/cancelFulfillmentStep",
                     "title": "cancelFulfillmentStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11054,6 +20408,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createFulfillmentSets",
                     "title": "createFulfillmentSets",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11062,6 +20417,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createFulfillmentStep",
                     "title": "createFulfillmentStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11070,6 +20426,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createReturnFulfillmentStep",
                     "title": "createReturnFulfillmentStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11078,6 +20435,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createServiceZonesStep",
                     "title": "createServiceZonesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11086,6 +20444,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createShippingOptionRulesStep",
                     "title": "createShippingOptionRulesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11094,6 +20453,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createShippingOptionsPriceSetsStep",
                     "title": "createShippingOptionsPriceSetsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11102,6 +20462,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createShippingProfilesStep",
                     "title": "createShippingProfilesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11110,6 +20471,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteFulfillmentSetsStep",
                     "title": "deleteFulfillmentSetsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11118,6 +20480,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteServiceZonesStep",
                     "title": "deleteServiceZonesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11126,6 +20489,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteShippingOptionRulesStep",
                     "title": "deleteShippingOptionRulesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11134,6 +20498,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteShippingOptionsStep",
                     "title": "deleteShippingOptionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11142,6 +20507,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/setShippingOptionsPricesStep",
                     "title": "setShippingOptionsPricesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11150,6 +20516,25 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateFulfillmentStep",
                     "title": "updateFulfillmentStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/updateServiceZonesStep",
+                    "title": "updateServiceZonesStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/updateShippingOptionRulesStep",
+                    "title": "updateShippingOptionRulesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11158,6 +20543,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateShippingProfilesStep",
                     "title": "updateShippingProfilesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11166,6 +20552,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/upsertShippingOptionsStep",
                     "title": "upsertShippingOptionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11174,6 +20561,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/validateShipmentStep",
                     "title": "validateShipmentStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/validateShippingOptionPricesStep",
+                    "title": "validateShippingOptionPricesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11182,6 +20579,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/validateFulfillmentDeliverabilityStep",
                     "title": "validateFulfillmentDeliverabilityStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -11203,8 +20601,18 @@ export const generatedSidebar = [
                     "loaded": true,
                     "isPathHref": true,
                     "type": "link",
+                    "path": "/references/medusa-workflows/batchInventoryItemLevelsWorkflow",
+                    "title": "batchInventoryItemLevelsWorkflow",
+                    "description": "Manage inventory levels in bulk.",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
                     "path": "/references/medusa-workflows/bulkCreateDeleteLevelsWorkflow",
                     "title": "bulkCreateDeleteLevelsWorkflow",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11213,6 +20621,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createInventoryItemsWorkflow",
                     "title": "createInventoryItemsWorkflow",
+                    "description": "Create one or more inventory items.",
                     "children": []
                   },
                   {
@@ -11221,6 +20630,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createInventoryLevelsWorkflow",
                     "title": "createInventoryLevelsWorkflow",
+                    "description": "Create one or more inventory levels.",
                     "children": []
                   },
                   {
@@ -11229,6 +20639,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteInventoryItemWorkflow",
                     "title": "deleteInventoryItemWorkflow",
+                    "description": "Delete one or more inventory items.",
                     "children": []
                   },
                   {
@@ -11237,6 +20648,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteInventoryLevelsWorkflow",
                     "title": "deleteInventoryLevelsWorkflow",
+                    "description": "Delete one or more inventory levels.",
                     "children": []
                   },
                   {
@@ -11245,6 +20657,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateInventoryItemsWorkflow",
                     "title": "updateInventoryItemsWorkflow",
+                    "description": "Update one or more inventory items.",
                     "children": []
                   },
                   {
@@ -11253,6 +20666,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateInventoryLevelsWorkflow",
                     "title": "updateInventoryLevelsWorkflow",
+                    "description": "Update one or more inventory levels.",
                     "children": []
                   }
                 ],
@@ -11268,6 +20682,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/adjustInventoryLevelsStep",
                     "title": "adjustInventoryLevelsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11276,6 +20691,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/attachInventoryItemToVariants",
                     "title": "attachInventoryItemToVariants",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11284,6 +20700,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createInventoryItemsStep",
                     "title": "createInventoryItemsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11292,6 +20709,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createInventoryLevelsStep",
                     "title": "createInventoryLevelsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11300,6 +20718,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteInventoryItemStep",
                     "title": "deleteInventoryItemStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11308,6 +20727,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteInventoryLevelsStep",
                     "title": "deleteInventoryLevelsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11316,6 +20736,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateInventoryItemsStep",
                     "title": "updateInventoryItemsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11324,6 +20745,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateInventoryLevelsStep",
                     "title": "updateInventoryLevelsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11332,6 +20754,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/validateInventoryDeleteStep",
                     "title": "validateInventoryDeleteStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11340,6 +20763,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/validateInventoryItemsForCreate",
                     "title": "validateInventoryItemsForCreate",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11348,6 +20772,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/validateInventoryLocationsStep",
                     "title": "validateInventoryLocationsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11356,6 +20781,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/validateInventoryLevelsDelete",
                     "title": "validateInventoryLevelsDelete",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -11379,6 +20805,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/acceptInviteWorkflow",
                     "title": "acceptInviteWorkflow",
+                    "description": "Accept invite and create user.",
                     "children": []
                   },
                   {
@@ -11387,6 +20814,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createInvitesWorkflow",
                     "title": "createInvitesWorkflow",
+                    "description": "Create one or more user invites.",
                     "children": []
                   },
                   {
@@ -11395,6 +20823,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteInvitesWorkflow",
                     "title": "deleteInvitesWorkflow",
+                    "description": "Delete one or more user invites.",
                     "children": []
                   },
                   {
@@ -11403,6 +20832,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/refreshInviteTokensWorkflow",
                     "title": "refreshInviteTokensWorkflow",
+                    "description": "Refresh user invite tokens.",
                     "children": []
                   }
                 ],
@@ -11418,6 +20848,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createInviteStep",
                     "title": "createInviteStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11426,6 +20857,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteInvitesStep",
                     "title": "deleteInvitesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11434,6 +20866,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/refreshInviteTokensStep",
                     "title": "refreshInviteTokensStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11442,6 +20875,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/validateTokenStep",
                     "title": "validateTokenStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -11465,6 +20899,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteLineItemsWorkflow",
                     "title": "deleteLineItemsWorkflow",
+                    "description": "Delete line items from a cart.",
                     "children": []
                   }
                 ],
@@ -11480,6 +20915,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteLineItemsStep",
                     "title": "deleteLineItemsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11488,6 +20924,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/listLineItemsStep",
                     "title": "listLineItemsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11496,6 +20933,40 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateLineItemsStepWithSelector",
                     "title": "updateLineItemsStepWithSelector",
+                    "description": "",
+                    "children": []
+                  }
+                ],
+                "loaded": true
+              }
+            ],
+            "loaded": true,
+            "initialOpen": false
+          },
+          {
+            "type": "category",
+            "title": "Notification",
+            "children": [
+              {
+                "type": "sub-category",
+                "title": "Steps",
+                "children": [
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/notifyOnFailureStep",
+                    "title": "notifyOnFailureStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/sendNotificationsStep",
+                    "title": "sendNotificationsStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -11517,8 +20988,18 @@ export const generatedSidebar = [
                     "loaded": true,
                     "isPathHref": true,
                     "type": "link",
+                    "path": "/references/medusa-workflows/acceptOrderTransferWorkflow",
+                    "title": "acceptOrderTransferWorkflow",
+                    "description": "Accept an order transfer request.",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
                     "path": "/references/medusa-workflows/addOrderLineItemsWorkflow",
                     "title": "addOrderLineItemsWorkflow",
+                    "description": "Add line items to an order.",
                     "children": []
                   },
                   {
@@ -11527,6 +21008,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/archiveOrderWorkflow",
                     "title": "archiveOrderWorkflow",
+                    "description": "Archive one or more orders.",
                     "children": []
                   },
                   {
@@ -11535,6 +21017,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/beginClaimOrderWorkflow",
                     "title": "beginClaimOrderWorkflow",
+                    "description": "Create an order claim in requested state.",
                     "children": []
                   },
                   {
@@ -11543,6 +21026,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/beginExchangeOrderWorkflow",
                     "title": "beginExchangeOrderWorkflow",
+                    "description": "Request an order exchange.",
                     "children": []
                   },
                   {
@@ -11551,6 +21035,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/beginOrderEditOrderWorkflow",
                     "title": "beginOrderEditOrderWorkflow",
+                    "description": "Create an order edit request.",
                     "children": []
                   },
                   {
@@ -11559,6 +21044,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/beginReceiveReturnWorkflow",
                     "title": "beginReceiveReturnWorkflow",
+                    "description": "Request a return receival.",
                     "children": []
                   },
                   {
@@ -11567,6 +21053,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/beginReturnOrderWorkflow",
                     "title": "beginReturnOrderWorkflow",
+                    "description": "Create a return for an order.",
                     "children": []
                   },
                   {
@@ -11575,6 +21062,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelBeginOrderClaimWorkflow",
                     "title": "cancelBeginOrderClaimWorkflow",
+                    "description": "Cancel a requested order claim.",
                     "children": []
                   },
                   {
@@ -11583,6 +21071,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelBeginOrderEditWorkflow",
                     "title": "cancelBeginOrderEditWorkflow",
+                    "description": "Cancel a requested order edit.",
                     "children": []
                   },
                   {
@@ -11591,6 +21080,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelBeginOrderExchangeWorkflow",
                     "title": "cancelBeginOrderExchangeWorkflow",
+                    "description": "Cancel a requested order exchange.",
                     "children": []
                   },
                   {
@@ -11599,6 +21089,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelOrderChangeWorkflow",
                     "title": "cancelOrderChangeWorkflow",
+                    "description": "Cancel an order change.",
                     "children": []
                   },
                   {
@@ -11607,6 +21098,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelOrderClaimWorkflow",
                     "title": "cancelOrderClaimWorkflow",
+                    "description": "Cancel a confirmed order claim.",
                     "children": []
                   },
                   {
@@ -11615,6 +21107,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelOrderExchangeWorkflow",
                     "title": "cancelOrderExchangeWorkflow",
+                    "description": "Cancel an exchange for an order.",
                     "children": []
                   },
                   {
@@ -11623,6 +21116,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelOrderFulfillmentWorkflow",
                     "title": "cancelOrderFulfillmentWorkflow",
+                    "description": "Cancel an order's fulfillment.",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/cancelOrderTransferRequestWorkflow",
+                    "title": "cancelOrderTransferRequestWorkflow",
+                    "description": "Cancel an order transfer request.",
                     "children": []
                   },
                   {
@@ -11631,6 +21134,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelOrderWorkflow",
                     "title": "cancelOrderWorkflow",
+                    "description": "Cancel an order.",
                     "children": []
                   },
                   {
@@ -11639,6 +21143,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelReturnReceiveWorkflow",
                     "title": "cancelReturnReceiveWorkflow",
+                    "description": "Cancel a return receival.",
                     "children": []
                   },
                   {
@@ -11647,6 +21152,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelReturnRequestWorkflow",
                     "title": "cancelReturnRequestWorkflow",
+                    "description": "Cancel a requested return.",
                     "children": []
                   },
                   {
@@ -11655,6 +21161,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelReturnWorkflow",
                     "title": "cancelReturnWorkflow",
+                    "description": "Cancel a return.",
                     "children": []
                   },
                   {
@@ -11663,6 +21170,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/completeOrderWorkflow",
                     "title": "completeOrderWorkflow",
+                    "description": "Complete one or more orders.",
                     "children": []
                   },
                   {
@@ -11671,6 +21179,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/confirmClaimRequestWorkflow",
                     "title": "confirmClaimRequestWorkflow",
+                    "description": "Confirm a requested claim.",
                     "children": []
                   },
                   {
@@ -11679,6 +21188,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/confirmExchangeRequestWorkflow",
                     "title": "confirmExchangeRequestWorkflow",
+                    "description": "Confirm an exchange request.",
                     "children": []
                   },
                   {
@@ -11687,6 +21197,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/confirmOrderEditRequestWorkflow",
                     "title": "confirmOrderEditRequestWorkflow",
+                    "description": "Confirm an order edit request.",
                     "children": []
                   },
                   {
@@ -11695,6 +21206,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/confirmReturnReceiveWorkflow",
                     "title": "confirmReturnReceiveWorkflow",
+                    "description": "Confirm a return receival request.",
                     "children": []
                   },
                   {
@@ -11703,6 +21215,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/confirmReturnRequestWorkflow",
                     "title": "confirmReturnRequestWorkflow",
+                    "description": "Confirm a return request.",
                     "children": []
                   },
                   {
@@ -11711,6 +21224,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createAndCompleteReturnOrderWorkflow",
                     "title": "createAndCompleteReturnOrderWorkflow",
+                    "description": "Create and complete a return for an order.",
                     "children": []
                   },
                   {
@@ -11719,6 +21233,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createClaimShippingMethodWorkflow",
                     "title": "createClaimShippingMethodWorkflow",
+                    "description": "Create an inbound or outbound shipping method for a claim.",
                     "children": []
                   },
                   {
@@ -11727,6 +21242,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createExchangeShippingMethodWorkflow",
                     "title": "createExchangeShippingMethodWorkflow",
+                    "description": "Create an inbound or outbound shipping method for an exchange.",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/createOrUpdateOrderPaymentCollectionWorkflow",
+                    "title": "createOrUpdateOrderPaymentCollectionWorkflow",
+                    "description": "Create or update payment collection for an order.",
                     "children": []
                   },
                   {
@@ -11735,6 +21260,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createOrderChangeActionsWorkflow",
                     "title": "createOrderChangeActionsWorkflow",
+                    "description": "Create an order change action.",
                     "children": []
                   },
                   {
@@ -11743,6 +21269,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createOrderChangeWorkflow",
                     "title": "createOrderChangeWorkflow",
+                    "description": "Create an order change.",
                     "children": []
                   },
                   {
@@ -11751,6 +21278,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createOrderEditShippingMethodWorkflow",
                     "title": "createOrderEditShippingMethodWorkflow",
+                    "description": "Create a shipping method for an order edit.",
                     "children": []
                   },
                   {
@@ -11759,6 +21287,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createOrderFulfillmentWorkflow",
                     "title": "createOrderFulfillmentWorkflow",
+                    "description": "Creates a fulfillment for an order.",
                     "children": []
                   },
                   {
@@ -11767,6 +21296,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createOrderPaymentCollectionWorkflow",
                     "title": "createOrderPaymentCollectionWorkflow",
+                    "description": "Create a payment collection for an order.",
                     "children": []
                   },
                   {
@@ -11775,6 +21305,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createOrderShipmentWorkflow",
                     "title": "createOrderShipmentWorkflow",
+                    "description": "Creates a shipment for an order.",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/createOrderWorkflow",
+                    "title": "createOrderWorkflow",
+                    "description": "Create an order.",
                     "children": []
                   },
                   {
@@ -11783,6 +21323,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createOrdersWorkflow",
                     "title": "createOrdersWorkflow",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -11791,6 +21332,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createReturnShippingMethodWorkflow",
                     "title": "createReturnShippingMethodWorkflow",
+                    "description": "Create a shipping method for a return.",
                     "children": []
                   },
                   {
@@ -11799,6 +21341,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/declineOrderChangeWorkflow",
                     "title": "declineOrderChangeWorkflow",
+                    "description": "Decline an order change.",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/declineOrderTransferRequestWorkflow",
+                    "title": "declineOrderTransferRequestWorkflow",
+                    "description": "Decline a requested order transfer.",
                     "children": []
                   },
                   {
@@ -11807,6 +21359,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteOrderChangeActionsWorkflow",
                     "title": "deleteOrderChangeActionsWorkflow",
+                    "description": "Delete one or more order change actions.",
                     "children": []
                   },
                   {
@@ -11815,6 +21368,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteOrderChangeWorkflow",
                     "title": "deleteOrderChangeWorkflow",
+                    "description": "Delete one or more order changes.",
                     "children": []
                   },
                   {
@@ -11823,6 +21377,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/dismissItemReturnRequestWorkflow",
                     "title": "dismissItemReturnRequestWorkflow",
+                    "description": "Dismiss items from a return request.",
                     "children": []
                   },
                   {
@@ -11831,6 +21386,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/getOrderDetailWorkflow",
                     "title": "getOrderDetailWorkflow",
+                    "description": "Retrieve an order's details.",
                     "children": []
                   },
                   {
@@ -11839,6 +21395,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/getOrdersListWorkflow",
                     "title": "getOrdersListWorkflow",
+                    "description": "Retrieve a list of orders.",
                     "children": []
                   },
                   {
@@ -11847,6 +21404,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/markOrderFulfillmentAsDeliveredWorkflow",
                     "title": "markOrderFulfillmentAsDeliveredWorkflow",
+                    "description": "Mark a fulfillment in an order as delivered.",
                     "children": []
                   },
                   {
@@ -11855,6 +21413,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/orderClaimAddNewItemWorkflow",
                     "title": "orderClaimAddNewItemWorkflow",
+                    "description": "Add outbound or new items to a claim.",
                     "children": []
                   },
                   {
@@ -11863,6 +21422,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/orderClaimItemWorkflow",
                     "title": "orderClaimItemWorkflow",
+                    "description": "Add order items to a claim as claim items.",
                     "children": []
                   },
                   {
@@ -11871,6 +21431,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/orderClaimRequestItemReturnWorkflow",
                     "title": "orderClaimRequestItemReturnWorkflow",
+                    "description": "Request one or more items to be returned as part of a claim.",
                     "children": []
                   },
                   {
@@ -11879,6 +21440,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/orderEditAddNewItemWorkflow",
                     "title": "orderEditAddNewItemWorkflow",
+                    "description": "Add new items to an order edit.",
                     "children": []
                   },
                   {
@@ -11887,6 +21449,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/orderEditUpdateItemQuantityWorkflow",
                     "title": "orderEditUpdateItemQuantityWorkflow",
+                    "description": "Update the quantity of an existing order item in the order's edit.",
                     "children": []
                   },
                   {
@@ -11895,6 +21458,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/orderExchangeAddNewItemWorkflow",
                     "title": "orderExchangeAddNewItemWorkflow",
+                    "description": "Add new or outbound items to an exchange.",
                     "children": []
                   },
                   {
@@ -11903,6 +21467,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/orderExchangeRequestItemReturnWorkflow",
                     "title": "orderExchangeRequestItemReturnWorkflow",
+                    "description": "Add inbound items to be returned as part of the exchange.",
                     "children": []
                   },
                   {
@@ -11911,6 +21476,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/receiveAndCompleteReturnOrderWorkflow",
                     "title": "receiveAndCompleteReturnOrderWorkflow",
+                    "description": "Receive and complete a return.",
                     "children": []
                   },
                   {
@@ -11919,6 +21485,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/receiveItemReturnRequestWorkflow",
                     "title": "receiveItemReturnRequestWorkflow",
+                    "description": "Mark return items as received.",
                     "children": []
                   },
                   {
@@ -11927,6 +21494,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeAddItemClaimActionWorkflow",
                     "title": "removeAddItemClaimActionWorkflow",
+                    "description": "Remove outbound (new) items from a claim.",
                     "children": []
                   },
                   {
@@ -11935,6 +21503,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeClaimShippingMethodWorkflow",
                     "title": "removeClaimShippingMethodWorkflow",
+                    "description": "Remove an inbound or outbound shipping method from a claim.",
                     "children": []
                   },
                   {
@@ -11943,6 +21512,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeExchangeShippingMethodWorkflow",
                     "title": "removeExchangeShippingMethodWorkflow",
+                    "description": "Remove an inbound or outbound shipping method from an exchange.",
                     "children": []
                   },
                   {
@@ -11951,6 +21521,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeItemClaimActionWorkflow",
                     "title": "removeItemClaimActionWorkflow",
+                    "description": "Remove order items from a claim.",
                     "children": []
                   },
                   {
@@ -11959,6 +21530,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeItemExchangeActionWorkflow",
                     "title": "removeItemExchangeActionWorkflow",
+                    "description": "Remove an outbound or new item from an exchange.",
                     "children": []
                   },
                   {
@@ -11967,6 +21539,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeItemOrderEditActionWorkflow",
                     "title": "removeItemOrderEditActionWorkflow",
+                    "description": "Remove an item that was added to an order edit.",
                     "children": []
                   },
                   {
@@ -11975,6 +21548,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeItemReceiveReturnActionWorkflow",
                     "title": "removeItemReceiveReturnActionWorkflow",
+                    "description": "Remove an item from a return receival.",
                     "children": []
                   },
                   {
@@ -11983,6 +21557,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeItemReturnActionWorkflow",
                     "title": "removeItemReturnActionWorkflow",
+                    "description": "Remove an item from a return.",
                     "children": []
                   },
                   {
@@ -11991,6 +21566,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeOrderEditShippingMethodWorkflow",
                     "title": "removeOrderEditShippingMethodWorkflow",
+                    "description": "Remove a shipping method from an order edit.",
                     "children": []
                   },
                   {
@@ -11999,6 +21575,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeReturnShippingMethodWorkflow",
                     "title": "removeReturnShippingMethodWorkflow",
+                    "description": "Remove a shipping method from a return.",
                     "children": []
                   },
                   {
@@ -12007,6 +21584,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/requestItemReturnWorkflow",
                     "title": "requestItemReturnWorkflow",
+                    "description": "Add items to a return.",
                     "children": []
                   },
                   {
@@ -12015,6 +21593,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/requestOrderEditRequestWorkflow",
                     "title": "requestOrderEditRequestWorkflow",
+                    "description": "Request an order edit.",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/requestOrderTransferWorkflow",
+                    "title": "requestOrderTransferWorkflow",
+                    "description": "Request a transfer of an order to a customer.",
                     "children": []
                   },
                   {
@@ -12023,6 +21611,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateClaimAddItemWorkflow",
                     "title": "updateClaimAddItemWorkflow",
+                    "description": "Update a claim's new or outbound item.",
                     "children": []
                   },
                   {
@@ -12031,6 +21620,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateClaimItemWorkflow",
                     "title": "updateClaimItemWorkflow",
+                    "description": "Update a claim item, added to the claim from an order item.",
                     "children": []
                   },
                   {
@@ -12039,6 +21629,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateClaimShippingMethodWorkflow",
                     "title": "updateClaimShippingMethodWorkflow",
+                    "description": "Update an inbound or outbound shipping method of a claim.",
                     "children": []
                   },
                   {
@@ -12047,6 +21638,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateExchangeAddItemWorkflow",
                     "title": "updateExchangeAddItemWorkflow",
+                    "description": "Update an outbound or new item in an exchange.",
                     "children": []
                   },
                   {
@@ -12055,6 +21647,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateExchangeShippingMethodWorkflow",
                     "title": "updateExchangeShippingMethodWorkflow",
+                    "description": "Update an exchange's inbound or outbound shipping method.",
                     "children": []
                   },
                   {
@@ -12063,6 +21656,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateOrderChangeActionsWorkflow",
                     "title": "updateOrderChangeActionsWorkflow",
+                    "description": "Update one or more order change actions.",
                     "children": []
                   },
                   {
@@ -12071,6 +21665,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateOrderChangesWorkflow",
                     "title": "updateOrderChangesWorkflow",
+                    "description": "Update one or more order changes.",
                     "children": []
                   },
                   {
@@ -12079,6 +21674,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateOrderEditAddItemWorkflow",
                     "title": "updateOrderEditAddItemWorkflow",
+                    "description": "Update a new item in an order edit.",
                     "children": []
                   },
                   {
@@ -12087,6 +21683,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateOrderEditItemQuantityWorkflow",
                     "title": "updateOrderEditItemQuantityWorkflow",
+                    "description": "Update an existing order item previously added to an order edit.",
                     "children": []
                   },
                   {
@@ -12095,6 +21692,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateOrderEditShippingMethodWorkflow",
                     "title": "updateOrderEditShippingMethodWorkflow",
+                    "description": "Update a shipping method of an order edit.",
                     "children": []
                   },
                   {
@@ -12103,6 +21701,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateOrderTaxLinesWorkflow",
                     "title": "updateOrderTaxLinesWorkflow",
+                    "description": "Update the tax lines of items and shipping methods in an order.",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/updateOrderWorkflow",
+                    "title": "updateOrderWorkflow",
+                    "description": "Update an order's details.",
                     "children": []
                   },
                   {
@@ -12111,6 +21719,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateReceiveItemReturnRequestWorkflow",
                     "title": "updateReceiveItemReturnRequestWorkflow",
+                    "description": "Update an item in a return receival request.",
                     "children": []
                   },
                   {
@@ -12119,6 +21728,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateRequestItemReturnWorkflow",
                     "title": "updateRequestItemReturnWorkflow",
+                    "description": "Update a requested item in a return.",
                     "children": []
                   },
                   {
@@ -12127,6 +21737,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateReturnShippingMethodWorkflow",
                     "title": "updateReturnShippingMethodWorkflow",
+                    "description": "Update the shipping method of a return.",
                     "children": []
                   },
                   {
@@ -12135,6 +21746,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateReturnWorkflow",
                     "title": "updateReturnWorkflow",
+                    "description": "Update a return's details.",
                     "children": []
                   }
                 ],
@@ -12150,6 +21762,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/addOrderTransactionStep",
                     "title": "addOrderTransactionStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12158,6 +21771,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/archiveOrdersStep",
                     "title": "archiveOrdersStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12166,6 +21780,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/cancelOrderChangeStep",
                     "title": "cancelOrderChangeStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12174,6 +21789,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/cancelOrderClaimStep",
                     "title": "cancelOrderClaimStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12182,6 +21798,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/cancelOrderExchangeStep",
                     "title": "cancelOrderExchangeStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12190,6 +21807,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/cancelOrderFulfillmentStep",
                     "title": "cancelOrderFulfillmentStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12198,6 +21816,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/cancelOrderReturnStep",
                     "title": "cancelOrderReturnStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12206,6 +21825,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/cancelOrdersStep",
                     "title": "cancelOrdersStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12214,6 +21834,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/completeOrdersStep",
                     "title": "completeOrdersStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12222,6 +21843,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createCompleteReturnStep",
                     "title": "createCompleteReturnStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12230,6 +21852,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createOrderChangeStep",
                     "title": "createOrderChangeStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12238,6 +21861,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createOrderClaimItemsFromActionsStep",
                     "title": "createOrderClaimItemsFromActionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12246,6 +21870,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createOrderClaimsStep",
                     "title": "createOrderClaimsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12254,6 +21879,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createOrderExchangeItemsFromActionsStep",
                     "title": "createOrderExchangeItemsFromActionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12262,6 +21888,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createOrderExchangesStep",
                     "title": "createOrderExchangesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12270,6 +21897,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createOrderLineItemsStep",
                     "title": "createOrderLineItemsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12278,6 +21906,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createOrdersStep",
                     "title": "createOrdersStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12286,6 +21915,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createReturnsStep",
                     "title": "createReturnsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12294,6 +21924,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/declineOrderChangeStep",
                     "title": "declineOrderChangeStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12302,6 +21933,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteClaimsStep",
                     "title": "deleteClaimsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12310,6 +21942,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteExchangesStep",
                     "title": "deleteExchangesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12318,6 +21951,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteOrderChangeActionsStep",
                     "title": "deleteOrderChangeActionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12326,6 +21960,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteOrderChangesStep",
                     "title": "deleteOrderChangesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12334,6 +21969,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteOrderLineItems",
                     "title": "deleteOrderLineItems",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12342,6 +21978,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteOrderShippingMethods",
                     "title": "deleteOrderShippingMethods",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12350,6 +21987,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteReturnsStep",
                     "title": "deleteReturnsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12358,6 +21996,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/previewOrderChangeStep",
                     "title": "previewOrderChangeStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/registerOrderChangesStep",
+                    "title": "registerOrderChangesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12366,6 +22014,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/registerOrderFulfillmentStep",
                     "title": "registerOrderFulfillmentStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12374,6 +22023,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/registerOrderShipmentStep",
                     "title": "registerOrderShipmentStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12382,6 +22032,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/setOrderTaxLinesForItemsStep",
                     "title": "setOrderTaxLinesForItemsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12390,6 +22041,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateOrderChangeActionsStep",
                     "title": "updateOrderChangeActionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12398,14 +22050,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateOrderChangesStep",
                     "title": "updateOrderChangesStep",
-                    "children": []
-                  },
-                  {
-                    "loaded": true,
-                    "isPathHref": true,
-                    "type": "link",
-                    "path": "/references/medusa-workflows/steps/updateOrderExchangesStep",
-                    "title": "updateOrderExchangesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12414,6 +22059,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateOrderShippingMethodsStep",
                     "title": "updateOrderShippingMethodsStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/updateOrdersStep",
+                    "title": "updateOrdersStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12422,6 +22077,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateReturnItemsStep",
                     "title": "updateReturnItemsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12430,6 +22086,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateReturnsStep",
                     "title": "updateReturnsStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/acceptOrderTransferValidationStep",
+                    "title": "acceptOrderTransferValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12438,6 +22104,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/beginClaimOrderValidationStep",
                     "title": "beginClaimOrderValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12446,6 +22113,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/beginOrderEditValidationStep",
                     "title": "beginOrderEditValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12454,6 +22122,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/beginOrderExchangeValidationStep",
                     "title": "beginOrderExchangeValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12462,6 +22131,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/beginReceiveReturnValidationStep",
                     "title": "beginReceiveReturnValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12470,6 +22140,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/beginReturnOrderValidationStep",
                     "title": "beginReturnOrderValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12478,6 +22149,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelBeginOrderClaimValidationStep",
                     "title": "cancelBeginOrderClaimValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12486,6 +22158,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelBeginOrderEditValidationStep",
                     "title": "cancelBeginOrderEditValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12494,6 +22167,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelBeginOrderExchangeValidationStep",
                     "title": "cancelBeginOrderExchangeValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12502,6 +22176,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelClaimValidateOrderStep",
                     "title": "cancelClaimValidateOrderStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12510,6 +22185,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelExchangeValidateOrder",
                     "title": "cancelExchangeValidateOrder",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12518,6 +22194,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelOrderFulfillmentValidateOrder",
                     "title": "cancelOrderFulfillmentValidateOrder",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12526,6 +22203,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelReceiveReturnValidationStep",
                     "title": "cancelReceiveReturnValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12534,6 +22212,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelRequestReturnValidationStep",
                     "title": "cancelRequestReturnValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12542,6 +22221,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelReturnValidateOrder",
                     "title": "cancelReturnValidateOrder",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/cancelTransferOrderRequestValidationStep",
+                    "title": "cancelTransferOrderRequestValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12550,6 +22239,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/cancelValidateOrder",
                     "title": "cancelValidateOrder",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12558,6 +22248,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/confirmClaimRequestValidationStep",
                     "title": "confirmClaimRequestValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12566,6 +22257,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/confirmExchangeRequestValidationStep",
                     "title": "confirmExchangeRequestValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12574,6 +22266,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/confirmOrderEditRequestValidationStep",
                     "title": "confirmOrderEditRequestValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12582,6 +22275,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/confirmReceiveReturnValidationStep",
                     "title": "confirmReceiveReturnValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12590,6 +22284,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/confirmReturnRequestValidationStep",
                     "title": "confirmReturnRequestValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12598,6 +22293,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createClaimShippingMethodValidationStep",
                     "title": "createClaimShippingMethodValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12606,6 +22302,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createCompleteReturnValidationStep",
                     "title": "createCompleteReturnValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12614,6 +22311,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createExchangeShippingMethodValidationStep",
                     "title": "createExchangeShippingMethodValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12622,6 +22320,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createFulfillmentValidateOrder",
                     "title": "createFulfillmentValidateOrder",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12630,6 +22329,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createOrderEditShippingMethodValidationStep",
                     "title": "createOrderEditShippingMethodValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12638,6 +22338,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createReturnShippingMethodValidationStep",
                     "title": "createReturnShippingMethodValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12646,6 +22347,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createShipmentValidateOrder",
                     "title": "createShipmentValidateOrder",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/declineTransferOrderRequestValidationStep",
+                    "title": "declineTransferOrderRequestValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12654,6 +22365,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteOrderPaymentCollections",
                     "title": "deleteOrderPaymentCollections",
+                    "description": "Delete a payment collection of an order.",
                     "children": []
                   },
                   {
@@ -12662,6 +22374,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/dismissItemReturnRequestValidationStep",
                     "title": "dismissItemReturnRequestValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12670,6 +22383,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/exchangeAddNewItemValidationStep",
                     "title": "exchangeAddNewItemValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12678,6 +22392,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/exchangeRequestItemReturnValidationStep",
                     "title": "exchangeRequestItemReturnValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12686,6 +22401,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/markPaymentCollectionAsPaid",
                     "title": "markPaymentCollectionAsPaid",
+                    "description": "Mark a payment collection for an order as paid.",
                     "children": []
                   },
                   {
@@ -12694,6 +22410,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/orderClaimAddNewItemValidationStep",
                     "title": "orderClaimAddNewItemValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12702,6 +22419,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/orderClaimItemValidationStep",
                     "title": "orderClaimItemValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12710,6 +22428,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/orderClaimRequestItemReturnValidationStep",
                     "title": "orderClaimRequestItemReturnValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12718,6 +22437,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/orderEditAddNewItemValidationStep",
                     "title": "orderEditAddNewItemValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12726,6 +22446,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/orderEditUpdateItemQuantityValidationStep",
                     "title": "orderEditUpdateItemQuantityValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12734,6 +22455,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/orderFulfillmentDeliverablilityValidationStep",
                     "title": "orderFulfillmentDeliverablilityValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12742,6 +22464,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/receiveCompleteReturnValidationStep",
                     "title": "receiveCompleteReturnValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12750,6 +22473,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/receiveItemReturnRequestValidationStep",
                     "title": "receiveItemReturnRequestValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12758,6 +22482,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeClaimAddItemActionValidationStep",
                     "title": "removeClaimAddItemActionValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12766,6 +22491,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeClaimItemActionValidationStep",
                     "title": "removeClaimItemActionValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12774,6 +22500,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeClaimShippingMethodValidationStep",
                     "title": "removeClaimShippingMethodValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12782,6 +22509,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeExchangeItemActionValidationStep",
                     "title": "removeExchangeItemActionValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12790,6 +22518,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeExchangeShippingMethodValidationStep",
                     "title": "removeExchangeShippingMethodValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12798,6 +22527,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeItemReceiveReturnActionValidationStep",
                     "title": "removeItemReceiveReturnActionValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12806,6 +22536,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeOrderEditItemActionValidationStep",
                     "title": "removeOrderEditItemActionValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12814,6 +22545,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeOrderEditShippingMethodValidationStep",
                     "title": "removeOrderEditShippingMethodValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12822,6 +22554,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeReturnItemActionValidationStep",
                     "title": "removeReturnItemActionValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12830,6 +22563,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeReturnShippingMethodValidationStep",
                     "title": "removeReturnShippingMethodValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12838,6 +22572,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/requestItemReturnValidationStep",
                     "title": "requestItemReturnValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12846,6 +22581,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/requestOrderEditRequestValidationStep",
                     "title": "requestOrderEditRequestValidationStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/requestOrderTransferValidationStep",
+                    "title": "requestOrderTransferValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12854,6 +22599,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/throwUnlessPaymentCollectionNotPaid",
                     "title": "throwUnlessPaymentCollectionNotPaid",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12862,6 +22608,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/throwUnlessStatusIsNotPaid",
                     "title": "throwUnlessStatusIsNotPaid",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12870,6 +22617,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateClaimAddItemValidationStep",
                     "title": "updateClaimAddItemValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12878,6 +22626,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateClaimItemValidationStep",
                     "title": "updateClaimItemValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12886,6 +22635,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateClaimShippingMethodValidationStep",
                     "title": "updateClaimShippingMethodValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12894,6 +22644,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateExchangeAddItemValidationStep",
                     "title": "updateExchangeAddItemValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12902,6 +22653,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateExchangeShippingMethodValidationStep",
                     "title": "updateExchangeShippingMethodValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12910,6 +22662,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateOrderEditAddItemValidationStep",
                     "title": "updateOrderEditAddItemValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12918,6 +22671,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateOrderEditItemQuantityValidationStep",
                     "title": "updateOrderEditItemQuantityValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12926,6 +22680,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateOrderEditShippingMethodValidationStep",
                     "title": "updateOrderEditShippingMethodValidationStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/updateOrderValidationStep",
+                    "title": "updateOrderValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12934,6 +22698,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateReceiveItemReturnRequestValidationStep",
                     "title": "updateReceiveItemReturnRequestValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12942,6 +22707,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateRequestItemReturnValidationStep",
                     "title": "updateRequestItemReturnValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12950,6 +22716,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateReturnShippingMethodValidationStep",
                     "title": "updateReturnShippingMethodValidationStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -12958,6 +22725,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateReturnValidationStep",
                     "title": "updateReturnValidationStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -12981,14 +22749,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/capturePaymentWorkflow",
                     "title": "capturePaymentWorkflow",
-                    "children": []
-                  },
-                  {
-                    "loaded": true,
-                    "isPathHref": true,
-                    "type": "link",
-                    "path": "/references/medusa-workflows/onPaymentProcessedWorkflow",
-                    "title": "onPaymentProcessedWorkflow",
+                    "description": "Capture a payment.",
                     "children": []
                   },
                   {
@@ -12997,6 +22758,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/processPaymentWorkflow",
                     "title": "processPaymentWorkflow",
+                    "description": "Process a payment based on a webhook event.",
                     "children": []
                   },
                   {
@@ -13005,6 +22767,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/refundPaymentWorkflow",
                     "title": "refundPaymentWorkflow",
+                    "description": "Refund a payment.",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/refundPaymentsWorkflow",
+                    "title": "refundPaymentsWorkflow",
+                    "description": "Refund one or more payments.",
                     "children": []
                   }
                 ],
@@ -13020,6 +22792,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/authorizePaymentSessionStep",
                     "title": "authorizePaymentSessionStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13028,6 +22801,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/cancelPaymentStep",
                     "title": "cancelPaymentStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13036,6 +22810,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/capturePaymentStep",
                     "title": "capturePaymentStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13044,6 +22819,25 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/refundPaymentStep",
                     "title": "refundPaymentStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/refundPaymentsStep",
+                    "title": "refundPaymentsStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/validatePaymentsRefundStep",
+                    "title": "validatePaymentsRefundStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13052,6 +22846,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/validateRefundStep",
                     "title": "validateRefundStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -13075,6 +22870,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createPaymentSessionsWorkflow",
                     "title": "createPaymentSessionsWorkflow",
+                    "description": "Create payment sessions.",
                     "children": []
                   },
                   {
@@ -13083,6 +22879,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createRefundReasonsWorkflow",
                     "title": "createRefundReasonsWorkflow",
+                    "description": "Create refund reasons.",
                     "children": []
                   },
                   {
@@ -13091,6 +22888,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deletePaymentSessionsWorkflow",
                     "title": "deletePaymentSessionsWorkflow",
+                    "description": "Delete payment sessions.",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/deleteRefundReasonsWorkflow",
+                    "title": "deleteRefundReasonsWorkflow",
+                    "description": "Delete refund reasons.",
                     "children": []
                   },
                   {
@@ -13099,6 +22906,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateRefundReasonsWorkflow",
                     "title": "updateRefundReasonsWorkflow",
+                    "description": "Update refund reasons.",
                     "children": []
                   }
                 ],
@@ -13112,8 +22920,18 @@ export const generatedSidebar = [
                     "loaded": true,
                     "isPathHref": true,
                     "type": "link",
+                    "path": "/references/medusa-workflows/steps/createPaymentAccountHolderStep",
+                    "title": "createPaymentAccountHolderStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
                     "path": "/references/medusa-workflows/steps/createPaymentSessionStep",
                     "title": "createPaymentSessionStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13122,6 +22940,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createRefundReasonStep",
                     "title": "createRefundReasonStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13130,6 +22949,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deletePaymentSessionsStep",
                     "title": "deletePaymentSessionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13138,6 +22958,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteRefundReasonsStep",
                     "title": "deleteRefundReasonsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13146,6 +22967,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updatePaymentCollectionStep",
                     "title": "updatePaymentCollectionStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13154,6 +22976,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateRefundReasonsStep",
                     "title": "updateRefundReasonsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13162,6 +22985,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/validateDeletedPaymentSessionsStep",
                     "title": "validateDeletedPaymentSessionsStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -13185,6 +23009,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/batchPriceListPricesWorkflow",
                     "title": "batchPriceListPricesWorkflow",
+                    "description": "Manage a price list's prices.",
                     "children": []
                   },
                   {
@@ -13193,6 +23018,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createPriceListPricesWorkflow",
                     "title": "createPriceListPricesWorkflow",
+                    "description": "Create prices in price lists.",
                     "children": []
                   },
                   {
@@ -13201,6 +23027,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createPriceListsWorkflow",
                     "title": "createPriceListsWorkflow",
+                    "description": "Create one or more price lists.",
                     "children": []
                   },
                   {
@@ -13209,6 +23036,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deletePriceListsWorkflow",
                     "title": "deletePriceListsWorkflow",
+                    "description": "Delete one or more price lists.",
                     "children": []
                   },
                   {
@@ -13217,6 +23045,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removePriceListPricesWorkflow",
                     "title": "removePriceListPricesWorkflow",
+                    "description": "Remove prices in price lists.",
                     "children": []
                   },
                   {
@@ -13225,6 +23054,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updatePriceListPricesWorkflow",
                     "title": "updatePriceListPricesWorkflow",
+                    "description": "Update price lists' prices.",
                     "children": []
                   },
                   {
@@ -13233,6 +23063,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updatePriceListsWorkflow",
                     "title": "updatePriceListsWorkflow",
+                    "description": "Update one or more price lists.",
                     "children": []
                   }
                 ],
@@ -13248,6 +23079,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createPriceListPricesStep",
                     "title": "createPriceListPricesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13256,6 +23088,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createPriceListsStep",
                     "title": "createPriceListsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13264,6 +23097,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deletePriceListsStep",
                     "title": "deletePriceListsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13272,6 +23106,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/getExistingPriceListsPriceIdsStep",
                     "title": "getExistingPriceListsPriceIdsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13280,6 +23115,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/removePriceListPricesStep",
                     "title": "removePriceListPricesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13288,6 +23124,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updatePriceListPricesStep",
                     "title": "updatePriceListPricesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13296,6 +23133,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updatePriceListsStep",
                     "title": "updatePriceListsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13304,6 +23142,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/validatePriceListsStep",
                     "title": "validatePriceListsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13312,6 +23151,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/validateVariantPriceLinksStep",
                     "title": "validateVariantPriceLinksStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -13335,6 +23175,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createPricePreferencesWorkflow",
                     "title": "createPricePreferencesWorkflow",
+                    "description": "Create one or more price preferences.",
                     "children": []
                   },
                   {
@@ -13343,6 +23184,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deletePricePreferencesWorkflow",
                     "title": "deletePricePreferencesWorkflow",
+                    "description": "Delete one or more price preferences.",
                     "children": []
                   },
                   {
@@ -13351,6 +23193,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updatePricePreferencesWorkflow",
                     "title": "updatePricePreferencesWorkflow",
+                    "description": "Update one or more price preferences.",
                     "children": []
                   }
                 ],
@@ -13366,6 +23209,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createPricePreferencesStep",
                     "title": "createPricePreferencesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13374,6 +23218,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createPriceSetsStep",
                     "title": "createPriceSetsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13382,6 +23227,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deletePricePreferencesStep",
                     "title": "deletePricePreferencesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13390,6 +23236,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updatePricePreferencesAsArrayStep",
                     "title": "updatePricePreferencesAsArrayStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13398,6 +23245,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updatePricePreferencesStep",
                     "title": "updatePricePreferencesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13406,6 +23254,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updatePriceSetsStep",
                     "title": "updatePriceSetsStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -13429,6 +23278,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/batchLinkProductsToCategoryWorkflow",
                     "title": "batchLinkProductsToCategoryWorkflow",
+                    "description": "Manage the links between a collection and products.",
                     "children": []
                   },
                   {
@@ -13437,6 +23287,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/batchLinkProductsToCollectionWorkflow",
                     "title": "batchLinkProductsToCollectionWorkflow",
+                    "description": "Manage the links between a collection and products.",
                     "children": []
                   },
                   {
@@ -13445,6 +23296,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/batchProductVariantsWorkflow",
                     "title": "batchProductVariantsWorkflow",
+                    "description": "Create, update, and delete product variants.",
                     "children": []
                   },
                   {
@@ -13453,6 +23305,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/batchProductsWorkflow",
                     "title": "batchProductsWorkflow",
+                    "description": "Manage products in bulk.",
                     "children": []
                   },
                   {
@@ -13461,6 +23314,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createCollectionsWorkflow",
                     "title": "createCollectionsWorkflow",
+                    "description": "Create one or more product collections.",
                     "children": []
                   },
                   {
@@ -13469,6 +23323,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createProductOptionsWorkflow",
                     "title": "createProductOptionsWorkflow",
+                    "description": "Create one or more product options.",
                     "children": []
                   },
                   {
@@ -13477,6 +23332,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createProductTagsWorkflow",
                     "title": "createProductTagsWorkflow",
+                    "description": "Create one or more product tags.",
                     "children": []
                   },
                   {
@@ -13485,6 +23341,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createProductTypesWorkflow",
                     "title": "createProductTypesWorkflow",
+                    "description": "Create one or more product types.",
                     "children": []
                   },
                   {
@@ -13493,6 +23350,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createProductVariantsWorkflow",
                     "title": "createProductVariantsWorkflow",
+                    "description": "Create one or more product variants.",
                     "children": []
                   },
                   {
@@ -13501,6 +23359,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createProductsWorkflow",
                     "title": "createProductsWorkflow",
+                    "description": "Create one or more products with options and variants.",
                     "children": []
                   },
                   {
@@ -13509,6 +23368,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteCollectionsWorkflow",
                     "title": "deleteCollectionsWorkflow",
+                    "description": "Delete one or more product collection.",
                     "children": []
                   },
                   {
@@ -13517,6 +23377,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteProductOptionsWorkflow",
                     "title": "deleteProductOptionsWorkflow",
+                    "description": "Delete one or more product option.",
                     "children": []
                   },
                   {
@@ -13525,6 +23386,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteProductTagsWorkflow",
                     "title": "deleteProductTagsWorkflow",
+                    "description": "Delete one or more product tags.",
                     "children": []
                   },
                   {
@@ -13533,6 +23395,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteProductTypesWorkflow",
                     "title": "deleteProductTypesWorkflow",
+                    "description": "Delete one or more product types.",
                     "children": []
                   },
                   {
@@ -13541,6 +23404,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteProductVariantsWorkflow",
                     "title": "deleteProductVariantsWorkflow",
+                    "description": "Delete one or more product variants.",
                     "children": []
                   },
                   {
@@ -13549,6 +23413,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteProductsWorkflow",
                     "title": "deleteProductsWorkflow",
+                    "description": "Delete one or more products.",
                     "children": []
                   },
                   {
@@ -13557,6 +23422,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/exportProductsWorkflow",
                     "title": "exportProductsWorkflow",
+                    "description": "Export products with filtering capabilities.",
                     "children": []
                   },
                   {
@@ -13565,6 +23431,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/importProductsWorkflow",
                     "title": "importProductsWorkflow",
+                    "description": "Import products from a CSV file.",
                     "children": []
                   },
                   {
@@ -13573,6 +23440,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateCollectionsWorkflow",
                     "title": "updateCollectionsWorkflow",
+                    "description": "Update one or more product collections.",
                     "children": []
                   },
                   {
@@ -13581,6 +23449,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateProductOptionsWorkflow",
                     "title": "updateProductOptionsWorkflow",
+                    "description": "Update one or more product options.",
                     "children": []
                   },
                   {
@@ -13589,6 +23458,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateProductTagsWorkflow",
                     "title": "updateProductTagsWorkflow",
+                    "description": "Update one or more product tags.",
                     "children": []
                   },
                   {
@@ -13597,6 +23467,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateProductTypesWorkflow",
                     "title": "updateProductTypesWorkflow",
+                    "description": "Update one or more product types.",
                     "children": []
                   },
                   {
@@ -13605,6 +23476,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateProductVariantsWorkflow",
                     "title": "updateProductVariantsWorkflow",
+                    "description": "Update one or more product variants.",
                     "children": []
                   },
                   {
@@ -13613,6 +23485,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateProductsWorkflow",
                     "title": "updateProductsWorkflow",
+                    "description": "Update one or more products with options and variants.",
                     "children": []
                   },
                   {
@@ -13621,6 +23494,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/upsertVariantPricesWorkflow",
                     "title": "upsertVariantPricesWorkflow",
+                    "description": "Create, update, or remove variants' prices.",
                     "children": []
                   }
                 ],
@@ -13634,8 +23508,18 @@ export const generatedSidebar = [
                     "loaded": true,
                     "isPathHref": true,
                     "type": "link",
+                    "path": "/references/medusa-workflows/steps/batchLinkProductsToCategoryStep",
+                    "title": "batchLinkProductsToCategoryStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
                     "path": "/references/medusa-workflows/steps/batchLinkProductsToCollectionStep",
                     "title": "batchLinkProductsToCollectionStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13644,6 +23528,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createCollectionsStep",
                     "title": "createCollectionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13652,6 +23537,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createProductOptionsStep",
                     "title": "createProductOptionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13660,6 +23546,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createProductTagsStep",
                     "title": "createProductTagsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13668,6 +23555,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createProductTypesStep",
                     "title": "createProductTypesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13676,6 +23564,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createProductVariantsStep",
                     "title": "createProductVariantsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13684,6 +23573,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createProductsStep",
                     "title": "createProductsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13692,6 +23582,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createVariantPricingLinkStep",
                     "title": "createVariantPricingLinkStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13700,6 +23591,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteCollectionsStep",
                     "title": "deleteCollectionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13708,6 +23600,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteProductOptionsStep",
                     "title": "deleteProductOptionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13716,6 +23609,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteProductTagsStep",
                     "title": "deleteProductTagsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13724,6 +23618,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteProductTypesStep",
                     "title": "deleteProductTypesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13732,6 +23627,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteProductVariantsStep",
                     "title": "deleteProductVariantsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13740,6 +23636,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteProductsStep",
                     "title": "deleteProductsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13748,6 +23645,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/generateProductCsvStep",
                     "title": "generateProductCsvStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13756,6 +23654,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/getAllProductsStep",
                     "title": "getAllProductsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13764,6 +23663,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/getProductsStep",
                     "title": "getProductsStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/getVariantAvailabilityStep",
+                    "title": "getVariantAvailabilityStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13772,6 +23681,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/groupProductsForBatchStep",
                     "title": "groupProductsForBatchStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13780,6 +23690,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/parseProductCsvStep",
                     "title": "parseProductCsvStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13788,6 +23699,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateCollectionsStep",
                     "title": "updateCollectionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13796,6 +23708,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateProductOptionsStep",
                     "title": "updateProductOptionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13804,6 +23717,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateProductTagsStep",
                     "title": "updateProductTagsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13812,6 +23726,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateProductTypesStep",
                     "title": "updateProductTypesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13820,6 +23735,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateProductVariantsStep",
                     "title": "updateProductVariantsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13828,6 +23744,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateProductsStep",
                     "title": "updateProductsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13836,6 +23753,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/waitConfirmationProductImportStep",
                     "title": "waitConfirmationProductImportStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/validateProductInputStep",
+                    "title": "validateProductInputStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -13859,6 +23786,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createProductCategoriesWorkflow",
                     "title": "createProductCategoriesWorkflow",
+                    "description": "Create product categories.",
                     "children": []
                   },
                   {
@@ -13867,6 +23795,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteProductCategoriesWorkflow",
                     "title": "deleteProductCategoriesWorkflow",
+                    "description": "Delete product categories.",
                     "children": []
                   },
                   {
@@ -13875,6 +23804,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateProductCategoriesWorkflow",
                     "title": "updateProductCategoriesWorkflow",
+                    "description": "Update product categories.",
                     "children": []
                   }
                 ],
@@ -13890,6 +23820,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createProductCategoriesStep",
                     "title": "createProductCategoriesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13898,6 +23829,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteProductCategoriesStep",
                     "title": "deleteProductCategoriesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -13906,6 +23838,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateProductCategoriesStep",
                     "title": "updateProductCategoriesStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -13929,6 +23862,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/addOrRemoveCampaignPromotionsWorkflow",
                     "title": "addOrRemoveCampaignPromotionsWorkflow",
+                    "description": "Manage the promotions of a campaign.",
                     "children": []
                   },
                   {
@@ -13937,6 +23871,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/batchPromotionRulesWorkflow",
                     "title": "batchPromotionRulesWorkflow",
+                    "description": "Manage the rules of a promotion.",
                     "children": []
                   },
                   {
@@ -13945,6 +23880,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createCampaignsWorkflow",
                     "title": "createCampaignsWorkflow",
+                    "description": "Create one or more campaigns.",
                     "children": []
                   },
                   {
@@ -13953,6 +23889,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createPromotionRulesWorkflow",
                     "title": "createPromotionRulesWorkflow",
+                    "description": "Create one or more promotion rules.",
                     "children": []
                   },
                   {
@@ -13961,6 +23898,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createPromotionsWorkflow",
                     "title": "createPromotionsWorkflow",
+                    "description": "Create one or more promotions.",
                     "children": []
                   },
                   {
@@ -13969,6 +23907,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteCampaignsWorkflow",
                     "title": "deleteCampaignsWorkflow",
+                    "description": "Delete one or more campaigns.",
                     "children": []
                   },
                   {
@@ -13977,6 +23916,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deletePromotionRulesWorkflow",
                     "title": "deletePromotionRulesWorkflow",
+                    "description": "Delete one or more promotion rules.",
                     "children": []
                   },
                   {
@@ -13985,6 +23925,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deletePromotionsWorkflow",
                     "title": "deletePromotionsWorkflow",
+                    "description": "Delete one or more promotions.",
                     "children": []
                   },
                   {
@@ -13993,6 +23934,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateCampaignsWorkflow",
                     "title": "updateCampaignsWorkflow",
+                    "description": "Update one or more campaigns.",
                     "children": []
                   },
                   {
@@ -14001,6 +23943,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updatePromotionRulesWorkflow",
                     "title": "updatePromotionRulesWorkflow",
+                    "description": "Update one or more promotion rules.",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/updatePromotionsStatusWorkflow",
+                    "title": "updatePromotionsStatusWorkflow",
+                    "description": "Update the status of one or more promotions.",
                     "children": []
                   },
                   {
@@ -14009,6 +23961,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updatePromotionsWorkflow",
                     "title": "updatePromotionsWorkflow",
+                    "description": "Update one or more promotions.",
                     "children": []
                   }
                 ],
@@ -14024,6 +23977,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/addCampaignPromotionsStep",
                     "title": "addCampaignPromotionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14032,6 +23986,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/addRulesToPromotionsStep",
                     "title": "addRulesToPromotionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14040,6 +23995,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createCampaignsStep",
                     "title": "createCampaignsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14048,6 +24004,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createPromotionsStep",
                     "title": "createPromotionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14056,6 +24013,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteCampaignsStep",
                     "title": "deleteCampaignsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14064,6 +24022,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deletePromotionsStep",
                     "title": "deletePromotionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14072,6 +24031,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/removeCampaignPromotionsStep",
                     "title": "removeCampaignPromotionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14080,6 +24040,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/removeRulesFromPromotionsStep",
                     "title": "removeRulesFromPromotionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14088,6 +24049,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateCampaignsStep",
                     "title": "updateCampaignsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14096,6 +24058,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updatePromotionRulesStep",
                     "title": "updatePromotionRulesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14104,6 +24067,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updatePromotionsStep",
                     "title": "updatePromotionsStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/updatePromotionsValidationStep",
+                    "title": "updatePromotionsValidationStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -14127,6 +24100,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createRegionsWorkflow",
                     "title": "createRegionsWorkflow",
+                    "description": "Create one or more regions.",
                     "children": []
                   },
                   {
@@ -14135,6 +24109,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteRegionsWorkflow",
                     "title": "deleteRegionsWorkflow",
+                    "description": "Delete one or more regions.",
                     "children": []
                   },
                   {
@@ -14143,6 +24118,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateRegionsWorkflow",
                     "title": "updateRegionsWorkflow",
+                    "description": "Update regions.",
                     "children": []
                   }
                 ],
@@ -14158,6 +24134,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createRegionsStep",
                     "title": "createRegionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14166,6 +24143,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteRegionsStep",
                     "title": "deleteRegionsStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/setRegionsPaymentProvidersStep",
+                    "title": "setRegionsPaymentProvidersStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14174,6 +24161,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateRegionsStep",
                     "title": "updateRegionsStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -14197,6 +24185,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createReservationsWorkflow",
                     "title": "createReservationsWorkflow",
+                    "description": "Create one or more reservations.",
                     "children": []
                   },
                   {
@@ -14205,6 +24194,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteReservationsByLineItemsWorkflow",
                     "title": "deleteReservationsByLineItemsWorkflow",
+                    "description": "Delete reservations by their associated line items.",
                     "children": []
                   },
                   {
@@ -14213,6 +24203,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteReservationsWorkflow",
                     "title": "deleteReservationsWorkflow",
+                    "description": "Delete one or more reservations.",
                     "children": []
                   },
                   {
@@ -14221,6 +24212,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateReservationsWorkflow",
                     "title": "updateReservationsWorkflow",
+                    "description": "Update one or more reservations.",
                     "children": []
                   }
                 ],
@@ -14236,6 +24228,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createReservationsStep",
                     "title": "createReservationsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14244,6 +24237,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteReservationsByLineItemsStep",
                     "title": "deleteReservationsByLineItemsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14252,6 +24246,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteReservationsStep",
                     "title": "deleteReservationsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14260,6 +24255,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateReservationsStep",
                     "title": "updateReservationsStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -14283,6 +24279,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createReturnReasonsWorkflow",
                     "title": "createReturnReasonsWorkflow",
+                    "description": "Create return reasons.",
                     "children": []
                   },
                   {
@@ -14291,6 +24288,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteReturnReasonsWorkflow",
                     "title": "deleteReturnReasonsWorkflow",
+                    "description": "Delete return reasons.",
                     "children": []
                   },
                   {
@@ -14299,6 +24297,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateReturnReasonsWorkflow",
                     "title": "updateReturnReasonsWorkflow",
+                    "description": "Update return reasons.",
                     "children": []
                   }
                 ],
@@ -14314,6 +24313,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createReturnReasonsStep",
                     "title": "createReturnReasonsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14322,6 +24322,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteReturnReasonStep",
                     "title": "deleteReturnReasonStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14330,6 +24331,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateReturnReasonsStep",
                     "title": "updateReturnReasonsStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -14353,6 +24355,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createSalesChannelsWorkflow",
                     "title": "createSalesChannelsWorkflow",
+                    "description": "Create sales channels.",
                     "children": []
                   },
                   {
@@ -14361,6 +24364,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteSalesChannelsWorkflow",
                     "title": "deleteSalesChannelsWorkflow",
+                    "description": "Delete sales channels.",
                     "children": []
                   },
                   {
@@ -14369,6 +24373,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/linkProductsToSalesChannelWorkflow",
                     "title": "linkProductsToSalesChannelWorkflow",
+                    "description": "Manage the products available in a sales channel.",
                     "children": []
                   },
                   {
@@ -14377,6 +24382,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateSalesChannelsWorkflow",
                     "title": "updateSalesChannelsWorkflow",
+                    "description": "Update sales channels.",
                     "children": []
                   }
                 ],
@@ -14392,6 +24398,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/associateLocationsWithSalesChannelsStep",
                     "title": "associateLocationsWithSalesChannelsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14400,6 +24407,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/associateProductsWithSalesChannelsStep",
                     "title": "associateProductsWithSalesChannelsStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/canDeleteSalesChannelsOrThrowStep",
+                    "title": "canDeleteSalesChannelsOrThrowStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14408,6 +24425,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createDefaultSalesChannelStep",
                     "title": "createDefaultSalesChannelStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14416,6 +24434,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createSalesChannelsStep",
                     "title": "createSalesChannelsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14424,6 +24443,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteSalesChannelsStep",
                     "title": "deleteSalesChannelsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14432,6 +24452,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/detachLocationsFromSalesChannelsStep",
                     "title": "detachLocationsFromSalesChannelsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14440,6 +24461,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/detachProductsFromSalesChannelsStep",
                     "title": "detachProductsFromSalesChannelsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14448,6 +24470,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateSalesChannelsStep",
                     "title": "updateSalesChannelsStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -14471,6 +24494,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/listShippingOptionsForContextStep",
                     "title": "listShippingOptionsForContextStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -14494,6 +24518,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteShippingProfileWorkflow",
                     "title": "deleteShippingProfileWorkflow",
+                    "description": "Delete shipping profiles.",
                     "children": []
                   }
                 ],
@@ -14509,6 +24534,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteShippingProfilesStep",
                     "title": "deleteShippingProfilesStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/validateStepShippingProfileDelete",
+                    "title": "validateStepShippingProfileDelete",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -14532,6 +24567,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createLocationFulfillmentSetWorkflow",
                     "title": "createLocationFulfillmentSetWorkflow",
+                    "description": "Add fulfillment set to a stock location.",
                     "children": []
                   },
                   {
@@ -14540,6 +24576,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createStockLocationsWorkflow",
                     "title": "createStockLocationsWorkflow",
+                    "description": "Create one or more stock locations.",
                     "children": []
                   },
                   {
@@ -14548,6 +24585,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteStockLocationsWorkflow",
                     "title": "deleteStockLocationsWorkflow",
+                    "description": "Delete one or more stock locations.",
                     "children": []
                   },
                   {
@@ -14556,6 +24594,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/linkSalesChannelsToStockLocationWorkflow",
                     "title": "linkSalesChannelsToStockLocationWorkflow",
+                    "description": "Manage the sales channels of a stock location.",
                     "children": []
                   },
                   {
@@ -14564,6 +24603,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateStockLocationsWorkflow",
                     "title": "updateStockLocationsWorkflow",
+                    "description": "Update stock locations.",
                     "children": []
                   }
                 ],
@@ -14579,6 +24619,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createStockLocations",
                     "title": "createStockLocations",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14587,6 +24628,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteStockLocationsStep",
                     "title": "deleteStockLocationsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14595,6 +24637,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateStockLocationsStep",
                     "title": "updateStockLocationsStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -14618,6 +24661,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createStoresWorkflow",
                     "title": "createStoresWorkflow",
+                    "description": "Create one or more stores.",
                     "children": []
                   },
                   {
@@ -14626,6 +24670,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteStoresWorkflow",
                     "title": "deleteStoresWorkflow",
+                    "description": "Delete one or more stores.",
                     "children": []
                   },
                   {
@@ -14634,6 +24679,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateStoresWorkflow",
                     "title": "updateStoresWorkflow",
+                    "description": "Update stores.",
                     "children": []
                   }
                 ],
@@ -14649,6 +24695,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createStoresStep",
                     "title": "createStoresStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14657,6 +24704,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteStoresStep",
                     "title": "deleteStoresStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14665,6 +24713,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateStoresStep",
                     "title": "updateStoresStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -14688,6 +24737,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createTaxRateRulesWorkflow",
                     "title": "createTaxRateRulesWorkflow",
+                    "description": "Create one or more tax rules for rates.",
                     "children": []
                   },
                   {
@@ -14696,6 +24746,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createTaxRatesWorkflow",
                     "title": "createTaxRatesWorkflow",
+                    "description": "Create one or more tax rates.",
                     "children": []
                   },
                   {
@@ -14704,6 +24755,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createTaxRegionsWorkflow",
                     "title": "createTaxRegionsWorkflow",
+                    "description": "Create one or more tax regions.",
                     "children": []
                   },
                   {
@@ -14712,6 +24764,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteTaxRateRulesWorkflow",
                     "title": "deleteTaxRateRulesWorkflow",
+                    "description": "Delete one or more tax rate rules.",
                     "children": []
                   },
                   {
@@ -14720,6 +24773,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteTaxRatesWorkflow",
                     "title": "deleteTaxRatesWorkflow",
+                    "description": "Delete one or more tax rates.",
                     "children": []
                   },
                   {
@@ -14728,6 +24782,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteTaxRegionsWorkflow",
                     "title": "deleteTaxRegionsWorkflow",
+                    "description": "Delete one or more tax regions.",
                     "children": []
                   },
                   {
@@ -14736,6 +24791,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/setTaxRateRulesWorkflow",
                     "title": "setTaxRateRulesWorkflow",
+                    "description": "Set the rules of tax rates.",
                     "children": []
                   },
                   {
@@ -14744,6 +24800,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateTaxRatesWorkflow",
                     "title": "updateTaxRatesWorkflow",
+                    "description": "Update tax rates.",
                     "children": []
                   },
                   {
@@ -14752,6 +24809,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateTaxRegionsWorkflow",
                     "title": "updateTaxRegionsWorkflow",
+                    "description": "Update one or more tax regions.",
                     "children": []
                   }
                 ],
@@ -14767,6 +24825,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createTaxRateRulesStep",
                     "title": "createTaxRateRulesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14775,6 +24834,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createTaxRatesStep",
                     "title": "createTaxRatesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14783,6 +24843,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createTaxRegionsStep",
                     "title": "createTaxRegionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14791,6 +24852,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteTaxRateRulesStep",
                     "title": "deleteTaxRateRulesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14799,6 +24861,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteTaxRatesStep",
                     "title": "deleteTaxRatesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14807,6 +24870,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteTaxRegionsStep",
                     "title": "deleteTaxRegionsStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/getItemTaxLinesStep",
+                    "title": "getItemTaxLinesStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14815,6 +24888,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/listTaxRateIdsStep",
                     "title": "listTaxRateIdsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14823,6 +24897,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/listTaxRateRuleIdsStep",
                     "title": "listTaxRateRuleIdsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14831,6 +24906,16 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateTaxRatesStep",
                     "title": "updateTaxRatesStep",
+                    "description": "",
+                    "children": []
+                  },
+                  {
+                    "loaded": true,
+                    "isPathHref": true,
+                    "type": "link",
+                    "path": "/references/medusa-workflows/steps/updateTaxRegionsStep",
+                    "title": "updateTaxRegionsStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14839,6 +24924,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/maybeListTaxRateRuleIdsStep",
                     "title": "maybeListTaxRateRuleIdsStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -14862,6 +24948,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createUserAccountWorkflow",
                     "title": "createUserAccountWorkflow",
+                    "description": "Create a user account and attach an auth identity.",
                     "children": []
                   },
                   {
@@ -14870,6 +24957,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/createUsersWorkflow",
                     "title": "createUsersWorkflow",
+                    "description": "Create one or more users.",
                     "children": []
                   },
                   {
@@ -14878,6 +24966,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/deleteUsersWorkflow",
                     "title": "deleteUsersWorkflow",
+                    "description": "Delete one or more users.",
                     "children": []
                   },
                   {
@@ -14886,6 +24975,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/removeUserAccountWorkflow",
                     "title": "removeUserAccountWorkflow",
+                    "description": "Delete a user and remove the association to its auth identity.",
                     "children": []
                   },
                   {
@@ -14894,6 +24984,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/updateUsersWorkflow",
                     "title": "updateUsersWorkflow",
+                    "description": "Update one or more users.",
                     "children": []
                   }
                 ],
@@ -14909,6 +25000,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/createUsersStep",
                     "title": "createUsersStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14917,6 +25009,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/deleteUsersStep",
                     "title": "deleteUsersStep",
+                    "description": "",
                     "children": []
                   },
                   {
@@ -14925,6 +25018,7 @@ export const generatedSidebar = [
                     "type": "link",
                     "path": "/references/medusa-workflows/steps/updateUsersStep",
                     "title": "updateUsersStep",
+                    "description": "",
                     "children": []
                   }
                 ],
@@ -14940,7 +25034,7 @@ export const generatedSidebar = [
         "loaded": true,
         "isPathHref": true,
         "type": "link",
-        "title": "Testing Tools Reference",
+        "title": "Testing Framework",
         "path": "/test-tools-reference",
         "isChildSidebar": true,
         "children": [

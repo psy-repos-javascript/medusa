@@ -1,5 +1,70 @@
 # @medusajs/payment
 
+## 2.5.1
+
+## 2.5.0
+
+### Minor Changes
+
+- [`d3bf59bb7a208a9a280743212601522da5448c1b`](https://github.com/medusajs/medusa/commit/d3bf59bb7a208a9a280743212601522da5448c1b) Thanks [@olivermrbl](https://github.com/olivermrbl)! - chore: Revamp payment provider interface
+
+### Patch Changes
+
+- [#11216](https://github.com/medusajs/medusa/pull/11216) [`016e332e9b98f316cded6eb999927fc942ce56c5`](https://github.com/medusajs/medusa/commit/016e332e9b98f316cded6eb999927fc942ce56c5) Thanks [@thetutlage](https://github.com/thetutlage)! - feat: make AbstractModuleService create method type-safe
+
+## 2.4.0
+
+### Minor Changes
+
+- [#10292](https://github.com/medusajs/medusa/pull/10292) [`cc73802ab3821d2c667942bd887efb7476205547`](https://github.com/medusajs/medusa/commit/cc73802ab3821d2c667942bd887efb7476205547) Thanks [@carlos-r-l-rodrigues](https://github.com/carlos-r-l-rodrigues)! - chore: upgrade to mikro-orm 6
+
+### Patch Changes
+
+- [#11048](https://github.com/medusajs/medusa/pull/11048) [`da3906efa42ee729c11696e2d3255a60ac3fa958`](https://github.com/medusajs/medusa/commit/da3906efa42ee729c11696e2d3255a60ac3fa958) Thanks [@adrien2p](https://github.com/adrien2p)! - fix: Unique constraint should account for soft deleted records
+
+- Updated dependencies [[`0deffe7b9b9a1055813249b17057b7bba01b78ac`](https://github.com/medusajs/medusa/commit/0deffe7b9b9a1055813249b17057b7bba01b78ac), [`cc73802ab3821d2c667942bd887efb7476205547`](https://github.com/medusajs/medusa/commit/cc73802ab3821d2c667942bd887efb7476205547), [`13fe2f6776b22c401d131f184fc3600ef4008383`](https://github.com/medusajs/medusa/commit/13fe2f6776b22c401d131f184fc3600ef4008383), [`e53b8b0a9708d2eb46258ca417b6ff6abbd5f3d9`](https://github.com/medusajs/medusa/commit/e53b8b0a9708d2eb46258ca417b6ff6abbd5f3d9)]:
+  - @medusajs/framework@2.4.0
+
+## 2.3.1
+
+## 2.3.0
+
+### Minor Changes
+
+- [`5faf48b8c236007cd9b229219d466681c9c884c0`](https://github.com/medusajs/medusa/commit/5faf48b8c236007cd9b229219d466681c9c884c0) Thanks [@olivermrbl](https://github.com/olivermrbl)! - fix(payment): If someone was using region_id from the payment collection entity, or cart_id, order_id, customer_id from the payment entity, they will no longer exist. Similarly, any code that was passing region_Id to createPaymentCollections would be recommended to remove the field.
+
+## 2.2.0
+
+## 2.1.3
+
+## 2.1.2
+
+### Patch Changes
+
+- [#10553](https://github.com/medusajs/medusa/pull/10553) [`0264294ab55fc34a728834b5d217e0c8a7bf5a90`](https://github.com/medusajs/medusa/commit/0264294ab55fc34a728834b5d217e0c8a7bf5a90) Thanks [@carlos-r-l-rodrigues](https://github.com/carlos-r-l-rodrigues)! - Payment module DML
+
+## 2.1.1
+
+### Patch Changes
+
+- [#10506](https://github.com/medusajs/medusa/pull/10506) [`a04238a7f1b77e6f6fe0e51951251286cd207115`](https://github.com/medusajs/medusa/commit/a04238a7f1b77e6f6fe0e51951251286cd207115) Thanks [@riqwan](https://github.com/riqwan)! - fix(payment): ensure that payment error is captured in logger
+
+## 2.1.0
+
+## 2.0.7
+
+## 2.0.6
+
+## 2.0.5
+
+### Patch Changes
+
+- [#10119](https://github.com/medusajs/medusa/pull/10119) [`2822972e04f12d2ca9378dd09529ab6ca308a286`](https://github.com/medusajs/medusa/commit/2822972e04f12d2ca9378dd09529ab6ca308a286) Thanks [@adrien2p](https://github.com/adrien2p)! - Fix/mikro orm cli wrapper
+
+- [#10135](https://github.com/medusajs/medusa/pull/10135) [`b1b7a4abf10956d2d2863ba2b7e08e39b1abfbc1`](https://github.com/medusajs/medusa/commit/b1b7a4abf10956d2d2863ba2b7e08e39b1abfbc1) Thanks [@adrien2p](https://github.com/adrien2p)! - fix(payment): Idempotent cancellation and proper creationg fail handling
+
+- [#10138](https://github.com/medusajs/medusa/pull/10138) [`7aa990795cf262f98b86adb7f14d6f146620bc1d`](https://github.com/medusajs/medusa/commit/7aa990795cf262f98b86adb7f14d6f146620bc1d) Thanks [@adrien2p](https://github.com/adrien2p)! - chore(): Update module provider retrieval error message and type
+
 ## 2.0.4
 
 ## 2.0.3

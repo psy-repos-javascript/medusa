@@ -4,7 +4,8 @@
 
 @layer base {
   html {
-    -webkit-font-smoothing: antialiased;
+    @apply antialiased;
+    text-rendering: optimizeLegibility;
   }
   .html {
     @apply text-medusa-fg-base;
@@ -27,7 +28,7 @@
   }
 
   body {
-    @apply text-ui-fg-subtle;
+    @apply text-ui-fg-base;
   }
 
   /* Hack to hide navbar / toc when some components like prompt are opened. */
@@ -39,4 +40,12 @@
   body[data-modal="opened"] {
     @apply !overflow-hidden text-ui-fg-base;
   }
+
+  .text-wrap {
+    text-wrap: wrap;
+  }
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
 }
